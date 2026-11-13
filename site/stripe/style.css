@@ -1,0 +1,79 @@
+/* STRIPE — Swiss grid, the belt progression as the palette, the rank bar as the motif. */
+:root {
+  --paper: #F5F5F2; --ink: #16161A; --mut: #55555B; --red: #D7262E;
+  --white-belt: #FFFFFF; --blue: #2557B8; --purple: #6A3FA0; --brown: #6B4226; --black: #16161A;
+  --bg: var(--paper); --btn-bg: var(--ink); --btn-ink: var(--paper); --radius: 0;
+  --f-head: "Archivo", system-ui, sans-serif; --f-body: "Archivo", system-ui, sans-serif;
+  --nav-bg: var(--paper);
+}
+h1, h2, h3 { font-stretch: 125%; font-weight: 800; letter-spacing: -0.025em; }
+.brand-word b { font-stretch: 125%; font-weight: 900; letter-spacing: -0.02em; }
+.nav { border-bottom: 4px solid var(--ink); }
+.btn { font-stretch: 112%; }
+
+.hero { grid-template-columns: 1fr; gap: 0; padding-bottom: 0; }
+.hero h1 { font-size: clamp(2.7rem, 8.4vw, 7.6rem); line-height: .95; max-width: 13ch; }
+.kicker { font-weight: 700; color: var(--mut); }
+.lede { color: var(--mut); }
+.hero-text { padding-bottom: clamp(40px, 6vw, 72px); }
+.hero-belt { position: relative; height: clamp(56px, 8vw, 96px); margin: 0 calc(-1 * clamp(16px, 4vw, 48px)); background: var(--white-belt); border-top: 4px solid var(--ink); border-bottom: 4px solid var(--ink); }
+.hb-bar { position: absolute; right: 12%; top: 0; bottom: 0; width: clamp(110px, 16vw, 220px); background: var(--ink); display: flex; justify-content: center; align-items: stretch; gap: 7%; }
+.hb-bar i { width: 10%; background: var(--white-belt); transform-origin: top; animation: tape 1s .4s cubic-bezier(.2,.8,.2,1) both; }
+@keyframes tape { from { transform: scaleY(0); } }
+
+/* Each section opens with the next belt in the progression */
+.sec { position: relative; border-top: 14px solid var(--belt, var(--ink)); }
+.sec::before { content: ""; position: absolute; top: -14px; right: 12%; width: clamp(80px, 10vw, 140px); height: 14px; background: var(--bar, var(--ink)); }
+.programs { --belt: var(--blue); }
+.two { --belt: var(--purple); }
+.schedule { --belt: var(--brown); }
+.pricing { --belt: var(--black); --bar: var(--red); }
+.first { --belt: var(--blue); }
+.coach { --belt: var(--purple); }
+.learn { --belt: var(--brown); }
+.visit { --belt: var(--black); --bar: var(--red); }
+.faq { --belt: #F2C230; }
+.contact { --belt: var(--black); --bar: var(--red); }
+
+.sec-head { display: grid; grid-template-columns: 1fr; }
+.prog-list { gap: 0; }
+.prog { border-top: 4px solid var(--ink); padding: 1.2rem 1.4rem 1.6rem 0; }
+.prog + .prog { padding-left: 1.4rem; border-left: 1px solid rgba(22,22,26,.25); }
+.prog h3 { font-size: 1.6rem; }
+.prog-age { color: var(--mut); }
+@media (max-width: 1100px) { .prog + .prog { border-left: 0; padding-left: 0; } }
+
+.art-jp { font-family: "Zen Kaku Gothic New", sans-serif; font-weight: 900; font-size: clamp(4rem, 10vw, 8rem); }
+.art { border-top: 4px solid var(--ink); padding-top: 1.2rem; }
+.art p:not(.art-jp) { color: var(--mut); }
+.two-note { font-stretch: 112%; font-weight: 700; font-size: 1.4rem; }
+
+.week { gap: 0; border-top: 4px solid var(--ink); }
+.day { border-right: 1px solid rgba(22,22,26,.25); padding-left: 0; padding-right: 1rem; }
+.day + .day { padding-left: 1rem; }
+.day h3 { font-size: 1.5rem; }
+.flag { background: var(--ink); color: var(--paper); padding: .15rem .55rem; justify-self: start; }
+
+.price-list { gap: 0; }
+.price-list li { border-top: 4px solid var(--ink); padding-left: 0; }
+.price { font-stretch: 125%; }
+.fund a { font-weight: 700; }
+
+.steps li { border-top: 4px solid var(--ink); padding-top: 1rem; }
+.steps li::before { font-stretch: 125%; font-size: 3.4rem; }
+.steps p { color: var(--mut); }
+
+.coach .img-slot { background: repeating-linear-gradient(90deg, #E7E7E3 0 40px, #DEDED9 40px 80px); border: 4px solid var(--ink); }
+.img-slot span { background: var(--ink); color: var(--paper); }
+
+.visit-card { background: var(--ink); color: var(--paper); }
+.visit-text a:not(.btn) { font-weight: 700; }
+
+.faq details { border-bottom: 1px solid rgba(22,22,26,.3); }
+.faq summary { font-stretch: 110%; }
+.faq details p { color: var(--mut); }
+
+.contact { background: var(--ink); color: var(--paper); }
+.contact h2 { font-size: clamp(2.6rem, 7vw, 6rem); }
+.foot { border-top: 4px solid var(--ink); }
+.foot b { font-stretch: 125%; }

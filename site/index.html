@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Clearwater Jiu Jitsu & Judo · Brand directions</title>
+<meta name="description" content="Three brand directions for a new jiu jitsu and judo club in Clearwater, BC: website versions and a printable poster set for each.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Figtree:wght@400;600;700;800&family=Shippori+Mincho+B1:wght@400;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Zilla+Slab:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="posters/poster.css">
+<style>
+  :root { --bg: #F1F0EC; --ink: #1B1B1E; --mut: #5E5E64; --line: rgba(27,27,30,.14); --card: #FFFFFF; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg: #161719; --ink: #ECEBE6; --mut: #A3A3A9; --line: rgba(236,235,230,.14); --card: #1F2023; } }
+  :root[data-theme="dark"] { --bg: #161719; --ink: #ECEBE6; --mut: #A3A3A9; --line: rgba(236,235,230,.14); --card: #1F2023; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 400 1.0625rem/1.6 "Archivo", system-ui, sans-serif; }
+  a { color: inherit; }
+  :focus-visible { outline: 3px solid #C8402A; outline-offset: 3px; }
+  .wrap { max-width: 1240px; margin: 0 auto; padding: 0 16px; }
+  header.top { padding: clamp(40px, 7vw, 88px) 0 clamp(24px, 4vw, 40px); }
+  header.top h1 { font-size: clamp(2.2rem, 5.4vw, 4.2rem); line-height: 1.02; font-stretch: 118%; font-weight: 800; letter-spacing: -0.03em; margin: 0 0 1rem; max-width: 16ch; }
+  header.top p { max-width: 44rem; color: var(--mut); font-size: 1.15rem; margin: 0; }
+  .name { display: grid; grid-template-columns: auto 1fr; gap: 1.5rem; align-items: center; margin-top: 2rem; padding: 1.25rem 1.5rem; background: var(--card); border: 1px solid var(--line); max-width: 46rem; }
+  .name .jp { font: 800 3rem/1 "Shippori Mincho B1", serif; }
+  .name p { margin: 0; color: var(--mut); font-size: .98rem; }
+  .name b { color: var(--ink); }
+
+  .dirs { display: grid; gap: 28px; padding: 24px 0 64px; }
+  .dir { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); background: var(--card); border: 1px solid var(--line); overflow: hidden; }
+  .dir-show { position: relative; padding: clamp(20px, 3vw, 36px); display: grid; grid-template-columns: 1fr 1fr; gap: 18px; align-items: center; }
+  .dir-show .sheet { box-shadow: 0 2px 4px rgba(0,0,0,.15), 0 16px 36px rgba(0,0,0,.2); }
+  .dir-show .sheet:nth-child(2) { transform: translateY(-18px); }
+  .dir-body { padding: clamp(22px, 3.4vw, 44px); display: flex; flex-direction: column; gap: 1rem; }
+  .dir-head { display: flex; align-items: center; gap: 1rem; }
+  .dir-head .mk { width: 64px; flex: none; }
+  .dir-head h2 { margin: 0; font-size: clamp(1.7rem, 3vw, 2.4rem); line-height: 1; }
+  .dir-head small { display: block; color: var(--mut); font-size: .9rem; margin-top: .3rem; font-family: "Archivo", sans-serif; font-weight: 500; }
+  .dir-body p { margin: 0; }
+  .sw { display: flex; gap: 6px; flex-wrap: wrap; }
+  .sw span { width: 44px; height: 44px; border-radius: 4px; box-shadow: inset 0 0 0 1px rgba(0,0,0,.15); position: relative; }
+  .sw span::after { content: attr(title); position: absolute; top: 48px; left: 0; font-size: .65rem; color: var(--mut); white-space: nowrap; }
+  .sw { margin-bottom: 1rem; }
+  .meta { display: grid; grid-template-columns: max-content 1fr; gap: .35rem 1rem; font-size: .93rem; }
+  .meta dt { color: var(--mut); }
+  .meta dd { margin: 0; }
+  .why { font-size: .95rem; color: var(--mut); border-left: 3px solid var(--acc); padding-left: .9rem; }
+  .links { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: auto; padding-top: .5rem; }
+  .links a { display: inline-flex; align-items: center; min-height: 44px; padding: .6rem 1.1rem; text-decoration: none; font-weight: 700; border: 2px solid var(--acc); }
+  .links a:first-child { background: var(--acc); color: #fff; }
+  .d-tenugui { --acc: #C8402A; } .d-tenugui .dir-show { background: #1B2A47; }
+  .d-wellsgray { --acc: #2C6E6A; } .d-wellsgray .dir-show { background: #E3A13B; }
+  .d-stripe { --acc: #16161A; } .d-stripe .dir-show { background: #DCDCD7; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .d-stripe { --acc: #ECEBE6; } :root:not([data-theme="light"]) .d-stripe .links a:first-child { color: #16161A; } }
+  .t-tenugui { font-family: "Shippori Mincho B1", serif; font-weight: 800; }
+  .t-wellsgray { font-family: "Zilla Slab", serif; font-weight: 700; }
+  .t-stripe { font-family: "Archivo", sans-serif; font-stretch: 125%; font-weight: 800; letter-spacing: -0.02em; }
+  @media (max-width: 860px) { .dir { grid-template-columns: 1fr; } }
+
+  section.notes { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 28px; padding-bottom: 80px; }
+  .note { background: var(--card); border: 1px solid var(--line); padding: clamp(20px, 3vw, 32px); }
+  .note h2 { margin: 0 0 .8rem; font-size: 1.35rem; font-stretch: 112%; }
+  .note ul { margin: 0; padding-left: 1.1rem; color: var(--mut); }
+  .note li { margin: .35rem 0; }
+  .note li b { color: var(--ink); }
+  .note p { color: var(--mut); margin: 0 0 .8rem; }
+  body > footer { border-top: 1px solid var(--line); padding: 24px 0 40px; color: var(--mut); font-size: .9rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <h1>Three ways the club could look</h1>
+    <p>Each direction comes with its own homepage and a twelve-poster set for the dojo walls: counting in Japanese, belt ranks for both arts, dojo words, throws, groundwork and more. Open each one, then pick a favourite or mix the parts you like.</p>
+    <div class="name">
+      <div class="jp" lang="ja">清水</div>
+      <p><b>A name idea:</b> Clearwater in Japanese is 清水, read <i>shimizu</i>, literally “clear water”. 清水道場 (Shimizu Dōjō) means “Clearwater Dojo”. It appears on the seal and the posters; “Clearwater Jiu Jitsu &amp; Judo” is only a working name.</p>
+    </div>
+  </header>
+
+  <main class="dirs" id="dirs"></main>
+
+  <section class="notes">
+    <div class="note">
+      <h2>What the research found</h2>
+      <p>We reviewed 18 club sites, from Atos and Gracie Barra to judo clubs in Burnaby, Lake Country and Kamloops.</p>
+      <ul>
+        <li><b>Red and black is everywhere</b> (13 of 17 sites), with condensed all-caps type and dark gym photos. Indigo, nature colours and Japanese type are unused.</li>
+        <li><b>The best sites</b> repeat one first-class button, split visitors by age early, explain the first class plainly, and publish schedule and prices.</li>
+        <li><b>Rarely done:</b> published prices, KidSport and Jumpstart links, drop-in info for visitors, learning content like terminology and belts.</li>
+        <li><b>Nearest club:</b> Grizzly Jiu Jitsu in Barriere, about 60 km away, social media only.</li>
+      </ul>
+      <p style="margin-top:.8rem"><a href="research/">Read the full competitor research</a></p>
+    </div>
+    <div class="note">
+      <h2>To confirm with the instructor</h2>
+      <ul>
+        <li>The club's name, and whether 清水道場 fits</li>
+        <li>Instructor bio, ranks, lineage and certifications</li>
+        <li>Class times, age groups and prices</li>
+        <li>Is the first class free?</li>
+        <li>Judo BC / BJJ affiliation and insurance</li>
+        <li>The room at 52 Ridge, and parking</li>
+        <li>Contact email, phone and Instagram</li>
+      </ul>
+    </div>
+    <div class="note">
+      <h2>Photos</h2>
+      <p>Grey photo boxes on the sites are placeholders. Every one has a matching image prompt, ready to paste into an image generator.</p>
+      <p><a href="prompts/">See the image prompts</a></p>
+      <p><a href="posters/">Browse all posters</a></p>
+    </div>
+  </section>
+</div>
+<footer><div class="wrap">Temporary preview site · jiujitsu.designspore.co</div></footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+<script src="assets/content.js"></script>
+<script src="assets/brand.js"></script>
+<script src="posters/render.js"></script>
+<script>
+  document.documentElement.style.setProperty("--asanoha", BRAND.asanohaURI("rgba(238,233,221,0.075)", 1.1));
+  const D = [
+    { k: "tenugui", name: "Tenugui", sub: "手拭い · indigo-dyed cloth", mark: BRAND.seal(),
+      sw: [["#1B2A47","Ai indigo"],["#121D33","Kon"],["#EEE9DD","Kinari"],["#C8402A","Shu red"],["#A9B6CC","Pale ai"]],
+      type: "Shippori Mincho + Zen Kaku Gothic", feel: "Calm, respectful, traditional",
+      desc: "Built on the tenugui, the patterned indigo cotton cloth that Japanese martial artists carry to training. Indigo field, cotton-white ink, a vermilion hanko seal reading 清水道場. The asanoha (hemp-leaf) pattern is traditionally used for children's clothing because hemp grows fast and straight.",
+      why: "The most Japanese of the three, and the most distinctive in a field of red and black. Suits judo's heritage and families. Big indigo areas print beautifully but use more ink.",
+      posters: ["counting", "dojo-code"] },
+    { k: "wellsgray", name: "Wells Gray", sub: "a screenprinted park poster", mark: BRAND.badge(),
+      sw: [["#E3A13B","Ochre sky"],["#7FB0A6","Glacier"],["#2C6E6A","River teal"],["#1F3D3A","Forest"],["#B4502F","Rust"],["#EEF2EC","Snow"]],
+      type: "Zilla Slab + Figtree", feel: "Warm, local, outdoorsy",
+      desc: "Rooted in place: layered ridges, a falls dropping into the river, routed-sign slab lettering like the BC Parks signs on the road to Wells Gray. A round park badge as the logo. Feels like a community club that belongs to the valley.",
+      why: "No competitor uses nature colours. It speaks to locals and to resort guests, and would suit club t-shirts, stickers and patches. The least “martial arts” look, which some will love and others won't.",
+      posters: ["nage-waza", "come-train"] },
+    { k: "stripe", name: "Stripe", sub: "the belt system as a brand", mark: BRAND.beltTip({ bg: "none" }),
+      sw: [["#F5F5F2","Paper"],["#16161A","Black belt"],["#2557B8","Blue"],["#6A3FA0","Purple"],["#6B4226","Brown"],["#D7262E","Rank bar"]],
+      type: "Archivo Expanded + Zen Kaku Gothic Black", feel: "Modern, athletic, direct",
+      desc: "The palette is the belt progression itself: white, blue, purple, brown, black. The logo is a belt tip with its rank bar and four stripes of tape, and every section of the site opens with the next belt. A Swiss grid, wide heavy type, no decoration.",
+      why: "The most contemporary, the cheapest to print, and the most legible from across the mat. Red is held back for the black-belt bar only, so it doesn't blend in with every other gym.",
+      posters: ["bjj-belts", "lineage"] }
+  ];
+  document.getElementById("dirs").innerHTML = D.map((d) => `
+    <article class="dir d-${d.k}">
+      <div class="dir-show">${d.posters.map((id) => POSTERS.renderPoster(POSTERS.list.find((p) => p.id === id), d.k)).join("")}</div>
+      <div class="dir-body">
+        <div class="dir-head"><span class="mk">${d.mark}</span><h2 class="t-${d.k}">${d.name}<small>${d.sub}</small></h2></div>
+        <div class="sw">${d.sw.map(([c, n]) => `<span style="background:${c}" title="${n}"></span>`).join("")}</div>
+        <p>${d.desc}</p>
+        <dl class="meta"><dt>Type</dt><dd>${d.type}</dd><dt>Feel</dt><dd>${d.feel}</dd></dl>
+        <p class="why">${d.why}</p>
+        <div class="links"><a href="${d.k}/">Open the homepage</a><a href="posters/?theme=${d.k}">See the posters</a></div>
+      </div>
+    </article>`).join("");
+</script>
+</body>
+</html>

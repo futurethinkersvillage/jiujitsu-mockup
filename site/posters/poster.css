@@ -1,0 +1,326 @@
+/* ===== Poster base: 18 x 24 in (3:4). The poster is 60em wide, so every size scales with it. ===== */
+.sheet { container-type: inline-size; width: 100%; }
+.poster {
+  width: 100cqw; aspect-ratio: 3 / 4; font-size: calc(100cqw / 60);
+  position: relative; overflow: hidden; box-sizing: border-box;
+  display: flex; flex-direction: column; padding: 3.2em 3.6em 2.4em;
+  line-height: 1.3; -webkit-print-color-adjust: exact; print-color-adjust: exact;
+}
+.poster *, .poster *::before, .poster *::after { box-sizing: border-box; }
+.poster ul, .poster ol { list-style: none; margin: 0; padding: 0; }
+.poster h2, .poster h3, .poster p { margin: 0; }
+.ph { position: relative; display: grid; grid-template-columns: 1fr auto; gap: 0 2em; align-items: start; }
+.poster .ph-title { font-size: 4.4em; line-height: 1; letter-spacing: -0.01em; }
+.ph-romaji { font-size: 1.35em; margin-bottom: .35em; }
+.ph-lede { font-size: 1.3em; line-height: 1.4; margin-top: 1.5em; max-width: 30em; }
+.ph-jp { grid-column: 2; grid-row: 1 / span 2; font-size: 6em; line-height: 1; }
+.ph-text { grid-column: 1; grid-row: 1; }
+.pb { flex: 1; min-height: 0; display: flex; flex-direction: column; gap: 1.6em; padding-top: 2.2em; }
+.p-note { margin-top: auto; font-size: 1.15em; line-height: 1.45; max-width: 44em; }
+.g-label { font-size: 1.25em; font-weight: 700; margin-bottom: .7em; }
+.g-label small { display: block; font-size: .8em; font-weight: 400; opacity: .75; }
+
+.pf { display: grid; grid-template-columns: 4.6em 1fr auto 4.2em; gap: 1.4em; align-items: center; padding-top: 1.4em; margin-top: 1.8em; }
+.pf-name strong { display: block; font-size: 1.3em; }
+.pf-name span { font-size: 1em; opacity: .8; }
+.pf-url { font-size: 1.1em; font-weight: 700; }
+.pf-qr svg, .qr-box svg { display: block; width: 100%; height: auto; }
+.pf-qr { padding: .3em; background: #fff; }
+.mark { display: block; width: 100%; height: auto; }
+
+/* Belts */
+.belt { display: block; position: relative; height: 2.1em; border-radius: .2em; box-shadow: inset 0 0 0 .07em rgba(0,0,0,.28); }
+.belt.is-light { box-shadow: inset 0 0 0 .09em rgba(0,0,0,.4); }
+.belt.sm { height: 1.25em; }
+.belt-bar { position: absolute; right: 9%; top: 0; bottom: 0; width: 22%; display: flex; justify-content: center; gap: 7%; }
+.belt-bar i { width: 9%; background: #F4F2EC; }
+
+/* Counting */
+.count { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1.2em; }
+.count li { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 1em .4em 1.1em; }
+.c-n { font-size: 1.15em; font-weight: 700; }
+.c-k { font-size: 6.2em; line-height: 1.1; margin: .05em 0 .1em; }
+.c-r { font-size: 1.55em; font-weight: 700; line-height: 1.15; }
+.c-kana { font-size: 1.05em; opacity: .75; margin-top: .25em; }
+.count-extra { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2em; }
+.count-extra > div { display: grid; grid-template-columns: auto auto 1fr; grid-template-rows: auto auto; column-gap: .7em; align-items: baseline; padding: .9em 1.1em; }
+.count-extra .c-n { grid-row: 1 / span 2; font-size: 1.6em; }
+.count-extra .c-k { font-size: 2.6em; grid-row: 1 / span 2; margin: 0; }
+.count-extra .c-r { font-size: 1.3em; }
+.count-extra .c-note { grid-column: 3; font-size: .95em; opacity: .75; }
+
+/* Judo belts */
+.bgroup + .bgroup { margin-top: .6em; }
+.brows li { display: grid; grid-template-columns: 16em 9em 1fr 8.5em 9em; gap: 1.2em; align-items: center; padding: .45em 0; }
+.b-rank { font-size: 1.35em; font-weight: 700; }
+.b-name { font-size: 1.25em; }
+.b-k { font-size: 1.7em; }
+.b-r { font-size: 1.1em; opacity: .8; }
+
+/* BJJ belts */
+.adults li { display: grid; grid-template-columns: 19em 6.5em 9em 1fr; grid-template-rows: auto auto; column-gap: 1.3em; align-items: center; padding: .55em 0; }
+.adults .belt { grid-row: 1 / span 2; }
+.adults .b-name { font-size: 1.5em; font-weight: 700; grid-row: 1 / span 2; }
+.adults .b-k { font-size: 1.35em; grid-row: 1 / span 2; }
+.adults .b-age { font-size: 1.15em; font-weight: 700; }
+.adults .b-time { font-size: 1em; opacity: .8; grid-column: 4; }
+.bjj-split { display: grid; grid-template-columns: 1.35fr 1fr; gap: 2.4em; }
+.kids { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: repeat(7, auto); grid-auto-flow: column; gap: .55em 1.2em; }
+.kids li, .degrees li { display: grid; grid-template-columns: 7em 1fr; gap: .8em; align-items: center; font-size: 1em; }
+.degrees { display: grid; gap: .9em; }
+.degrees li { grid-template-columns: 8em 1fr; }
+.degrees b { display: block; font-size: 1.1em; }
+
+/* Terms (words, groundwork) */
+.words { display: grid; grid-template-columns: 1fr 1fr; gap: 1.8em 3em; }
+.words .wgroup:nth-child(2) { grid-column: 2; grid-row: 1; }
+.words .wgroup:nth-child(3) { grid-column: 1 / -1; }
+.words .wgroup:nth-child(3) .terms { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: repeat(4, auto); grid-auto-flow: column; column-gap: 3em; }
+.terms li { display: grid; grid-template-columns: 6.6em 1fr; grid-template-rows: auto auto; column-gap: 1em; padding: .38em 0; align-items: baseline; }
+.terms .t-k { font-size: 1.55em; grid-row: 1 / span 2; line-height: 1.15; }
+.terms .t-k.long { font-size: 1.05em; line-height: 1.3; }
+.terms .t-r { font-size: 1.2em; font-weight: 700; }
+.terms .t-e { font-size: 1em; opacity: .82; grid-column: 2; }
+.is-seq .terms { counter-reset: seq; }
+.is-seq .terms li { grid-template-columns: 1.8em 6.6em 1fr; counter-increment: seq; }
+.is-seq .terms li::before { content: counter(seq); grid-row: 1 / span 2; font-weight: 700; font-size: 1.1em; }
+.is-seq .terms .t-e { grid-column: 3; }
+
+.ground { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2em; }
+.ground .terms li { grid-template-columns: 1fr; padding: .6em 0; }
+.ground .terms .t-k { grid-row: auto; font-size: 1.7em; }
+.ground .terms .t-k.long { font-size: 1.7em; }
+.ground .terms .t-e { grid-column: 1; }
+.ground .g-label span { font-size: 1.15em; }
+
+/* Throws */
+.tech { display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: 1fr; gap: 1.1em; flex: 1; }
+.tech li { display: flex; flex-direction: column; justify-content: center; padding: .8em 1.2em; position: relative; }
+.tech .t-f { font-size: .95em; font-weight: 700; align-self: flex-start; }
+.tech .t-k { font-size: 3em; line-height: 1.15; margin: .12em 0 .08em; }
+.tech .t-r { font-size: 1.45em; font-weight: 700; }
+.tech .t-e { font-size: 1.1em; opacity: .82; }
+
+/* Pairs */
+.pairs-head { display: grid; grid-template-columns: 1fr 3.8em 1fr; font-weight: 700; font-size: 1.15em; padding-bottom: .5em; }
+.pairs-head span:last-child { grid-column: 3; }
+.pairs li { display: grid; grid-template-columns: 1fr 3em 8em 1fr; gap: 0 .8em; align-items: center; padding: .55em 0; }
+.pa-a { font-size: 1.5em; font-weight: 700; }
+.pa-eq { height: .14em; background: currentColor; opacity: .35; }
+.pa-k { font-size: 1.45em; white-space: nowrap; }
+.pa-r { font-size: 1.2em; }
+
+/* Ukemi */
+.ukemi { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4em; flex: 1; }
+.ukemi li { display: flex; flex-direction: column; padding: 1.6em; }
+.ukemi .t-k { font-size: 3.6em; line-height: 1.1; }
+.ukemi .t-r { font-size: 1.6em; font-weight: 700; margin-top: .3em; }
+.ukemi .t-e { font-size: 1.2em; opacity: .8; }
+.ukemi .t-d { font-size: 1.15em; margin-top: auto; padding-top: 1em; line-height: 1.4; }
+.rules ol { counter-reset: r; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4em; }
+.rules li { counter-increment: r; font-size: 1.2em; line-height: 1.35; }
+.rules li::before { content: counter(r); display: block; font-weight: 700; font-size: 1.6em; margin-bottom: .2em; }
+
+/* Principles */
+.princ { display: grid; grid-template-columns: 1fr 1fr; grid-auto-rows: 1fr; gap: 1.3em 2.4em; flex: 1; }
+.princ li { display: flex; flex-direction: column; padding: 1.2em 0; }
+.pr-k { font-size: 3.6em; line-height: 1.1; }
+.pr-k.long { font-size: 2.5em; }
+.princ .t-r { font-size: 1.4em; font-weight: 700; margin-top: .4em; }
+.princ .t-e { font-size: 1.2em; opacity: .85; }
+.princ .t-d { font-size: 1.1em; line-height: 1.4; margin-top: .5em; opacity: .9; }
+
+/* Timeline */
+.timeline { display: flex; flex-direction: column; justify-content: space-between; flex: 1; }
+.timeline li { display: grid; grid-template-columns: 9em 1fr; gap: 1.6em; align-items: baseline; padding: .7em 0; }
+.tl-y { font-size: 2.4em; font-weight: 800; line-height: 1; }
+.tl-t { font-size: 1.4em; line-height: 1.35; }
+
+/* Code */
+.code { display: flex; flex-direction: column; justify-content: space-between; flex: 1; }
+.code li { display: grid; grid-template-columns: 5.4em 1fr; gap: 2em; align-items: center; }
+.cd-k { font-size: 3.4em; width: 1.5em; height: 1.5em; display: grid; place-items: center; line-height: 1; }
+.cd-t { font-size: 1.75em; line-height: 1.3; }
+
+/* Promo */
+.poster.t-promo .ph-title { font-size: 8em; line-height: .92; }
+.t-promo .ph-lede { font-size: 1.7em; max-width: 26em; }
+.promo { flex: 1; display: grid; grid-template-columns: 1fr 17em; grid-template-rows: 1fr auto; gap: 2em 3em; }
+.promo-progs { align-self: center; }
+.promo-progs li { font-size: 3em; font-weight: 700; line-height: 1.2; padding: .2em 0; }
+.promo-where { grid-column: 1; grid-row: 2; font-size: 1.5em; }
+.promo-where strong, .promo-where span { display: block; }
+.promo-qr { grid-column: 2; grid-row: 1 / span 2; align-self: end; text-align: left; }
+.qr-box { background: #fff; padding: 1em; }
+.promo-qr p { font-size: 1.25em; margin-top: .8em; line-height: 1.35; }
+
+/* =====================================================================
+   THEME 1 · TENUGUI — indigo-dyed cloth, kinari cotton ink, vermilion seal
+   ===================================================================== */
+.poster[data-theme="tenugui"] {
+  --bg: #1B2A47; --ink: #EEE9DD; --mut: #A9B6CC; --acc: #D2472F; --rule: rgba(238,233,221,.24);
+  background: var(--asanoha, none) 0 0 / 3.4em auto, var(--bg);
+  color: var(--ink); font-family: "Zen Kaku Gothic New", system-ui, sans-serif;
+}
+.poster[data-theme="tenugui"]::before { content: ""; position: absolute; inset: 1.3em; border: .12em solid var(--rule); pointer-events: none; }
+.poster[data-theme="tenugui"] :is(.ph-title, .ph-romaji, .c-k, .b-k, .t-k, .pa-k, .pr-k, .cd-k, .ph-jp, .tl-y, .promo-progs li) { font-family: "Shippori Mincho B1", "Noto Serif JP", serif; }
+.poster[data-theme="tenugui"] .ph-title { font-weight: 800; }
+.poster[data-theme="tenugui"] .ph-romaji { color: var(--acc); font-weight: 700; font-size: 1.5em; }
+.poster[data-theme="tenugui"] .ph-lede { color: var(--mut); }
+.poster[data-theme="tenugui"] .ph-jp { writing-mode: vertical-rl; font-size: 5.4em; font-weight: 800; letter-spacing: .08em; grid-row: 1; }
+.poster[data-theme="tenugui"] .ph-seal { grid-column: 2; grid-row: 2; width: 4.6em; justify-self: center; margin-top: .8em; }
+.poster[data-theme="tenugui"] .ph-text { padding-top: .4em; }
+.poster[data-theme="tenugui"] .pb { padding-top: 1.6em; }
+.poster[data-theme="tenugui"] .g-label { color: var(--acc); font-family: "Shippori Mincho B1", serif; font-size: 1.4em; border-bottom: .06em solid var(--rule); padding-bottom: .35em; }
+.poster[data-theme="tenugui"] .g-label small { color: var(--mut); font-family: "Zen Kaku Gothic New", sans-serif; }
+.poster[data-theme="tenugui"] .p-note { color: var(--mut); border-left: .2em solid var(--acc); padding-left: 1em; }
+.poster[data-theme="tenugui"] .pf { border-top: .06em solid var(--rule); }
+.poster[data-theme="tenugui"] .pf-name span, .poster[data-theme="tenugui"] .pf-url { color: var(--mut); }
+.poster[data-theme="tenugui"] .count li { border-top: .08em solid var(--rule); }
+.poster[data-theme="tenugui"] .c-n { color: var(--acc); }
+.poster[data-theme="tenugui"] .c-kana, .poster[data-theme="tenugui"] .t-e, .poster[data-theme="tenugui"] .b-r { color: var(--mut); opacity: 1; }
+.poster[data-theme="tenugui"] .count-extra > div { border: .08em solid var(--rule); }
+.poster[data-theme="tenugui"] :is(.brows li, .adults li, .terms li, .pairs li, .timeline li) { border-bottom: .06em solid var(--rule); }
+.poster[data-theme="tenugui"] .tech li, .poster[data-theme="tenugui"] .ukemi li { border: .08em solid var(--rule); background: rgba(14,22,38,.35); }
+.poster[data-theme="tenugui"] .tech .t-f { color: var(--acc); }
+.poster[data-theme="tenugui"] .princ li { border-top: .1em solid var(--acc); }
+.poster[data-theme="tenugui"] .tl-y { color: var(--acc); font-weight: 800; }
+.poster[data-theme="tenugui"] .cd-k { background: var(--acc); color: var(--ink); border-radius: .12em; font-weight: 800; }
+.poster[data-theme="tenugui"] .rules li::before, .poster[data-theme="tenugui"] .is-seq .terms li::before { color: var(--acc); font-family: "Shippori Mincho B1", serif; }
+.poster[data-theme="tenugui"].t-promo .ph-title { font-size: 7em; }
+.poster[data-theme="tenugui"] .promo-progs li { font-weight: 700; border-bottom: .03em solid var(--rule); }
+.poster[data-theme="tenugui"] .promo-where span { color: var(--mut); }
+
+/* =====================================================================
+   THEME 2 · WELLS GRAY — screenprinted park poster: basalt, glacier, ochre
+   ===================================================================== */
+.poster[data-theme="wellsgray"] {
+  --paper: #EEF2EC; --ink: #23292B; --mut: #55625F; --teal: #2C6E6A; --ochre: #E3A13B; --rust: #B4502F; --forest: #1F3D3A;
+  background: var(--paper); color: var(--ink); font-family: "Figtree", system-ui, sans-serif; padding-top: 0;
+}
+.poster[data-theme="wellsgray"] :is(.ph-title, .tl-y, .promo-progs li, .c-r, .t-r, .pa-a, .b-rank, .adults .b-name) { font-family: "Zilla Slab", serif; }
+.poster[data-theme="wellsgray"] :is(.c-k, .b-k, .t-k, .pa-k, .pr-k, .cd-k, .ph-jp) { font-family: "Zen Kaku Gothic New", sans-serif; font-weight: 700; }
+.poster[data-theme="wellsgray"] .ph { margin: 0 -3.6em; display: block; }
+.poster[data-theme="wellsgray"] .ph-land { display: block; width: 100%; height: 11em; }
+.poster[data-theme="wellsgray"] .ph-text { background: var(--forest); color: var(--paper); padding: 1.6em 15em 1.8em 3.6em; }
+.poster[data-theme="wellsgray"] .ph-romaji { color: var(--ochre); font-weight: 700; font-size: 1.4em; }
+.poster[data-theme="wellsgray"] .ph-title { font-weight: 700; font-size: 4.6em; }
+.poster[data-theme="wellsgray"] .ph-lede { color: #CFE0DA; }
+.poster[data-theme="wellsgray"] .ph-jp { position: absolute; right: .55em; bottom: .32em; font-size: 4.4em; color: var(--ochre); writing-mode: vertical-rl; letter-spacing: .05em; z-index: 1; }
+.poster[data-theme="wellsgray"] .g-label { color: var(--teal); font-family: "Zilla Slab", serif; font-size: 1.5em; }
+.poster[data-theme="wellsgray"] .p-note { background: var(--forest); color: var(--paper); padding: .9em 1.2em; border-radius: .5em; max-width: none; }
+.poster[data-theme="wellsgray"] .pf { border-top: .2em solid var(--forest); }
+.poster[data-theme="wellsgray"] .pf-name strong { font-family: "Zilla Slab", serif; color: var(--forest); }
+.poster[data-theme="wellsgray"] .pf-url { color: var(--teal); }
+.poster[data-theme="wellsgray"] .count li { background: var(--forest); color: var(--paper); border-radius: .7em; }
+.poster[data-theme="wellsgray"] .count .c-n { color: var(--ochre); }
+.poster[data-theme="wellsgray"] .count .c-kana { color: #CFE0DA; opacity: 1; }
+.poster[data-theme="wellsgray"] .count-extra > div { border: .15em solid var(--forest); border-radius: .7em; }
+.poster[data-theme="wellsgray"] .count-extra .c-n { color: var(--rust); }
+.poster[data-theme="wellsgray"] :is(.brows li, .adults li, .terms li, .pairs li, .timeline li) { border-bottom: .1em dashed rgba(31,61,58,.3); }
+.poster[data-theme="wellsgray"] .tech li, .poster[data-theme="wellsgray"] .ukemi li { border: .15em solid var(--forest); border-radius: .7em; background: #fff8; }
+.poster[data-theme="wellsgray"] .tech .t-f { background: var(--ochre); color: var(--forest); padding: .15em .6em; border-radius: .3em; }
+.poster[data-theme="wellsgray"] .tech .t-k, .poster[data-theme="wellsgray"] .ukemi .t-k { color: var(--teal); }
+.poster[data-theme="wellsgray"] .princ li { border-top: .3em solid var(--ochre); }
+.poster[data-theme="wellsgray"] .pr-k { color: var(--teal); }
+.poster[data-theme="wellsgray"] .tl-y { color: var(--rust); }
+.poster[data-theme="wellsgray"] .cd-k { background: var(--ochre); color: var(--forest); border-radius: 50%; }
+.poster[data-theme="wellsgray"] .rules li::before, .poster[data-theme="wellsgray"] .is-seq .terms li::before { color: var(--rust); }
+.poster[data-theme="wellsgray"] .pa-eq { background: var(--ochre); opacity: 1; }
+.poster[data-theme="wellsgray"].t-promo .ph-land { height: 24em; }
+.poster[data-theme="wellsgray"].t-promo .ph-title { font-size: 6.6em; }
+.poster[data-theme="wellsgray"] .promo-progs li { color: var(--forest); }
+.poster[data-theme="wellsgray"] .promo-progs li::before { content: ""; display: inline-block; width: .5em; height: .5em; background: var(--ochre); border-radius: 50%; margin-right: .4em; vertical-align: .12em; }
+.poster[data-theme="wellsgray"] .qr-box { border: .2em solid var(--forest); border-radius: .5em; }
+
+/* =====================================================================
+   THEME 3 · STRIPE — Swiss grid, belt colours as the palette, rank-bar motif
+   ===================================================================== */
+.poster[data-theme="stripe"] {
+  --paper: #F5F5F2; --ink: #16161A; --mut: #5B5B60; --red: #D7262E;
+  background: var(--paper); color: var(--ink); font-family: "Archivo", system-ui, sans-serif; padding-top: 0;
+}
+.poster[data-theme="stripe"] .ph { padding-top: 6em; }
+.poster[data-theme="stripe"] .band { position: absolute; top: 0; left: -3.6em; right: -3.6em; height: 3.4em; box-shadow: inset 0 -.08em 0 rgba(0,0,0,.25); }
+.poster[data-theme="stripe"] .band-bar { position: absolute; right: 7em; top: 0; bottom: 0; width: 9em; display: flex; justify-content: center; gap: .55em; }
+.poster[data-theme="stripe"] .band-bar i { width: .7em; background: #F5F5F2; }
+.poster[data-theme="stripe"] :is(.ph-title, .tl-y, .promo-progs li, .c-r, .t-r, .pa-a, .b-rank, .adults .b-name, .g-label, .pf-name strong) { font-stretch: 125%; }
+.poster[data-theme="stripe"] .ph-title { font-weight: 800; font-size: 4.8em; letter-spacing: -0.03em; }
+.poster[data-theme="stripe"] .ph-romaji { font-weight: 600; color: var(--mut); }
+.poster[data-theme="stripe"] :is(.c-k, .b-k, .t-k, .pa-k, .pr-k, .cd-k, .ph-jp) { font-family: "Zen Kaku Gothic New", sans-serif; font-weight: 900; }
+.poster[data-theme="stripe"] .ph-jp { font-size: 6.4em; color: var(--ink); }
+.poster[data-theme="stripe"] .pb { padding-top: 2em; border-top: .3em solid var(--ink); margin-top: 2em; }
+.poster[data-theme="stripe"] .g-label { font-weight: 800; border-top: .14em solid var(--ink); padding-top: .4em; font-size: 1.3em; }
+.poster[data-theme="stripe"] .p-note { border-top: .08em solid var(--ink); padding-top: .8em; max-width: none; }
+.poster[data-theme="stripe"] .pf { border-top: .3em solid var(--ink); }
+.poster[data-theme="stripe"] .pf-name strong { font-weight: 800; }
+.poster[data-theme="stripe"] .count li { border-top: .3em solid var(--ink); align-items: flex-start; text-align: left; padding-left: 0; }
+.poster[data-theme="stripe"] .count .c-k { font-size: 6.6em; }
+.poster[data-theme="stripe"] .count .c-n { font-size: 1.4em; font-stretch: 125%; }
+.poster[data-theme="stripe"] .count-extra > div { border-top: .14em solid var(--ink); padding-left: 0; }
+.poster[data-theme="stripe"] :is(.brows li, .adults li, .terms li, .pairs li, .timeline li) { border-bottom: .07em solid rgba(22,22,26,.35); }
+.poster[data-theme="stripe"] .tech li { border-top: .3em solid var(--ink); padding-left: 0; }
+.poster[data-theme="stripe"] .tech .t-f { background: var(--ink); color: var(--paper); padding: .1em .5em; }
+.poster[data-theme="stripe"] .tech li:nth-child(3n+2) .t-f { background: var(--red); }
+.poster[data-theme="stripe"] .ukemi li { border-top: .3em solid var(--ink); padding-left: 0; background: none; }
+.poster[data-theme="stripe"] .princ li { border-top: .3em solid var(--ink); }
+.poster[data-theme="stripe"] .tl-y { font-size: 2.6em; }
+.poster[data-theme="stripe"] .timeline li:last-child .tl-y { color: var(--red); }
+.poster[data-theme="stripe"] .cd-k { background: var(--ink); color: var(--paper); }
+.poster[data-theme="stripe"] .code li:nth-child(odd) .cd-k { background: var(--red); }
+.poster[data-theme="stripe"] .rules li::before, .poster[data-theme="stripe"] .is-seq .terms li::before { color: var(--red); font-stretch: 125%; }
+.poster[data-theme="stripe"].t-promo .ph-title { font-size: 8.4em; letter-spacing: -0.04em; }
+.poster[data-theme="stripe"] .promo-progs li { font-weight: 800; letter-spacing: -0.02em; border-top: .06em solid var(--ink); }
+.poster[data-theme="stripe"] .qr-box { border: .3em solid var(--ink); }
+
+/* Header Japanese scales with its length so long titles never push the body down */
+.poster[data-theme="tenugui"] .ph-jp { font-size: 5em; }
+.poster[data-theme="tenugui"] .ph-jp.len-3 { font-size: 3.7em; }
+.poster[data-theme="tenugui"] .ph-jp.len-4 { font-size: 2.9em; }
+.poster[data-theme="tenugui"] .ph-jp.len-5 { font-size: 2.3em; }
+.poster[data-theme="tenugui"] .ph-seal { display: none; }
+.poster[data-theme="tenugui"].t-promo .ph-seal { display: block; }
+.poster[data-theme="wellsgray"] .ph-jp.len-4 { font-size: 3.4em; }
+.poster[data-theme="wellsgray"] .ph-jp.len-5 { font-size: 2.8em; }
+
+.poster[data-theme="tenugui"] .belt { box-shadow: inset 0 0 0 .07em rgba(238,233,221,.35); }
+
+/* Let sparse posters breathe: lists grow to fill the sheet */
+.t-counting .count { flex: 1; grid-auto-rows: 1fr; }
+.t-counting .count li { justify-content: center; }
+.t-counting .count .c-k { font-size: 7em; }
+.t-belts .bgroup, .t-bjjbelts .bgroup:first-child { display: flex; flex-direction: column; }
+.t-belts .bgroup { flex: 1; }
+.t-belts .brows, .t-bjjbelts .adults { flex: 1; display: flex; flex-direction: column; justify-content: space-around; }
+.t-belts .belt { height: 2.5em; }
+.t-bjjbelts .bgroup:first-child { flex: 1.4; }
+.t-bjjbelts .adults .belt { height: 2.6em; }
+.t-bjjbelts .kids .belt.sm, .t-bjjbelts .degrees .belt.sm { height: 1.5em; }
+.t-bjjbelts .kids { gap: .8em 1.2em; }
+.t-pairs .pairs { flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
+.t-pairs .pa-a { font-size: 1.6em; }
+.t-ground .ground { flex: 1; }
+.t-ground .ggroup { display: flex; flex-direction: column; }
+.t-ground .ggroup .terms { flex: 1; display: flex; flex-direction: column; justify-content: space-around; }
+
+/* Wells Gray: shorter landscape strip */
+.poster[data-theme="wellsgray"] .ph-land { height: 7.5em; }
+.poster[data-theme="wellsgray"] .ph-text { padding: 1.2em 10em 1.3em 3.6em; }
+.poster[data-theme="wellsgray"] .ph-title { font-size: 4em; }
+.poster[data-theme="wellsgray"] .ph-lede { margin-top: 1em; }
+.poster[data-theme="wellsgray"] .pb { padding-top: 1.6em; }
+.poster[data-theme="wellsgray"].t-promo .ph-land { height: 22em; }
+.t-words .terms li { padding: .3em 0; }
+.poster[data-theme="stripe"] .pb { margin-top: 1.4em; padding-top: 1.5em; }
+.poster[data-theme="stripe"] .band { height: 3em; }
+.poster[data-theme="stripe"] .ph { padding-top: 5em; }
+/* Stripe: smaller display sizes so titles keep to two lines */
+.poster[data-theme="stripe"] .ph-title { font-size: 4.1em; }
+.poster[data-theme="stripe"] .ph-jp { font-size: 5.2em; }
+.poster[data-theme="stripe"] .ph-jp.len-3 { font-size: 4.2em; }
+.poster[data-theme="stripe"] .ph-jp.len-4 { font-size: 3.4em; }
+.poster[data-theme="stripe"] .ph-jp.len-5 { font-size: 2.9em; }
+.poster[data-theme="stripe"].t-promo .ph-title { font-size: 7.6em; }
+.t-techniques .p-note { margin-top: .2em; }
+.poster[data-theme="wellsgray"] .tech .t-k { font-size: 2.6em; }
+.poster[data-theme="wellsgray"] .ph-jp.len-5 { font-size: 2.4em; }

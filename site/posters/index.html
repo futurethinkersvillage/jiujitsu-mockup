@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dojo Posters · Clearwater Jiu Jitsu & Judo</title>
+<meta name="description" content="Printable dojo posters: counting in Japanese, judo and jiu jitsu belt ranks, dojo words, throws, groundwork, breakfalls, principles and lineage.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Figtree:wght@400;600;700;800&family=Shippori+Mincho+B1:wght@400;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Zilla+Slab:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="poster.css">
+<style>
+  :root { --bg: #E9E7E1; --ink: #1d1d20; --mut: #5d5d63; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg: #17181b; --ink: #ecebe6; --mut: #a2a2a8; } }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: "Archivo", system-ui, sans-serif; }
+  .bar { position: sticky; top: 0; z-index: 5; display: flex; flex-wrap: wrap; gap: .6rem 1.2rem; align-items: center; padding: .9rem 16px; background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid color-mix(in srgb, var(--ink) 15%, transparent); }
+  .bar h1 { font-size: 1rem; margin: 0 auto 0 0; font-stretch: 115%; }
+  .bar a.back { color: inherit; font-size: .9rem; }
+  .seg { display: inline-flex; border: 1px solid color-mix(in srgb, var(--ink) 30%, transparent); border-radius: 999px; overflow: hidden; }
+  .seg button { font: inherit; font-size: .9rem; border: 0; background: none; color: inherit; padding: .45rem .9rem; cursor: pointer; }
+  .seg button[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
+  .btn { font: inherit; font-size: .9rem; border: 1px solid var(--ink); background: var(--ink); color: var(--bg); padding: .45rem .9rem; border-radius: 999px; cursor: pointer; text-decoration: none; }
+  .btn:focus-visible, .seg button:focus-visible { outline: 2px solid #D7262E; outline-offset: 2px; }
+  .intro { max-width: 62rem; margin: 1.6rem auto 0; padding: 0 16px; color: var(--mut); line-height: 1.5; font-size: .95rem; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); gap: 28px; padding: 24px 16px 64px; max-width: 1500px; margin: 0 auto; }
+  .grid.single { grid-template-columns: minmax(0, 900px); justify-content: center; }
+  .card { display: flex; flex-direction: column; gap: .6rem; }
+  .card .sheet { box-shadow: 0 1px 2px rgba(0,0,0,.12), 0 12px 32px rgba(0,0,0,.14); }
+  .card .meta { display: flex; justify-content: space-between; align-items: center; font-size: .85rem; color: var(--mut); }
+  .card .meta a { color: inherit; }
+  .bare .bar, .bare .intro, .bare .meta { display: none; }
+  .bare .grid { display: block; padding: 0; max-width: none; }
+  @page { size: 18in 24in; margin: 0; }
+  @media print {
+    body { background: none; }
+    .bar, .intro, .meta { display: none !important; }
+    .grid, .grid.single { display: block; padding: 0; max-width: none; }
+    .card { display: block; }
+    .card .sheet { width: 18in; box-shadow: none; break-after: page; }
+  }
+</style>
+</head>
+<body>
+<div class="bar">
+  <h1>Dojo posters</h1>
+  <div class="seg" role="group" aria-label="Brand direction" id="themes"></div>
+  <button class="btn" id="print" type="button">Print / save PDF</button>
+  <a class="back" href="../">All directions</a>
+</div>
+<p class="intro" id="intro">Twelve posters, sized for 18 × 24 in prints. They also scale cleanly to 12 × 16 in or letter paper. Switch the brand direction above; print gives you the whole set, or open one poster to print it alone.</p>
+<main class="grid" id="grid"></main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+<script src="../assets/content.js"></script>
+<script src="../assets/brand.js"></script>
+<script src="render.js"></script>
+<script>
+  const P = window.POSTERS;
+  const qs = new URLSearchParams(location.search);
+  let theme = qs.get("theme") in P.THEMES ? qs.get("theme") : "tenugui";
+  const one = qs.get("p");
+  if (qs.has("bare")) document.body.classList.add("bare");
+  document.documentElement.style.setProperty("--asanoha", BRAND.asanohaURI("rgba(238,233,221,0.075)", 1.1));
+
+  const themesEl = document.getElementById("themes");
+  Object.entries(P.THEMES).forEach(([k, v]) => {
+    const b = document.createElement("button");
+    b.type = "button"; b.textContent = v.label; b.dataset.k = k;
+    b.onclick = () => { theme = k; sync(); draw(); };
+    themesEl.append(b);
+  });
+  function sync() {
+    themesEl.querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", b.dataset.k === theme));
+    const u = new URL(location); u.searchParams.set("theme", theme); history.replaceState(null, "", u);
+  }
+  function draw() {
+    const grid = document.getElementById("grid");
+    const list = one ? P.list.filter((p) => p.id === one) : P.list;
+    grid.classList.toggle("single", !!one);
+    grid.innerHTML = list.map((p) => `<div class="card">${P.renderPoster(p, theme)}
+      <div class="meta"><span>${p.title}</span>${one ? `<a href="?theme=${theme}">All posters</a>` : `<a href="?theme=${theme}&p=${p.id}">Open to print</a>`}</div></div>`).join("");
+  }
+  document.getElementById("print").onclick = () => window.print();
+  sync(); draw();
+</script>
+</body>
+</html>

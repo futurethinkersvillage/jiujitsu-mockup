@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Image Prompts · Clearwater Jiu Jitsu & Judo</title>
+<meta name="description" content="Image prompts for each brand direction, ready to paste into an image generator.">
+<meta name="robots" content="noindex">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/doc.css"></head>
+<body><div class="wrap">
+<a class="back" href="../">← Brand directions</a>
+<h1>Image prompts</h1>
+<p class="lede">Written for Nano Banana (Gemini image). Each prompt says where the image goes and what shape it should be. Treat these as stand-ins: once the club has a photo day, real members on the real mat will beat any generated image.</p>
+<div id="list"></div>
+</div>
+<script>
+const P = [
+  { g: "All directions", items: [
+    { id: "H3", where: "Coach section, all three sites", ar: "4:5 portrait",
+      p: "Environmental portrait of a martial arts coach in a white judo gi with a black belt, standing relaxed on green and grey tatami mats, arms loosely at their sides, warm friendly expression, looking slightly off camera. Soft natural daylight from tall windows on the left, background softly blurred: a wood-panelled training room with large windows and forested mountains outside. Shot on a 85mm lens at f/2, natural skin tones, gentle film grain. Documentary style, not posed like an advertisement. No text, no logos." },
+    { id: "K1", where: "Programs section / social posts", ar: "3:2 landscape",
+      p: "Children aged six to ten in white judo uniforms with white and yellow belts, kneeling in seiza in a neat row on tatami mats and bowing to their partners. Seen from the side at child eye level, the nearest child sharp, the rest falling softly out of focus. Warm late-afternoon light through big windows, wooden walls. Calm, respectful, happy mood. Candid documentary photography, natural colour. No text, no logos, faces natural and not retouched." },
+    { id: "A1", where: "“Two arts” section or social posts", ar: "16:9 landscape",
+      p: "Two adults training Brazilian jiu jitsu on a mat, one in a white gi and one in a blue gi, mid-movement in a guard position, both relaxed and smiling slightly, clearly a friendly training round not a fight. Bright natural daylight from a large window with snowy mountain forest visible outside. Shot from low angle, shallow depth of field, crisp detail on the cotton weave of the gis. Documentary sports photography. No text, no logos." }
+  ]},
+  { g: "Tenugui (indigo)", items: [
+    { id: "H1", where: "Tenugui homepage hero", ar: "4:5 portrait",
+      p: "Editorial photograph of two judoka gripping each other's lapels at the start of a throw on tatami, both in heavy white cotton judo gis, one with a black belt. Deep indigo blue backdrop, a single soft window light from the left carving the folds of the cotton, the rest falling into rich shadow. Quiet, respectful, focused mood. Medium-format film look, fine grain, muted colour except the indigo. No text, no logos, no watermarks." },
+    { id: "T2", where: "Background texture, merch, social tiles", ar: "1:1 square, tileable",
+      p: "Flat top-down scan of a hand-dyed Japanese tenugui cotton cloth: deep indigo (#1B2A47) background with an off-white asanoha hemp-leaf pattern made by katazome stencil resist dyeing. Slight natural irregularities in the dye, soft cotton texture, even lighting with no shadows, seamless repeat. No text." },
+    { id: "T3", where: "Poster or banner art", ar: "2:3 portrait",
+      p: "Traditional Japanese woodblock print (ukiyo-e) style illustration of a judo throw, one figure lifting another over the hip in an o-goshi, both in white gis with black belts, drawn with bold sumi ink outlines. Limited palette: deep indigo, off-white cotton, a single vermilion accent. Stylised river waves in the background suggesting clear water. Flat colour, visible paper texture. No text, no signature, no seal stamps." }
+  ]},
+  { g: "Wells Gray (park poster)", items: [
+    { id: "W1", where: "Wells Gray homepage hero / large print", ar: "16:9 landscape",
+      p: "Screenprint-style vintage national park travel poster illustration of a tall waterfall pouring from a basalt cliff into a river canyon in British Columbia's Wells Gray Park, with layered forested mountain ridges behind and a big pale sun. On a rocky ridge in the foreground, two small silhouetted grapplers practising a judo throw. Strictly limited flat palette: ochre #E3A13B sky, glacier green #7FB0A6, river teal #2C6E6A, forest #1F3D3A, off-white #EEF2EC, a touch of rust #B4502F. Bold simple shapes, slight paper grain and ink misregistration. No text, no lettering." },
+    { id: "W2", where: "First class / visit sections", ar: "3:2 landscape",
+      p: "Documentary photo of a small jiu jitsu and judo class in a timber-beamed lodge room with large windows looking out on forested mountains. About eight people of different ages, in white and blue gis, drilling techniques in pairs on mats, one coach demonstrating. Natural daylight, warm wood tones, green forest outside. Friendly, community feel. No text, no logos." },
+    { id: "W3", where: "Club patch, stickers, t-shirt", ar: "1:1 square",
+      p: "Flat vector-style embroidered patch design: a circular badge with layered mountains, a narrow waterfall and a river, in ochre, glacier green, teal, forest green and off-white, thick dark charcoal border ring left empty for lettering. Clean shapes suitable for embroidery, white background. No text." }
+  ]},
+  { g: "Stripe (belt system)", items: [
+    { id: "S1", where: "Stripe homepage hero banner", ar: "21:9 ultra-wide",
+      p: "Studio product photograph, extreme close-up of the end of a well-worn black Brazilian jiu jitsu belt with a red rank bar and four white tape stripes, lying straight across seamless off-white paper. Hard direct flash creating a crisp shadow, very high detail of the frayed cotton weave and slightly peeling tape. Minimal, graphic, lots of empty space on the left. No text, no logos." },
+    { id: "S2", where: "Belt ranks section / social", ar: "4:5 portrait",
+      p: "Overhead flat-lay photo of five neatly folded martial arts belts arranged in a vertical column in rank order: white, blue, purple, brown, black, each with a rank bar, on a light grey tatami mat. Crisp even softbox light, sharp focus, strong graphic composition, Swiss minimal style. No text, no logos." },
+    { id: "S3", where: "Kids section", ar: "3:2 landscape",
+      p: "Close-up of a child's hands tying a yellow and white striped kids jiu jitsu belt around a white gi, clean bright studio light against a pale background, playful but neat. Shallow depth of field. No faces, no text, no logos." }
+  ]}
+];
+document.getElementById("list").innerHTML = P.map((g) => `<h2>${g.g}</h2>` + g.items.map((i) => `
+  <div class="card"><h3>${i.id}</h3>
+  <p><span class="tag">${i.ar}</span><span class="mut">${i.where}</span></p>
+  <div class="prompt" id="p-${i.id}">${i.p}</div>
+  <button class="copy" type="button" data-id="${i.id}">Copy prompt</button></div>`).join("")).join("");
+document.addEventListener("click", async (e) => {
+  const b = e.target.closest(".copy"); if (!b) return;
+  try { await navigator.clipboard.writeText(document.getElementById("p-" + b.dataset.id).textContent); b.textContent = "Copied"; }
+  catch { b.textContent = "Select the text to copy"; }
+  setTimeout(() => (b.textContent = "Copy prompt"), 1800);
+});
+</script>
+</body></html>
