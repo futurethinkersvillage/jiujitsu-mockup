@@ -4,7 +4,7 @@
   --white-belt: #FFFFFF; --blue: #2557B8; --purple: #6A3FA0; --brown: #6B4226; --black: #16161A;
   --bg: var(--paper); --btn-bg: var(--ink); --btn-ink: var(--paper); --radius: 0;
   --f-head: "Archivo", system-ui, sans-serif; --f-body: "Archivo", system-ui, sans-serif;
-  --nav-bg: var(--paper);
+  --nav-bg: var(--paper); --menu-line: var(--ink); --flag-bg: rgba(245,245,242,.14);
 }
 h1, h2, h3 { font-stretch: 125%; font-weight: 800; letter-spacing: -0.025em; }
 .brand-word b { font-stretch: 125%; font-weight: 900; letter-spacing: -0.02em; }

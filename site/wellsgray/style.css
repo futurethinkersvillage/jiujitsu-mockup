@@ -4,6 +4,7 @@
   --bg: var(--paper); --btn-bg: var(--forest); --btn-ink: var(--paper); --radius: 10px;
   --f-head: "Zilla Slab", Georgia, serif; --f-body: "Figtree", system-ui, sans-serif;
   --nav-bg: var(--paper); --focus: #B4502F;
+  --rust-ink: #9A4023; /* rust for small text and the contact band (5.6:1 or better) */ --menu-line: rgba(31,61,58,.25); --flag-bg: rgba(0,0,0,.18);
 }
 h1, h2, h3 { font-weight: 700; }
 .nav { border-bottom: 3px solid var(--forest); }
@@ -27,7 +28,7 @@ h1, h2, h3 { font-weight: 700; }
 .prog::before { content: ""; display: block; width: 46px; height: 8px; border-radius: 4px; background: var(--ochre); margin-bottom: 1rem; }
 .prog:nth-child(2)::before { background: var(--far); } .prog:nth-child(3)::before { background: var(--teal); } .prog:nth-child(4)::before { background: var(--rust); }
 .prog h3 { color: var(--forest); }
-.prog-age { color: var(--rust); }
+.prog-age { color: var(--rust-ink); }
 
 .two-grid { background: #fff; border: 3px solid var(--forest); border-radius: 18px; padding: clamp(20px, 4vw, 48px); }
 .art-jp { color: var(--teal); font-family: "Zen Kaku Gothic New", sans-serif; font-weight: 700; }
@@ -36,9 +37,10 @@ h1, h2, h3 { font-weight: 700; }
 .two-note { background: var(--forest); color: var(--paper); border-radius: 10px; padding: 1rem 1.25rem; }
 
 .schedule { background: #E3EBE6; }
-.day { background: #fff; border-radius: 12px; border-top: 6px solid var(--teal); }
-.day:nth-child(odd) { border-top-color: var(--ochre); }
-.day h3 { color: var(--forest); }
+.day { background: #fff; border-radius: 12px; border: 2px solid rgba(31,61,58,.18); }
+/* Day names as trail-marker tabs */
+.day h3 { display: inline-block; padding: .2rem .65rem; border-radius: 6px; background: var(--teal); color: var(--paper); }
+.day:nth-child(odd) h3 { background: var(--ochre); color: var(--forest); }
 .flag { background: var(--ochre); color: var(--forest); padding: .2rem .6rem; border-radius: 6px; }
 
 .price-list li { background: #fff; border: 3px solid var(--forest); border-radius: 14px; }
@@ -48,14 +50,14 @@ h1, h2, h3 { font-weight: 700; }
 .first { background: var(--teal); color: var(--paper); }
 .first .sec-head p, .steps p { color: #DCEAE5; }
 .steps li { border-top: 3px solid var(--ochre); padding-top: 1rem; }
-.steps li::before { color: var(--ochre); }
+.steps li::before { color: var(--cream); }
 
 .coach .img-slot { border-radius: 18px; background:
   linear-gradient(180deg, var(--ochre) 0 45%, transparent 45%),
   linear-gradient(160deg, transparent 0 52%, var(--far) 52% 64%, transparent 64%),
   linear-gradient(200deg, transparent 0 58%, var(--teal) 58%), var(--forest); }
 .img-slot span { background: var(--paper); color: var(--forest); border-radius: 6px; }
-.coach-name { color: var(--rust); }
+.coach-name { color: var(--rust-ink); }
 
 .learn { background: var(--forest); color: var(--paper); }
 .learn .sec-head p { color: #CFE0DA; }
@@ -68,7 +70,7 @@ h1, h2, h3 { font-weight: 700; }
 .faq summary::after { color: var(--rust); }
 .faq details p { color: var(--mut); }
 
-.contact { background: var(--rust); color: var(--cream); }
+.contact { background: var(--rust-ink); color: var(--cream); }
 .foot { background: var(--forest); color: #CFE0DA; }
 .foot b { color: var(--paper); }
 .foot-mark { width: 72px; }

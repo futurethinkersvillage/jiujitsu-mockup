@@ -11,7 +11,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Figtree:wght@400;600;700;800&family=Shippori+Mincho+B1:wght@400;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Zilla+Slab:wght@500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/site-base.css">
-<link rel="stylesheet" href="../posters/poster.css">
 <link rel="stylesheet" href="style.css">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SportsActivityLocation","name":"Clearwater Jiu Jitsu & Judo","sport":["Brazilian jiu jitsu","Judo"],"address":{"@type":"PostalAddress","streetAddress":"373 Clearwater Valley Rd","addressLocality":"Clearwater","addressRegion":"BC","addressCountry":"CA"}}</script>
 </head>
@@ -19,9 +18,15 @@
 <a class="skip" href="#main">Skip to content</a>
 <div class="proto">Design direction: <b>Stripe</b> · also see <a href="../tenugui/">Tenugui</a> <a href="../wellsgray/">Wells Gray</a> · <a href="../">compare all</a></div>
 <header class="nav">
-  <a class="brand" href="#top" aria-label="Clearwater Jiu Jitsu and Judo, home"><span class="brand-mark" data-mark></span><span class="brand-word"><b>Clearwater</b><span>Jiu Jitsu &amp; Judo</span></span></a>
-  <nav aria-label="Main"><a href="#programs">Programs</a><a href="#schedule">Schedule</a><a href="#first">First class</a><a href="#learn">Learn</a><a href="#visit">Find us</a></nav>
-  <a class="btn btn-nav" href="#contact">Book a first class</a>
+  <a class="brand" href="#top" aria-label="Clearwater Jiu Jitsu and Judo, home"><span class="brand-mark" aria-hidden="true"><svg class="mark belttip" viewBox="0 0 100 100" width="100%" role="img" aria-label="Belt tip with four stripes">
+      <rect width="100" height="100" fill="none"/>
+      <rect x="0" y="30" width="100" height="40" fill="#16161A"/>
+      <rect x="54" y="30" width="34" height="40" fill="#D7262E"/>
+      <g fill="#F5F5F2"><rect x="58" y="30" width="4" height="40"/><rect x="65" y="30" width="4" height="40"/><rect x="72" y="30" width="4" height="40"/><rect x="79" y="30" width="4" height="40"/></g>
+    </svg></span><span class="brand-word"><b>Clearwater</b><span>Jiu Jitsu &amp; Judo</span></span></a>
+  <nav class="nav-links" aria-label="Main"><a href="#programs">Programs</a><a href="#schedule">Schedule</a><a href="#pricing">Pricing</a><a href="#first">First class</a><a href="#learn">Learn</a><a href="#visit">Find us</a></nav>
+  <a class="btn btn-nav" href="#contact">Book your first class</a>
+  <details class="menu"><summary aria-label="Open section menu"><span aria-hidden="true">Menu</span></summary><nav aria-label="Sections"><a href="#programs">Programs</a><a href="#schedule">Schedule</a><a href="#pricing">Pricing</a><a href="#first">First class</a><a href="#learn">Learn</a><a href="#visit">Find us</a></nav></details>
 </header>
 
 <main id="main">
@@ -30,7 +35,7 @@
     <p class="kicker">Brazilian jiu jitsu + judo · Clearwater, BC</p>
     <h1>Every black belt<br>started as a white belt.</h1>
     <p class="lede">A new club for kids, teens and adults who want to learn to grapple, properly and safely. First class: wear what you'd wear to the gym.</p>
-    <div class="ctas"><a class="btn" href="#contact">Book an adult class</a><a class="btn btn-ghost" href="#contact">Book a kids class</a></div>
+    <div class="ctas"><a class="btn" href="#contact">Book your first class</a><a class="btn btn-ghost" href="#programs">See kids classes</a></div>
     <p class="where">52 Ridge · Clearwater Valley Resort · Clearwater, BC</p>
   </div>
   <div class="hero-belt" aria-hidden="true"><span class="hb-bar"><i></i><i></i><i></i><i></i></span></div>
@@ -79,7 +84,7 @@
 
 <section class="sec learn" id="learn">
   <div class="sec-head"><h2>The dojo library</h2><p>The posters on our walls, free to read here: counting in Japanese, belt ranks, dojo words, throws, groundwork and where it all came from.</p></div>
-  <div class="learn-grid" id="learnGrid"></div>
+  <div class="learn-grid"><a class="learn-card" href="../posters/?theme=stripe&amp;p=counting"><img src="../posters/thumbs/stripe-counting.webp" width="600" height="800" loading="lazy" decoding="async" alt="Counting to ten poster"></a><a class="learn-card" href="../posters/?theme=stripe&amp;p=judo-belts"><img src="../posters/thumbs/stripe-judo-belts.webp" width="600" height="800" loading="lazy" decoding="async" alt="Judo belt ranks poster"></a><a class="learn-card" href="../posters/?theme=stripe&amp;p=bjj-belts"><img src="../posters/thumbs/stripe-bjj-belts.webp" width="600" height="800" loading="lazy" decoding="async" alt="Jiu jitsu belt ranks poster"></a><a class="learn-card" href="../posters/?theme=stripe&amp;p=two-names"><img src="../posters/thumbs/stripe-two-names.webp" width="600" height="800" loading="lazy" decoding="async" alt="Same move, two names poster"></a></div>
   <a class="btn" href="../posters/?theme=stripe">See all twelve posters</a>
 </section>
 
@@ -103,32 +108,28 @@
 </section>
 
 <section class="sec contact" id="contact">
-  <h2>Come try a class</h2>
-  <p>Message the club to book your first class or ask anything.</p>
-  <div class="contact-row"><span>Email: [TBC]</span><span>Phone / text: [TBC]</span><span>Instagram: [TBC]</span></div>
+  <h2>Book your first class</h2>
+  <p>Message the club to book a class or ask anything. Parents are welcome to come and watch first.</p>
+  <p class="contact-flag">Contact details are being confirmed with the instructor and will appear here.</p>
+  <dl class="contact-row"><div><dt>Email</dt><dd>[TBC]</dd></div><div><dt>Phone / text</dt><dd>[TBC]</dd></div><div><dt>Instagram</dt><dd>[TBC]</dd></div></dl>
 </section>
 </main>
 
 <footer class="foot">
-  <span class="foot-mark" data-mark></span>
+  <span class="foot-mark" aria-hidden="true"><svg class="mark belttip" viewBox="0 0 100 100" width="100%" role="img" aria-label="Belt tip with four stripes">
+      <rect width="100" height="100" fill="none"/>
+      <rect x="0" y="30" width="100" height="40" fill="#16161A"/>
+      <rect x="54" y="30" width="34" height="40" fill="#D7262E"/>
+      <g fill="#F5F5F2"><rect x="58" y="30" width="4" height="40"/><rect x="65" y="30" width="4" height="40"/><rect x="72" y="30" width="4" height="40"/><rect x="79" y="30" width="4" height="40"/></g>
+    </svg></span>
   <p><b>Clearwater Jiu Jitsu &amp; Judo</b><br>52 Ridge · Clearwater Valley Resort · Clearwater, BC</p>
   <p class="small">Temporary site · Stripe design direction · <a href="../posters/?theme=stripe">Posters</a></p>
 </footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
-<script src="../assets/content.js"></script>
-<script src="../assets/brand.js"></script>
-<script src="../posters/render.js"></script>
 <script>
-  document.querySelectorAll("[data-mark]").forEach((el) => el.innerHTML = BRAND.beltTip({bg:'none'}));
-  document.documentElement.style.setProperty("--asanoha", BRAND.asanohaURI("rgba(238,233,221,0.07)", 1.1));
-  const land = document.getElementById("heroLand");
-  if (land) land.innerHTML = BRAND.landscape({ align: "xMidYMax" });
-  const picks = ["counting", "judo-belts", "bjj-belts", "two-names"];
-  document.getElementById("learnGrid").innerHTML = picks.map((id) => {
-    const p = POSTERS.list.find((x) => x.id === id);
-    return `<a class="learn-card" href="../posters/?theme=stripe&p=${id}" aria-label="${p.title} poster">${POSTERS.renderPoster(p, "stripe")}</a>`;
-  }).join("");
+  // Close the phone menu after a section link is chosen.
+  const menu = document.querySelector(".menu");
+  menu.addEventListener("click", (e) => { if (e.target.closest("a")) menu.open = false; });
 </script>
 </body>
 </html>

@@ -1,9 +1,16 @@
 """Builds the three homepage versions (tenugui, wellsgray, stripe) from one shared structure.
 Run:  python build/build_site.py   (writes site/<theme>/index.html)
 Content marked TBC needs confirming with the instructor."""
+import json
+import subprocess
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent / "site"
+MARKS = json.loads(subprocess.run(["node", str(Path(__file__).with_name("brand_dump.js"))],
+                                  capture_output=True, text=True, encoding="utf-8", check=True).stdout)
+LEARN = [("counting", "Counting to ten"), ("judo-belts", "Judo belt ranks"),
+         ("bjj-belts", "Jiu jitsu belt ranks"), ("two-names", "Same move, two names")]
+CTA = "Book your first class"
 
 FONTS = ("https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900"
          "&family=Figtree:wght@400;600;700;800&family=Shippori+Mincho+B1:wght@400;700;800"
@@ -27,7 +34,7 @@ THEMES = {
         "h1": "Grappling in<br>Wells Gray country.",
         "kicker": "Jiu jitsu · Judo · Clearwater, BC",
         "lede": "Throws, holds and the ground game, taught on one mat at 52 Ridge, Clearwater Valley Resort. Kids, teens and adults. No experience and no special kit needed.",
-        "hero_art": '<div class="hero-land" id="heroLand"></div>',
+        "hero_art": '<div class="hero-land">{landscape}</div>',
         "two_title": "Two arts on one mat",
     },
     "stripe": {
@@ -81,10 +88,6 @@ PRICES = [
     ("Family", "Two or more on one plan"),
 ]
 
-def mark_js(theme):
-    return {"seal": "BRAND.seal()", "badge": "BRAND.badge()", "belttip": "BRAND.beltTip({bg:'none'})"}[THEMES[theme]["mark"]]
-
-
 def page(theme):
     t = THEMES[theme]
     others = [k for k in THEMES if k != theme]
@@ -95,10 +98,19 @@ def page(theme):
     first = "".join(f'<li><h3>{h}</h3><p>{p}</p></li>' for h, p in FIRST)
     faq = "".join(f'<details><summary>{q}</summary><p>{a}</p></details>' for q, a in FAQ)
     prices = "".join(f'<li><h3>{n}</h3><p class="price">$ TBC</p><p>{d}</p></li>' for n, d in PRICES)
+    learn = "".join(
+        f'<a class="learn-card" href="../posters/?theme={theme}&amp;p={pid}">'
+        f'<img src="../posters/thumbs/{theme}-{pid}.webp" width="600" height="800" loading="lazy" decoding="async" alt="{title} poster"></a>'
+        for pid, title in LEARN)
+    hero_art = t['hero_art'].replace('{landscape}', MARKS['landscape'])
+    asanoha_attr = MARKS['asanoha'].replace('"', '&quot;')
+    root_style = f' style="--asanoha: {asanoha_attr}"' if theme == 'tenugui' else ''
+    nav_mark, foot_mark = MARKS[theme]['nav'], MARKS[theme]['foot']
     switch = " ".join(f'<a href="../{k}/">{THEMES[k]["label"]}</a>' for k in others)
 
+    NAV = '<a href="#programs">Programs</a><a href="#schedule">Schedule</a><a href="#pricing">Pricing</a><a href="#first">First class</a><a href="#learn">Learn</a><a href="#visit">Find us</a>'
     return f"""<!doctype html>
-<html lang="en">
+<html lang="en"{root_style}>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -110,7 +122,6 @@ def page(theme):
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="{FONTS}" rel="stylesheet">
 <link rel="stylesheet" href="../assets/site-base.css">
-<link rel="stylesheet" href="../posters/poster.css">
 <link rel="stylesheet" href="style.css">
 <script type="application/ld+json">{{"@context":"https://schema.org","@type":"SportsActivityLocation","name":"Clearwater Jiu Jitsu & Judo","sport":["Brazilian jiu jitsu","Judo"],"address":{{"@type":"PostalAddress","streetAddress":"373 Clearwater Valley Rd","addressLocality":"Clearwater","addressRegion":"BC","addressCountry":"CA"}}}}</script>
 </head>
@@ -118,9 +129,10 @@ def page(theme):
 <a class="skip" href="#main">Skip to content</a>
 <div class="proto">Design direction: <b>{t['label']}</b> · also see {switch} · <a href="../">compare all</a></div>
 <header class="nav">
-  <a class="brand" href="#top" aria-label="Clearwater Jiu Jitsu and Judo, home"><span class="brand-mark" data-mark></span><span class="brand-word"><b>Clearwater</b><span>Jiu Jitsu &amp; Judo</span></span></a>
-  <nav aria-label="Main"><a href="#programs">Programs</a><a href="#schedule">Schedule</a><a href="#first">First class</a><a href="#learn">Learn</a><a href="#visit">Find us</a></nav>
-  <a class="btn btn-nav" href="#contact">Book a first class</a>
+  <a class="brand" href="#top" aria-label="Clearwater Jiu Jitsu and Judo, home"><span class="brand-mark" aria-hidden="true">{nav_mark}</span><span class="brand-word"><b>Clearwater</b><span>Jiu Jitsu &amp; Judo</span></span></a>
+  <nav class="nav-links" aria-label="Main">{NAV}</nav>
+  <a class="btn btn-nav" href="#contact">{CTA}</a>
+  <details class="menu"><summary aria-label="Open section menu"><span aria-hidden="true">Menu</span></summary><nav aria-label="Sections">{NAV}</nav></details>
 </header>
 
 <main id="main">
@@ -129,10 +141,10 @@ def page(theme):
     <p class="kicker">{t['kicker']}</p>
     <h1>{t['h1']}</h1>
     <p class="lede">{t['lede']}</p>
-    <div class="ctas"><a class="btn" href="#contact">Book an adult class</a><a class="btn btn-ghost" href="#contact">Book a kids class</a></div>
+    <div class="ctas"><a class="btn" href="#contact">{CTA}</a><a class="btn btn-ghost" href="#programs">See kids classes</a></div>
     <p class="where">52 Ridge · Clearwater Valley Resort · Clearwater, BC</p>
   </div>
-  {t['hero_art']}
+  {hero_art}
 </section>
 
 <section class="sec programs" id="programs">
@@ -178,7 +190,7 @@ def page(theme):
 
 <section class="sec learn" id="learn">
   <div class="sec-head"><h2>The dojo library</h2><p>The posters on our walls, free to read here: counting in Japanese, belt ranks, dojo words, throws, groundwork and where it all came from.</p></div>
-  <div class="learn-grid" id="learnGrid"></div>
+  <div class="learn-grid">{learn}</div>
   <a class="btn" href="../posters/?theme={theme}">See all twelve posters</a>
 </section>
 
@@ -202,32 +214,23 @@ def page(theme):
 </section>
 
 <section class="sec contact" id="contact">
-  <h2>Come try a class</h2>
-  <p>Message the club to book your first class or ask anything.</p>
-  <div class="contact-row"><span>Email: [TBC]</span><span>Phone / text: [TBC]</span><span>Instagram: [TBC]</span></div>
+  <h2>{CTA}</h2>
+  <p>Message the club to book a class or ask anything. Parents are welcome to come and watch first.</p>
+  <p class="contact-flag">Contact details are being confirmed with the instructor and will appear here.</p>
+  <dl class="contact-row"><div><dt>Email</dt><dd>[TBC]</dd></div><div><dt>Phone / text</dt><dd>[TBC]</dd></div><div><dt>Instagram</dt><dd>[TBC]</dd></div></dl>
 </section>
 </main>
 
 <footer class="foot">
-  <span class="foot-mark" data-mark></span>
+  <span class="foot-mark" aria-hidden="true">{foot_mark}</span>
   <p><b>Clearwater Jiu Jitsu &amp; Judo</b><br>52 Ridge · Clearwater Valley Resort · Clearwater, BC</p>
   <p class="small">Temporary site · {t['label']} design direction · <a href="../posters/?theme={theme}">Posters</a></p>
 </footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
-<script src="../assets/content.js"></script>
-<script src="../assets/brand.js"></script>
-<script src="../posters/render.js"></script>
 <script>
-  document.querySelectorAll("[data-mark]").forEach((el) => el.innerHTML = {mark_js(theme)});
-  document.documentElement.style.setProperty("--asanoha", BRAND.asanohaURI("rgba(238,233,221,0.07)", 1.1));
-  const land = document.getElementById("heroLand");
-  if (land) land.innerHTML = BRAND.landscape({{ align: "xMidYMax" }});
-  const picks = ["counting", "judo-belts", "bjj-belts", "two-names"];
-  document.getElementById("learnGrid").innerHTML = picks.map((id) => {{
-    const p = POSTERS.list.find((x) => x.id === id);
-    return `<a class="learn-card" href="../posters/?theme={theme}&p=${{id}}" aria-label="${{p.title}} poster">${{POSTERS.renderPoster(p, "{theme}")}}</a>`;
-  }}).join("");
+  // Close the phone menu after a section link is chosen.
+  const menu = document.querySelector(".menu");
+  menu.addEventListener("click", (e) => {{ if (e.target.closest("a")) menu.open = false; }});
 </script>
 </body>
 </html>

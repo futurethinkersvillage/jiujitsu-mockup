@@ -1,6 +1,8 @@
 /* TENUGUI — indigo-dyed cotton, kinari ink, one vermilion seal. */
 :root {
   --ai: #1B2A47; --kon: #121D33; --kinari: #EEE9DD; --shu: #C8402A; --ai-mut: #A9B6CC; --ink-mut: #4A5470;
+  --shu-ink: #A8321F; /* red for small text on kinari (5.5:1) */ --shu-light: #F07A5E; /* red for small text on indigo (5.2:1) */
+  --mut: var(--ink-mut); --menu-bg: var(--kon); --menu-ink: var(--kinari); --menu-line: rgba(238,233,221,.2); --menu-hover: rgba(238,233,221,.08); --flag-bg: rgba(18,29,51,.35);
   --bg: var(--ai); --ink: var(--kinari); --btn-bg: var(--shu); --btn-ink: #FFF8EE; --radius: 2px;
   --f-head: "Shippori Mincho B1", "Noto Serif JP", serif; --f-body: "Zen Kaku Gothic New", system-ui, sans-serif;
   --nav-bg: rgba(18, 29, 51, .94); --focus: #F08A6E;
@@ -15,7 +17,7 @@ h1, h2 { font-weight: 800; letter-spacing: -0.005em; }
 .programs .sec-head p, .schedule .sec-head p, .first .sec-head p, .learn .sec-head p { color: var(--ink-mut); }
 
 .hero { min-height: min(86dvh, 820px); }
-.kicker { color: var(--shu); font-family: var(--f-head); font-weight: 700; font-size: 1.15rem; filter: brightness(1.25); }
+.kicker { color: var(--shu-light); font-family: var(--f-head); font-weight: 700; font-size: 1.15rem; }
 .lede { color: var(--ai-mut); }
 .hero-art { display: grid; grid-template-columns: auto 1fr; gap: 1.5rem; align-items: stretch; }
 .vert { writing-mode: vertical-rl; font: 800 clamp(3rem, 6vw, 5.5rem)/1 var(--f-head); letter-spacing: .12em; color: var(--kinari); }
@@ -30,7 +32,7 @@ h1, h2 { font-weight: 800; letter-spacing: -0.005em; }
 .prog-list { gap: 0; border-top: 2px solid var(--ai); }
 .prog { padding: 1.6rem 1.4rem 1.8rem 0; border-bottom: 1px solid rgba(27,42,71,.2); }
 .prog + .prog { padding-left: 1.4rem; border-left: 1px solid rgba(27,42,71,.2); }
-.prog-age { color: var(--shu); }
+.prog-age { color: var(--shu-ink); }
 @media (max-width: 1100px) { .prog + .prog { border-left: 0; padding-left: 0; } }
 
 .two .art { border-top: 2px solid var(--shu); padding-top: 1.6rem; }
@@ -40,7 +42,7 @@ h1, h2 { font-weight: 800; letter-spacing: -0.005em; }
 
 .day { border-top: 2px solid var(--ai); background: rgba(27,42,71,.05); }
 .day h3 { font-weight: 800; }
-.flag { color: var(--shu); }
+.flag { color: var(--shu-ink); }
 
 .pricing .price-list li { border: 1px solid rgba(238,233,221,.25); background: rgba(18,29,51,.5); }
 .pricing .sec-head p, .price-list p:not(.price), .fund { color: var(--ai-mut); }
@@ -49,7 +51,7 @@ h1, h2 { font-weight: 800; letter-spacing: -0.005em; }
 .steps li::before { color: var(--shu); font-family: var(--f-head); }
 .steps p { color: var(--ink-mut); }
 
-.coach-name { color: var(--shu); filter: brightness(1.3); }
+.coach-name { color: var(--shu-light); }
 .coach-text p { color: var(--ai-mut); }
 
 .learn .btn { background: var(--ai); border-color: var(--ai); color: var(--kinari); }
