@@ -1,4 +1,4 @@
-/* Brand marks, patterns and illustrations for the three directions. */
+/* Brand marks and patterns for the three directions: Tenugui, Stone & Water, Stripe. */
 (function () {
   let uid = 0;
   const id = (p) => `${p}${++uid}`;
@@ -39,32 +39,17 @@
     </svg>`;
   }
 
-  /* --- Wells Gray direction: park badge. Basalt ring, layered ridges, a falls dropping into the river. --- */
-  function badge({ ring = "#23292B", paper = "#EEF2EC", sky = "#E3A13B", far = "#7FB0A6", mid = "#2C6E6A", near = "#1F3D3A", size = "100%" } = {}) {
-    const top = id("bt"), bot = id("bb"), clip = id("bc");
-    return `<svg class="mark badge" viewBox="0 0 200 200" width="${size}" role="img" aria-label="Clearwater Jiu Jitsu and Judo badge">
-      <defs>
-        <path id="${top}" d="M 30 100 A 70 70 0 0 1 170 100"/>
-        <path id="${bot}" d="M 22 100 A 78 78 0 0 0 178 100"/>
-        <clipPath id="${clip}"><circle cx="100" cy="100" r="56"/></clipPath>
-      </defs>
-      <circle cx="100" cy="100" r="97" fill="${ring}"/>
-      <circle cx="100" cy="100" r="58.5" fill="none" stroke="${paper}" stroke-width="1.5"/>
-      <g clip-path="url(#${clip})">
-        <rect x="0" y="0" width="200" height="200" fill="${sky}"/>
-        <circle cx="128" cy="86" r="15" fill="${paper}" opacity=".9"/>
-        <path d="M40 120 L72 76 L92 98 L116 62 L160 120 Z" fill="${far}"/>
-        <path d="M40 132 L64 104 L82 118 L100 96 L112 108 L112 160 L40 160 Z" fill="${mid}"/>
-        <path d="M118 104 L140 92 L162 118 L162 160 L118 160 Z" fill="${mid}"/>
-        <rect x="111" y="104" width="8" height="40" fill="${paper}"/>
-        <path d="M40 140 Q 80 132 100 142 T 162 140 L162 170 L40 170 Z" fill="${near}"/>
-        <path d="M70 150 Q 100 144 130 150" stroke="${paper}" stroke-width="2" fill="none" opacity=".7"/>
+  /* --- Stone & Water direction: a river stone carved with 清水道場 in brush script,
+         with a small red seal like the one on Ernst's carved-rock banner. --- */
+  function stone({ fill = "#1E2124", ink = "#ECEDEA", seal = "#B8322A", size = "100%" } = {}) {
+    return `<svg class="mark stone" viewBox="0 0 100 100" width="${size}" role="img" aria-label="River stone carved with 清水道場, Shimizu Dōjō">
+      <path d="M48 4 C72 3 93 19 96 45 C99 72 81 95 52 97 C25 99 4 82 4 54 C4 27 22 5 48 4 Z" fill="${fill}"/>
+      <path d="M30 14 C42 8 60 8 72 14" stroke="${ink}" stroke-opacity=".14" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <g fill="${ink}" font-family="'Yuji Boku', 'Shippori Mincho B1', serif" font-size="31" text-anchor="middle">
+        <text x="66" y="47">清</text><text x="66" y="82">水</text>
+        <text x="33" y="47">道</text><text x="33" y="82">場</text>
       </g>
-      <g fill="${paper}" font-family="'Zilla Slab', serif" font-weight="700" letter-spacing="2.2">
-        <text font-size="17"><textPath href="#${top}" startOffset="50%" text-anchor="middle">CLEARWATER</textPath></text>
-        <text font-size="11.5"><textPath href="#${bot}" startOffset="50%" text-anchor="middle" dominant-baseline="hanging">JIU JITSU · JUDO · B.C.</textPath></text>
-      </g>
-      <circle cx="31" cy="100" r="2.4" fill="${paper}"/><circle cx="169" cy="100" r="2.4" fill="${paper}"/>
+      <rect x="77" y="80" width="7" height="7" rx="1" fill="${seal}"/>
     </svg>`;
   }
 
@@ -94,20 +79,5 @@
     return `<span class="belt ${light ? "is-light" : ""} ${cls}" style="background:${bg}">${barHtml}</span>`;
   }
 
-  /* --- Wells Gray landscape strip for headers. viewBox 600 x 220. --- */
-  function landscape({ sky = "#E3A13B", sun = "#F3EBDA", far = "#7FB0A6", mid = "#2C6E6A", near = "#1F3D3A", water = "#EEF2EC", cls = "", align = "xMidYMid" } = {}) {
-    return `<svg class="landscape ${cls}" viewBox="0 0 600 220" preserveAspectRatio="${align} slice" aria-hidden="true">
-      <rect width="600" height="220" fill="${sky}"/>
-      <circle cx="430" cy="92" r="38" fill="${sun}"/>
-      <path d="M0 150 L60 112 L110 130 L170 70 L230 118 L280 96 L340 128 L400 80 L470 126 L520 100 L600 136 L600 220 L0 220 Z" fill="${far}"/>
-      <path d="M0 176 L50 150 L120 166 L190 128 L250 160 L300 140 L300 220 L0 220Z" fill="${mid}"/>
-      <path d="M318 140 L380 122 L450 152 L520 132 L600 160 L600 220 L318 220Z" fill="${mid}"/>
-      <rect x="300" y="138" width="18" height="58" fill="${water}"/>
-      <path d="M300 146 h18 M300 160 h18 M300 174 h18" stroke="${mid}" stroke-width="1.2" opacity=".35"/>
-      <path d="M0 196 Q 150 180 300 194 T 600 190 L600 220 L0 220Z" fill="${near}"/>
-      <path d="M240 204 Q 300 196 360 204" stroke="${water}" stroke-width="3" fill="none" opacity=".75"/>
-    </svg>`;
-  }
-
-  window.BRAND = { asanohaURI, seal, badge, beltTip, belt, landscape };
+  window.BRAND = { asanohaURI, seal, stone, beltTip, belt };
 })();

@@ -1,4 +1,4 @@
-/* Poster renderer: one markup, three themes (tenugui | wellsgray | stripe). */
+/* Poster renderer: one markup, three themes (tenugui | stone | stripe). */
 (function () {
   const { club, posters } = window.DOJO;
   const B = window.BRAND;
@@ -8,8 +8,8 @@
     tenugui: {
       label: "Tenugui", mark: () => B.seal({ fill: "#C8402A", ink: "#EEE9DD" })
     },
-    wellsgray: {
-      label: "Wells Gray", mark: () => B.badge()
+    stone: {
+      label: "Stone & Water", mark: () => B.stone()
     },
     stripe: {
       label: "Stripe", mark: () => B.beltTip({ bg: "#F5F5F2" })
@@ -26,7 +26,6 @@
 
   const head = (p, theme) => `
     <header class="ph">
-      ${theme === "wellsgray" ? B.landscape({ cls: "ph-land" }) : ""}
       ${theme === "stripe" ? stripeBand(p) : ""}
       <div class="ph-jp len-${Math.min([...p.jp].length, 5)}" lang="ja">${p.jp}</div>
       <div class="ph-text">

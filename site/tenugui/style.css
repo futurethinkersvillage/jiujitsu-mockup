@@ -13,8 +13,8 @@ body { background: var(--asanoha) 0 0 / 56px auto, var(--ai); }
 h1, h2 { font-weight: 800; letter-spacing: -0.005em; }
 
 /* Kinari "cloth" sections with indigo ink */
-.programs, .schedule, .first, .learn, .faq { background: var(--kinari); color: var(--ai); --btn-ink: #FFF8EE; }
-.programs .sec-head p, .schedule .sec-head p, .first .sec-head p, .learn .sec-head p { color: var(--ink-mut); }
+.programs, .scrolls, .schedule, .first, .learn, .faq { background: var(--kinari); color: var(--ai); --btn-ink: #FFF8EE; }
+.programs .sec-head p, .scrolls .sec-head p, .scrolls li p:not(.sc-r), .schedule .sec-head p, .first .sec-head p, .learn .sec-head p { color: var(--ink-mut); }
 
 .hero { min-height: min(86dvh, 820px); }
 .kicker { color: var(--shu-light); font-family: var(--f-head); font-weight: 700; font-size: 1.15rem; }
@@ -69,3 +69,10 @@ h1, h2 { font-weight: 800; letter-spacing: -0.005em; }
 .contact h2 { color: #FFF8EE; }
 .foot { background: var(--kon); color: var(--ai-mut); }
 .foot b { color: var(--kinari); }
+
+.hero-photo { aspect-ratio: 4 / 5; overflow: hidden; border: 1px solid rgba(238,233,221,.25); }
+.gallery .sec-head p { color: var(--ai-mut); }
+.gallery-list li { border: 1px solid rgba(238,233,221,.18); }
+.coach-photo { border: 1px solid rgba(238,233,221,.25); padding: 10px; }
+.coach-photo figcaption { color: var(--ai-mut); }
+.sc-r { color: var(--shu-ink); }

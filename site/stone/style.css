@@ -1,0 +1,97 @@
+/* STONE & WATER — from Ernst's own banner drafts: black-and-white falls, carved stone,
+   brush calligraphy. Every photo goes monochrome, which also makes mixed gym lighting
+   read as one consistent body of documentary work. One red seal, used sparingly. */
+:root {
+  --ink: #141618; --basalt: #1E2124; --slate: #4A5155; --mist: #ECEDEA; --fog: #E2E4E1; --pale: #A9AEB0;
+  --seal: #B8322A; /* small text on mist 5:1 */ --seal-light: #E0705F; /* small text on basalt */
+  --bg: var(--mist); --ink-text: var(--ink); --btn-bg: var(--ink); --btn-ink: var(--mist); --radius: 2px;
+  --f-head: "Zen Antique", "Shippori Mincho B1", serif; --f-body: "Figtree", system-ui, sans-serif; --f-brush: "Yuji Boku", "Zen Antique", serif;
+  --mut: var(--slate); --nav-bg: rgba(236,237,234,.95); --focus: #B8322A;
+  --menu-line: rgba(20,22,24,.2); --flag-bg: rgba(236,237,234,.12);
+}
+h1, h2, h3 { font-weight: 400; letter-spacing: -0.005em; }
+.nav { border-bottom: 1px solid rgba(20,22,24,.18); backdrop-filter: blur(6px); }
+.brand-word b { font-family: var(--f-head); font-weight: 400; font-size: 1.2rem; }
+.btn { letter-spacing: .02em; }
+
+/* Monochrome photography everywhere */
+.hero-bg img, .gallery-list img, .coach-photo img { filter: grayscale(1) contrast(1.06); }
+
+/* Dark bands */
+.hero, .gallery, .pricing, .coach, .contact { background: var(--basalt); color: var(--mist); --btn-bg: var(--mist); --btn-ink: var(--ink); }
+.gallery .sec-head p, .pricing .sec-head p, .price-list p:not(.price), .fund, .coach-text p, .coach-photo figcaption { color: var(--pale); }
+.fund a { color: var(--mist); }
+
+/* Hero: Ernst's misty falls, with 清水道場 carved into the rock on the right */
+.hero { position: relative; display: block; min-height: min(90dvh, 860px); overflow: hidden; isolation: isolate; }
+.hero-bg { position: absolute; inset: 0; z-index: -1; }
+.hero-bg img { width: 100%; height: 100%; object-fit: cover; object-position: 72% 50%; }
+.hero-bg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(20,22,24,.92) 0%, rgba(20,22,24,.72) 40%, rgba(20,22,24,.25) 75%, rgba(20,22,24,.45) 100%), linear-gradient(0deg, rgba(20,22,24,.7), transparent 40%); }
+.hero-text { max-width: 40rem; padding-top: clamp(24px, 6vw, 80px); position: relative; }
+.hero h1 { font-size: clamp(2.8rem, 7vw, 6rem); line-height: 1.02; }
+.lede { color: #CDD1D2; }
+.where { color: var(--pale); opacity: 1; }
+.hero .btn-ghost { color: var(--mist); }
+.hero-brush { position: absolute; right: clamp(16px, 5vw, 72px); top: 50%; transform: translateY(-50%); writing-mode: vertical-rl; white-space: nowrap; font: 400 clamp(3.6rem, 8vw, 7.5rem)/1 var(--f-brush); color: var(--mist); letter-spacing: .04em; text-shadow: 0 2px 30px rgba(0,0,0,.5); }
+.hero-brush::after { content: ""; display: block; width: .22em; height: .22em; margin: .25em auto 0; background: var(--seal); }
+@media (max-width: 760px) { .hero-brush { position: static; transform: none; writing-mode: horizontal-tb; font-size: 3rem; margin-top: 2.5rem; } .hero-brush::after { display: inline-block; margin: 0 0 0 .3em; vertical-align: middle; } }
+
+/* Programs: ruled list, no cards */
+.prog-list { gap: 0; border-top: 1px solid var(--ink); }
+.prog { padding: 1.5rem 1.4rem 1.7rem 0; border-bottom: 1px solid rgba(20,22,24,.18); }
+.prog + .prog { padding-left: 1.4rem; border-left: 1px solid rgba(20,22,24,.18); }
+.prog h3 { font-size: 1.6rem; }
+.prog-age { color: var(--seal); }
+.prog p:last-child { color: var(--slate); }
+@media (max-width: 1100px) { .prog + .prog { border-left: 0; padding-left: 0; } }
+
+/* Gallery */
+.gallery-list { gap: 6px; }
+
+/* Two arts */
+.art { border-top: 1px solid var(--ink); padding-top: 1.4rem; }
+.art-jp { font-family: var(--f-brush); font-size: clamp(3.6rem, 8vw, 6.5rem); }
+.art p:not(.art-jp) { color: var(--slate); }
+.two-note { font-family: var(--f-head); font-size: 1.45rem; }
+
+/* Scrolls */
+.scrolls { background: var(--fog); }
+.scrolls .sec-head p, .scroll-list li p:not(.sc-r) { color: var(--slate); }
+.scroll-paper { background: #F8F6F0; }
+.scroll-list h3 { font-family: var(--f-brush); font-size: 2.2rem; }
+.sc-r { color: var(--seal); }
+
+/* Schedule */
+.day { border-top: 1px solid var(--ink); background: rgba(20,22,24,.035); }
+.day h3 { font-family: var(--f-head); font-size: 1.3rem; }
+.flag { color: var(--seal); }
+
+/* Pricing */
+.price-list li { border: 1px solid rgba(236,237,234,.18); }
+.price { font-family: var(--f-head); font-weight: 400; }
+
+/* First class */
+.steps li { border-top: 1px solid var(--ink); padding-top: 1rem; }
+.steps li::before { font-family: var(--f-head); font-weight: 400; color: var(--seal); }
+.steps p { color: var(--slate); }
+
+/* Coach */
+.coach-name { color: var(--seal-light); }
+.coach-photo { background: var(--ink); padding: 10px; }
+
+/* Visit */
+.visit { background: var(--fog); }
+.visit-text p { color: var(--slate); }
+.visit-text .addr { color: var(--ink); }
+.visit-card { background: var(--basalt); color: var(--mist); }
+.visit-card p { color: var(--pale); }
+
+.faq details { border-bottom: 1px solid rgba(20,22,24,.2); }
+.faq summary::after { color: var(--seal); }
+.faq details p { color: var(--slate); }
+
+.contact h2 { font-size: clamp(2.4rem, 6vw, 4.6rem); }
+.contact p { color: #CDD1D2; }
+.foot { background: var(--ink); color: var(--pale); }
+.foot b { color: var(--mist); font-family: var(--f-head); font-weight: 400; }
+.foot a { color: var(--mist); }

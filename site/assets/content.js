@@ -2,9 +2,9 @@
    Everything marked TBC needs confirming with the instructor. */
 window.DOJO = {
   club: {
-    name: "Clearwater Jiu Jitsu & Judo",        // working name (TBC)
-    short: "Clearwater",
-    sub: "Jiu Jitsu & Judo",
+    name: "Shimizu Dojo · Clearwater Martial Arts", // from Ernst's banner drafts (TBC)
+    short: "Shimizu Dojo",
+    sub: "Clearwater Martial Arts",
     jp: "清水道場",
     jpReading: "Shimizu Dōjō",
     jpMeaning: "清水 (shimizu) literally means “clear water”",
@@ -239,7 +239,7 @@ window.DOJO = {
       items: [
         { k: "精力善用", r: "Seiryoku zen'yō", e: "Maximum efficiency", d: "Use your energy in the best possible way. Technique over strength." },
         { k: "自他共栄", r: "Jita kyōei",      e: "Mutual welfare and benefit", d: "You and your partner both improve, or neither of you does." },
-        { k: "柔よく剛を制す", r: "Jū yoku gō o seisu", e: "Softness controls hardness", d: "Give way to force, then redirect it. The root idea of 柔 jū." },
+        { k: "柔能制剛", r: "Jū yoku gō o seisu", e: "Softness controls hardness", d: "Give way to force, then redirect it. The root idea of 柔 jū, and one of the scrolls on our wall." },
         { k: "初心",     r: "Shoshin",         e: "Beginner's mind", d: "Black belts keep training like white belts: open, curious, humble." },
         { k: "守破離",   r: "Shu-ha-ri",       e: "Learn, break, transcend", d: "Copy the form, test the form, then make it your own." },
         { k: "礼",       r: "Rei",             e: "Respect", d: "Every class starts and ends with a bow." }

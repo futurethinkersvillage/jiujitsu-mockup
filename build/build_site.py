@@ -1,4 +1,4 @@
-"""Builds the three homepage versions (tenugui, wellsgray, stripe) from one shared structure.
+"""Builds the three homepage versions (tenugui, stone, stripe) from one shared structure.
 Run:  python build/build_site.py   (writes site/<theme>/index.html)
 Content marked TBC needs confirming with the instructor."""
 import json
@@ -11,40 +11,63 @@ MARKS = json.loads(subprocess.run(["node", str(Path(__file__).with_name("brand_d
 LEARN = [("counting", "Counting to ten"), ("judo-belts", "Judo belt ranks"),
          ("bjj-belts", "Jiu jitsu belt ranks"), ("two-names", "Same move, two names")]
 CTA = "Book your first class"
+CLUB, CLUB_SUB = "Shimizu Dojo", "Clearwater Martial Arts"   # from Ernst's banner drafts (TBC)
+
+# Ernst's photos from his Alberta club (site/assets/photos). name: (width, height, alt)
+PHOTOS = {
+    "koshi-guruma": (876, 1280, "A judoka in a blue gi throws a partner in white over the hip in koshi-guruma."),
+    "o-uchi-gari": (1102, 1280, "Two judoka with green belts mid-throw: a major inner reap, o-uchi-gari."),
+    "juji-gatame-guard": (1280, 1011, "From her back, a grappler in blue controls her partner's arm from guard."),
+    "groundwork-pin": (1280, 1064, "A judoka in blue pins her partner on the mat and controls his arm."),
+    "youth-throw": (640, 409, "A young judoka with a yellow belt is thrown mid-air during practice."),
+    "grading-group": (480, 562, "Five judoka in gis, kneeling and standing in front of the dojo wall after a grading."),
+}
+GALLERY = ["o-uchi-gari", "juji-gatame-guard", "groundwork-pin", "koshi-guruma", "youth-throw"]
+SCROLLS = [
+    ("seiryoku-zenyo", 121, 190, "精力善用", "Seiryoku zen'yō", "Maximum efficiency. Use your energy in the best possible way: technique over strength."),
+    ("jita-kyoei", 122, 183, "自他共栄", "Jita kyōei", "Mutual welfare and benefit. You and your partner both get better, or neither of you does."),
+    ("ju-yoku-go-o-seisu", 216, 520, "柔能制剛", "Jū yoku gō o seisu", "Softness controls hardness. Give way to force, then redirect it."),
+]
+
+
+def img(name, cls="", lazy=True):
+    w, h, alt = PHOTOS[name]
+    load = ' loading="lazy" decoding="async"' if lazy else ' fetchpriority="high"'
+    return f'<img class="{cls}" src="../assets/photos/{name}.webp" width="{w}" height="{h}" alt="{alt}"{load}>'
 
 FONTS = ("https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900"
          "&family=Figtree:wght@400;600;700;800&family=Shippori+Mincho+B1:wght@400;700;800"
-         "&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Zilla+Slab:wght@500;700&display=swap")
+         "&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Yuji+Boku&family=Zen+Antique&display=swap")
 
 THEMES = {
     "tenugui": {
         "label": "Tenugui",
         "color": "#1B2A47",
-        "mark": "seal",
         "h1": "The gentle way,<br>in Clearwater.",
         "kicker": "柔 · jū — gentleness that overcomes force",
         "lede": "Judo and Brazilian jiu jitsu for kids, teens and adults. Both arts grew from the same Japanese idea: give way to force, then turn it. We teach it on one mat at 52 Ridge.",
-        "hero_art": '<div class="hero-art"><div class="vert" lang="ja">柔の道</div><div class="img-slot" data-prompt="H1"><span>Photo to come · prompt H1</span></div></div>',
+        "hero_art": '<div class="hero-art"><div class="vert" lang="ja">柔の道</div><figure class="hero-photo">{photo:koshi-guruma}</figure></div>',
+        "hero_photo": "koshi-guruma",
         "two_title": "Two arts, one root",
     },
-    "wellsgray": {
-        "label": "Wells Gray",
-        "color": "#1F3D3A",
-        "mark": "badge",
-        "h1": "Grappling in<br>Wells Gray country.",
-        "kicker": "Jiu jitsu · Judo · Clearwater, BC",
-        "lede": "Throws, holds and the ground game, taught on one mat at 52 Ridge, Clearwater Valley Resort. Kids, teens and adults. No experience and no special kit needed.",
-        "hero_art": '<div class="hero-land">{landscape}</div>',
-        "two_title": "Two arts on one mat",
+    "stone": {
+        "label": "Stone & Water",
+        "color": "#141618",
+        "h1": "Soft as water.<br>Steady as stone.",
+        "kicker": "",
+        "lede": "Judo and Brazilian jiu jitsu for kids, teens and adults in the Clearwater Valley. Ernst Bergmann teaches both arts on one mat at 52 Ridge. No experience needed.",
+        "hero_art": '<div class="hero-bg" aria-hidden="true"><img src="../assets/photos/falls-stone.webp" alt="" width="640" height="349" fetchpriority="high"></div>',
+        "hero_photo": "",
+        "two_title": "Two arts, one source",
     },
     "stripe": {
         "label": "Stripe",
         "color": "#16161A",
-        "mark": "belttip",
         "h1": "Every black belt<br>started as a white belt.",
         "kicker": "Brazilian jiu jitsu + judo · Clearwater, BC",
         "lede": "A new club for kids, teens and adults who want to learn to grapple, properly and safely. First class: wear what you'd wear to the gym.",
-        "hero_art": '<div class="hero-belt" aria-hidden="true"><span class="hb-bar"><i></i><i></i><i></i><i></i></span></div>',
+        "hero_art": '<figure class="hero-photo">{photo:o-uchi-gari}</figure><div class="hero-belt" aria-hidden="true"><span class="hb-bar"><i></i><i></i><i></i><i></i></span></div>',
+        "hero_photo": "o-uchi-gari",
         "two_title": "Judo or jiu jitsu? Both.",
     },
 }
@@ -54,6 +77,7 @@ PROGRAMS = [
     ("Kids & youth", "Ages 9–14 (TBC)", "Judo throws, jiu jitsu basics, belt grading and how to train hard with a partner without anyone getting hurt."),
     ("Adult jiu jitsu", "Teens 15+ and adults", "Positions, escapes, sweeps and submissions, in the gi and without it. Live rolling at the end, always optional for beginners."),
     ("Adult judo", "Teens 15+ and adults", "How to fall, how to throw and how to pin. Builds balance and timing that carries straight into the ground game."),
+    ("Women's self-defence", "Teens and adults (TBC)", "Practical escapes, grips and getting back to your feet, built on judo and jiu jitsu. Ernst ran this program at his Alberta club."),
 ]
 
 SCHEDULE = [  # sample layout only
@@ -102,7 +126,15 @@ def page(theme):
         f'<a class="learn-card" href="../posters/?theme={theme}&amp;p={pid}">'
         f'<img src="../posters/thumbs/{theme}-{pid}.webp" width="600" height="800" loading="lazy" decoding="async" alt="{title} poster"></a>'
         for pid, title in LEARN)
-    hero_art = t['hero_art'].replace('{landscape}', MARKS['landscape'])
+    hero_art = t['hero_art']
+    if t['hero_photo']:
+        hero_art = hero_art.replace('{photo:' + t['hero_photo'] + '}', img(t['hero_photo'], lazy=False))
+    kicker = f'<p class="kicker">{t["kicker"]}</p>' if t['kicker'] else ''
+    gallery = "".join(f'<li>{img(n)}</li>' for n in [g for g in GALLERY if g != t['hero_photo']][:4])
+    scrolls = "".join(
+        f'<li><div class="scroll-paper"><img src="../assets/photos/scroll-{f}.png" width="{w}" height="{h}" alt="Brush calligraphy: {k}" loading="lazy"></div>'
+        f'<h3 lang="ja">{k}</h3><p class="sc-r">{r}</p><p>{d}</p></li>'
+        for f, w, h, k, r, d in SCROLLS)
     asanoha_attr = MARKS['asanoha'].replace('"', '&quot;')
     root_style = f' style="--asanoha: {asanoha_attr}"' if theme == 'tenugui' else ''
     nav_mark, foot_mark = MARKS[theme]['nav'], MARKS[theme]['foot']
@@ -114,22 +146,23 @@ def page(theme):
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Clearwater Jiu Jitsu & Judo · {t['label']} direction</title>
+<title>{CLUB} · {CLUB_SUB} · {t['label']} direction</title>
+<meta name="robots" content="noindex">
 <meta name="description" content="Brazilian jiu jitsu and judo for kids, teens and adults at 52 Ridge, Clearwater Valley Resort, Clearwater BC. No experience needed.">
 <meta name="theme-color" content="{t['color']}">
-<meta property="og:title" content="Clearwater Jiu Jitsu & Judo">
+<meta property="og:title" content="{CLUB} · {CLUB_SUB}">
 <meta property="og:description" content="Jiu jitsu and judo for kids, teens and adults in Clearwater, BC.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="{FONTS}" rel="stylesheet">
 <link rel="stylesheet" href="../assets/site-base.css">
 <link rel="stylesheet" href="style.css">
-<script type="application/ld+json">{{"@context":"https://schema.org","@type":"SportsActivityLocation","name":"Clearwater Jiu Jitsu & Judo","sport":["Brazilian jiu jitsu","Judo"],"address":{{"@type":"PostalAddress","streetAddress":"373 Clearwater Valley Rd","addressLocality":"Clearwater","addressRegion":"BC","addressCountry":"CA"}}}}</script>
+<script type="application/ld+json">{{"@context":"https://schema.org","@type":"SportsActivityLocation","name":"{CLUB}","sport":["Brazilian jiu jitsu","Judo"],"address":{{"@type":"PostalAddress","streetAddress":"373 Clearwater Valley Rd","addressLocality":"Clearwater","addressRegion":"BC","addressCountry":"CA"}}}}</script>
 </head>
 <body class="th-{theme}">
 <a class="skip" href="#main">Skip to content</a>
 <div class="proto">Design direction: <b>{t['label']}</b> · also see {switch} · <a href="../">compare all</a></div>
 <header class="nav">
-  <a class="brand" href="#top" aria-label="Clearwater Jiu Jitsu and Judo, home"><span class="brand-mark" aria-hidden="true">{nav_mark}</span><span class="brand-word"><b>Clearwater</b><span>Jiu Jitsu &amp; Judo</span></span></a>
+  <a class="brand" href="#top" aria-label="{CLUB}, {CLUB_SUB}, home"><span class="brand-mark" aria-hidden="true">{nav_mark}</span><span class="brand-word"><b>{CLUB}</b><span>{CLUB_SUB}</span></span></a>
   <nav class="nav-links" aria-label="Main">{NAV}</nav>
   <a class="btn btn-nav" href="#contact">{CTA}</a>
   <details class="menu"><summary aria-label="Open section menu"><span aria-hidden="true">Menu</span></summary><nav aria-label="Sections">{NAV}</nav></details>
@@ -138,7 +171,7 @@ def page(theme):
 <main id="main">
 <section class="hero" id="top">
   <div class="hero-text">
-    <p class="kicker">{t['kicker']}</p>
+    {kicker}
     <h1>{t['h1']}</h1>
     <p class="lede">{t['lede']}</p>
     <div class="ctas"><a class="btn" href="#contact">{CTA}</a><a class="btn btn-ghost" href="#programs">See kids classes</a></div>
@@ -152,6 +185,11 @@ def page(theme):
   <ul class="prog-list">{progs}</ul>
 </section>
 
+<section class="sec gallery" id="mat">
+  <div class="sec-head"><h2>On the mat</h2><p>Training at Ernst's previous club in Rocky Mountain House, Alberta. Photos from Clearwater are coming.</p></div>
+  <ul class="gallery-list">{gallery}</ul>
+</section>
+
 <section class="sec two" id="arts">
   <div class="sec-head"><h2>{t['two_title']}</h2></div>
   <div class="two-grid">
@@ -159,6 +197,11 @@ def page(theme):
     <div class="art"><p class="art-jp" lang="ja">柔術</p><h3>Brazilian jiu jitsu</h3><p>“The gentle art.” Judo master Mitsuyo Maeda taught it to the Gracie family in Brazil around 1917, and they built it into a complete ground game. Smaller people control bigger people with leverage.</p></div>
     <p class="two-note">Same root, 柔 (jū): yield to force, then redirect it. Training both makes you better at each.</p>
   </div>
+</section>
+
+<section class="sec scrolls" id="scrolls">
+  <div class="sec-head"><h2>The scrolls on our wall</h2><p>Three brushed maxims from Ernst's dojo in Alberta. Judo's founder, Jigorō Kanō, built the art on the first two.</p></div>
+  <ul class="scroll-list">{scrolls}</ul>
 </section>
 
 <section class="sec schedule" id="schedule">
@@ -179,12 +222,12 @@ def page(theme):
 </section>
 
 <section class="sec coach" id="coach">
-  <div class="img-slot" data-prompt="H3"><span>Coach portrait to come · prompt H3</span></div>
+  <figure class="coach-photo">{img("grading-group")}<figcaption>Grading day at Kuroi Ishi Judo &amp; Jiu Jitsu, Rocky Mountain House, Alberta.</figcaption></figure>
   <div class="coach-text">
     <h2>Your coach</h2>
-    <p class="coach-name">[Instructor name] · [rank, e.g. judo shodan / BJJ brown belt]</p>
-    <p>[Two or three sentences in the instructor's own words: how they started, who they trained under, why they're teaching in Clearwater.]</p>
-    <p class="small">Lineage: [teacher] → [teacher] → [instructor]. Certifications: [NCCP / Judo BC / first aid, TBC].</p>
+    <p class="coach-name">Ernst Bergmann · [ranks TBC]</p>
+    <p>Ernst taught judo and Brazilian jiu jitsu at Kuroi Ishi (<span lang="ja">黒い石</span>, “black stone”) in Rocky Mountain House, Alberta, including self-defence for women and private lessons. He now lives in the Upper Clearwater Valley.</p>
+    <p class="small">[A few words in Ernst's own voice, his ranks and lineage, and certifications to come.]</p>
   </div>
 </section>
 
@@ -223,7 +266,7 @@ def page(theme):
 
 <footer class="foot">
   <span class="foot-mark" aria-hidden="true">{foot_mark}</span>
-  <p><b>Clearwater Jiu Jitsu &amp; Judo</b><br>52 Ridge · Clearwater Valley Resort · Clearwater, BC</p>
+  <p><b>{CLUB} · {CLUB_SUB}</b><br>52 Ridge · Clearwater Valley Resort · Clearwater, BC</p>
   <p class="small">Temporary site · {t['label']} design direction · <a href="../posters/?theme={theme}">Posters</a></p>
 </footer>
 

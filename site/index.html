@@ -7,7 +7,7 @@
 <meta name="description" content="Three brand directions for a new jiu jitsu and judo club in Clearwater, BC: website versions and a printable poster set for each.">
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Figtree:wght@400;600;700;800&family=Shippori+Mincho+B1:wght@400;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Zilla+Slab:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Figtree:wght@400;600;700;800&family=Shippori+Mincho+B1:wght@400;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Yuji+Boku&family=Zen+Antique&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="posters/poster.css">
 <style>
   :root { --bg: #F1F0EC; --ink: #1B1B1E; --mut: #5E5E64; --line: rgba(27,27,30,.14); --card: #FFFFFF; }
@@ -49,11 +49,12 @@
   .links a { display: inline-flex; align-items: center; min-height: 44px; padding: .6rem 1.1rem; text-decoration: none; font-weight: 700; border: 2px solid var(--acc); }
   .links a:first-child { background: var(--acc); color: #fff; }
   .d-tenugui { --acc: #C8402A; } .d-tenugui .dir-show { background: #1B2A47; }
-  .d-wellsgray { --acc: #2C6E6A; } .d-wellsgray .dir-show { background: #E3A13B; }
+  .d-stone { --acc: #141618; } .d-stone .dir-show { background: #2A2E31; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .d-stone { --acc: #ECEDEA; } :root:not([data-theme="light"]) .d-stone .links a:first-child { color: #141618; } }
   .d-stripe { --acc: #16161A; } .d-stripe .dir-show { background: #DCDCD7; }
   @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .d-stripe { --acc: #ECEBE6; } :root:not([data-theme="light"]) .d-stripe .links a:first-child { color: #16161A; } }
   .t-tenugui { font-family: "Shippori Mincho B1", serif; font-weight: 800; }
-  .t-wellsgray { font-family: "Zilla Slab", serif; font-weight: 700; }
+  .t-stone { font-family: "Zen Antique", serif; font-weight: 400; }
   .t-stripe { font-family: "Archivo", sans-serif; font-stretch: 125%; font-weight: 800; letter-spacing: -0.02em; }
   @media (max-width: 860px) { .dir { grid-template-columns: 1fr; } }
 
@@ -74,7 +75,7 @@
     <p>Each direction comes with its own homepage and a twelve-poster set for the dojo walls: counting in Japanese, belt ranks for both arts, dojo words, throws, groundwork and more. Open each one, then pick a favourite or mix the parts you like.</p>
     <div class="name">
       <div class="jp" lang="ja">清水</div>
-      <p><b>A name idea:</b> Clearwater in Japanese is 清水, read <i>shimizu</i>, literally “clear water”. 清水道場 (Shimizu Dōjō) means “Clearwater Dojo”. It appears on the seal and the posters; “Clearwater Jiu Jitsu &amp; Judo” is only a working name.</p>
+      <p><b>The name:</b> Ernst landed on the same four characters, 清水道場, “Clearwater Dojo”, for his banner drafts. As one word 清水 is read <i>shimizu</i>, literally “clear water”, so the sites now use <b>Shimizu Dojo · Clearwater Martial Arts</b>. His drafts spell it “Shi Mizu” and “Sei Mizu”; worth settling on one spelling.</p>
     </div>
   </header>
 
@@ -95,8 +96,9 @@
     <div class="note">
       <h2>To confirm with the instructor</h2>
       <ul>
-        <li>The club's name, and whether 清水道場 fits</li>
-        <li>Instructor bio, ranks, lineage and certifications</li>
+        <li>Spelling: Shimizu, Shi Mizu or Sei Mizu</li>
+        <li>Ernst's ranks, lineage, certifications and a few words in his voice</li>
+        <li>OK to show the Alberta club members' photos publicly</li>
         <li>Class times, age groups and prices</li>
         <li>Is the first class free?</li>
         <li>Judo BC / BJJ affiliation and insurance</li>
@@ -106,7 +108,7 @@
     </div>
     <div class="note">
       <h2>Photos</h2>
-      <p>Grey photo boxes on the sites are placeholders. Every one has a matching image prompt, ready to paste into an image generator.</p>
+      <p>The sites now use Ernst's photos from his Alberta club, his three wall scrolls and his falls-and-stone banner. A Clearwater photo session would replace them; the prompts page covers anything still missing.</p>
       <p><a href="prompts/">See the image prompts</a></p>
       <p><a href="posters/">Browse all posters</a></p>
     </div>
@@ -127,12 +129,12 @@
       desc: "Built on the tenugui, the patterned indigo cotton cloth that Japanese martial artists carry to training. Indigo field, cotton-white ink, a vermilion hanko seal reading 清水道場. The asanoha (hemp-leaf) pattern is traditionally used for children's clothing because hemp grows fast and straight.",
       why: "The most Japanese of the three, and the most distinctive in a field of red and black. Suits judo's heritage and families. Big indigo areas print beautifully but use more ink.",
       posters: ["counting", "dojo-code"] },
-    { k: "wellsgray", name: "Wells Gray", sub: "a screenprinted park poster", mark: BRAND.badge(),
-      sw: [["#E3A13B","Ochre sky"],["#7FB0A6","Glacier"],["#2C6E6A","River teal"],["#1F3D3A","Forest"],["#B4502F","Rust"],["#EEF2EC","Snow"]],
-      type: "Zilla Slab + Figtree", feel: "Warm, local, outdoorsy",
-      desc: "Rooted in place: layered ridges, a falls dropping into the river, routed-sign slab lettering like the BC Parks signs on the road to Wells Gray. A round park badge as the logo. Feels like a community club that belongs to the valley.",
-      why: "No competitor uses nature colours. It speaks to locals and to resort guests, and would suit club t-shirts, stickers and patches. The least “martial arts” look, which some will love and others won't.",
-      posters: ["nage-waza", "come-train"] },
+    { k: "stone", name: "Stone & Water", sub: "石と水 · from Ernst's own banners", mark: BRAND.stone({ fill: "#4A5155" }),
+      sw: [["#141618","Sumi ink"],["#1E2124","Basalt"],["#4A5155","Slate"],["#E2E4E1","Fog"],["#ECEDEA","Mist"],["#B8322A","Seal"]],
+      type: "Zen Antique + Yuji Boku brush + Figtree", feel: "Quiet, grounded, local",
+      desc: "Built from Ernst's own drafts: the misty falls with 清水道場 carved into the rock, brush calligraphy and black-and-white photography. The logo is a river stone carved with the four kanji and a small red seal. Every photo goes monochrome, which also makes mixed gym lighting look like one body of work.",
+      why: "Closest to the instructor's own taste and story: from Kuroi Ishi (black stone), his Alberta club, to Shimizu (clear water). Moody and calm rather than aggressive, and nobody else in the region looks like this. Needs higher-resolution versions of the falls image for big prints.",
+      posters: ["principles", "counting"] },
     { k: "stripe", name: "Stripe", sub: "the belt system as a brand", mark: BRAND.beltTip({ bg: "none" }),
       sw: [["#F5F5F2","Paper"],["#16161A","Black belt"],["#2557B8","Blue"],["#6A3FA0","Purple"],["#6B4226","Brown"],["#D7262E","Rank bar"]],
       type: "Archivo Expanded + Zen Kaku Gothic Black", feel: "Modern, athletic, direct",

@@ -7,9 +7,8 @@ eval(fs.readFileSync(path.join(__dirname, "..", "site", "assets", "brand.js"), "
 const B = window.BRAND;
 const out = {
   tenugui: { nav: B.seal(), foot: B.seal() },
-  wellsgray: { nav: B.badge(), foot: B.badge() },
+  stone: { nav: B.stone(), foot: B.stone() },
   stripe: { nav: B.beltTip({ bg: "none" }), foot: B.beltTip({ bg: "none" }) },
-  landscape: B.landscape({ align: "xMidYMax" }),
   asanoha: B.asanohaURI("rgba(238,233,221,0.07)", 1.1),
 };
 process.stdout.write(JSON.stringify(out));

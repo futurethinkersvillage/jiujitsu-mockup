@@ -192,48 +192,6 @@
 .poster[data-theme="tenugui"] .promo-where span { color: var(--mut); }
 
 /* =====================================================================
-   THEME 2 · WELLS GRAY — screenprinted park poster: basalt, glacier, ochre
-   ===================================================================== */
-.poster[data-theme="wellsgray"] {
-  --paper: #EEF2EC; --ink: #23292B; --mut: #55625F; --teal: #2C6E6A; --ochre: #E3A13B; --rust: #B4502F; --forest: #1F3D3A;
-  background: var(--paper); color: var(--ink); font-family: "Figtree", system-ui, sans-serif; padding-top: 0;
-}
-.poster[data-theme="wellsgray"] :is(.ph-title, .tl-y, .promo-progs li, .c-r, .t-r, .pa-a, .b-rank, .adults .b-name) { font-family: "Zilla Slab", serif; }
-.poster[data-theme="wellsgray"] :is(.c-k, .b-k, .t-k, .pa-k, .pr-k, .cd-k, .ph-jp) { font-family: "Zen Kaku Gothic New", sans-serif; font-weight: 700; }
-.poster[data-theme="wellsgray"] .ph { margin: 0 -3.6em; display: block; }
-.poster[data-theme="wellsgray"] .ph-land { display: block; width: 100%; height: 11em; }
-.poster[data-theme="wellsgray"] .ph-text { background: var(--forest); color: var(--paper); padding: 1.6em 15em 1.8em 3.6em; }
-.poster[data-theme="wellsgray"] .ph-romaji { color: var(--ochre); font-weight: 700; font-size: 1.4em; }
-.poster[data-theme="wellsgray"] .ph-title { font-weight: 700; font-size: 4.6em; }
-.poster[data-theme="wellsgray"] .ph-lede { color: #CFE0DA; }
-.poster[data-theme="wellsgray"] .ph-jp { position: absolute; right: .55em; bottom: .32em; font-size: 4.4em; color: var(--ochre); writing-mode: vertical-rl; letter-spacing: .05em; z-index: 1; }
-.poster[data-theme="wellsgray"] .g-label { color: var(--teal); font-family: "Zilla Slab", serif; font-size: 1.5em; }
-.poster[data-theme="wellsgray"] .p-note { background: var(--forest); color: var(--paper); padding: .9em 1.2em; border-radius: .5em; max-width: none; }
-.poster[data-theme="wellsgray"] .pf { border-top: .2em solid var(--forest); }
-.poster[data-theme="wellsgray"] .pf-name strong { font-family: "Zilla Slab", serif; color: var(--forest); }
-.poster[data-theme="wellsgray"] .pf-url { color: var(--teal); }
-.poster[data-theme="wellsgray"] .count li { background: var(--forest); color: var(--paper); border-radius: .7em; }
-.poster[data-theme="wellsgray"] .count .c-n { color: var(--ochre); }
-.poster[data-theme="wellsgray"] .count .c-kana { color: #CFE0DA; opacity: 1; }
-.poster[data-theme="wellsgray"] .count-extra > div { border: .15em solid var(--forest); border-radius: .7em; }
-.poster[data-theme="wellsgray"] .count-extra .c-n { color: var(--rust); }
-.poster[data-theme="wellsgray"] :is(.brows li, .adults li, .terms li, .pairs li, .timeline li) { border-bottom: .1em dashed rgba(31,61,58,.3); }
-.poster[data-theme="wellsgray"] .tech li, .poster[data-theme="wellsgray"] .ukemi li { border: .15em solid var(--forest); border-radius: .7em; background: #fff8; }
-.poster[data-theme="wellsgray"] .tech .t-f { background: var(--ochre); color: var(--forest); padding: .15em .6em; border-radius: .3em; }
-.poster[data-theme="wellsgray"] .tech .t-k, .poster[data-theme="wellsgray"] .ukemi .t-k { color: var(--teal); }
-.poster[data-theme="wellsgray"] .princ li { border-top: .3em solid var(--ochre); }
-.poster[data-theme="wellsgray"] .pr-k { color: var(--teal); }
-.poster[data-theme="wellsgray"] .tl-y { color: var(--rust); }
-.poster[data-theme="wellsgray"] .cd-k { background: var(--ochre); color: var(--forest); border-radius: 50%; }
-.poster[data-theme="wellsgray"] .rules li::before, .poster[data-theme="wellsgray"] .is-seq .terms li::before { color: var(--rust); }
-.poster[data-theme="wellsgray"] .pa-eq { background: var(--ochre); opacity: 1; }
-.poster[data-theme="wellsgray"].t-promo .ph-land { height: 24em; }
-.poster[data-theme="wellsgray"].t-promo .ph-title { font-size: 6.6em; }
-.poster[data-theme="wellsgray"] .promo-progs li { color: var(--forest); }
-.poster[data-theme="wellsgray"] .promo-progs li::before { content: ""; display: inline-block; width: .5em; height: .5em; background: var(--ochre); border-radius: 50%; margin-right: .4em; vertical-align: .12em; }
-.poster[data-theme="wellsgray"] .qr-box { border: .2em solid var(--forest); border-radius: .5em; }
-
-/* =====================================================================
    THEME 3 · STRIPE — Swiss grid, belt colours as the palette, rank-bar motif
    ===================================================================== */
 .poster[data-theme="stripe"] {
@@ -280,8 +238,6 @@
 .poster[data-theme="tenugui"] .ph-jp.len-5 { font-size: 2.3em; }
 .poster[data-theme="tenugui"] .ph-seal { display: none; }
 .poster[data-theme="tenugui"].t-promo .ph-seal { display: block; }
-.poster[data-theme="wellsgray"] .ph-jp.len-4 { font-size: 3.4em; }
-.poster[data-theme="wellsgray"] .ph-jp.len-5 { font-size: 2.8em; }
 
 .poster[data-theme="tenugui"] .belt { box-shadow: inset 0 0 0 .07em rgba(238,233,221,.35); }
 
@@ -303,13 +259,6 @@
 .t-ground .ggroup { display: flex; flex-direction: column; }
 .t-ground .ggroup .terms { flex: 1; display: flex; flex-direction: column; justify-content: space-around; }
 
-/* Wells Gray: shorter landscape strip */
-.poster[data-theme="wellsgray"] .ph-land { height: 7.5em; }
-.poster[data-theme="wellsgray"] .ph-text { padding: 1.2em 10em 1.3em 3.6em; }
-.poster[data-theme="wellsgray"] .ph-title { font-size: 4em; }
-.poster[data-theme="wellsgray"] .ph-lede { margin-top: 1em; }
-.poster[data-theme="wellsgray"] .pb { padding-top: 1.6em; }
-.poster[data-theme="wellsgray"].t-promo .ph-land { height: 22em; }
 .t-words .terms li { padding: .3em 0; }
 .poster[data-theme="stripe"] .pb { margin-top: 1.4em; padding-top: 1.5em; }
 .poster[data-theme="stripe"] .band { height: 3em; }
@@ -322,5 +271,47 @@
 .poster[data-theme="stripe"] .ph-jp.len-5 { font-size: 2.9em; }
 .poster[data-theme="stripe"].t-promo .ph-title { font-size: 7.6em; }
 .t-techniques .p-note { margin-top: .2em; }
-.poster[data-theme="wellsgray"] .tech .t-k { font-size: 2.6em; }
-.poster[data-theme="wellsgray"] .ph-jp.len-5 { font-size: 2.4em; }
+
+
+/* =====================================================================
+   THEME 2 · STONE & WATER — mist paper, sumi ink, brush kanji, one red seal
+   (from Ernst's own banner drafts: black-and-white falls, carved stone, calligraphy)
+   ===================================================================== */
+.poster[data-theme="stone"] {
+  --mist: #ECEDEA; --ink: #141618; --slate: #4A5155; --wash: #C9CDCB; --seal: #B8322A; --rule: rgba(20,22,24,.18);
+  background: var(--mist); color: var(--ink); font-family: "Figtree", system-ui, sans-serif;
+}
+/* An ink-wash cloud behind the header, like mist over the falls */
+.poster[data-theme="stone"]::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 26em; pointer-events: none;
+  background: radial-gradient(60% 70% at 85% 10%, rgba(20,22,24,.16), transparent 70%), radial-gradient(45% 55% at 20% 0%, rgba(20,22,24,.08), transparent 70%); }
+.poster[data-theme="stone"] :is(.ph-title, .c-k, .b-k, .t-k, .pa-k, .pr-k, .tl-y, .promo-progs li, .g-label) { font-family: "Zen Antique", "Shippori Mincho B1", serif; font-weight: 400; }
+.poster[data-theme="stone"] :is(.ph-jp, .cd-k, .count .c-k) { font-family: "Yuji Boku", "Zen Antique", serif; font-weight: 400; }
+.poster[data-theme="stone"] .ph-title { letter-spacing: -0.01em; }
+.poster[data-theme="stone"] .ph-romaji { color: var(--seal); font-weight: 700; font-size: 1.3em; }
+.poster[data-theme="stone"] .ph-lede { color: var(--slate); }
+.poster[data-theme="stone"] .ph-jp { writing-mode: vertical-rl; letter-spacing: .06em; grid-row: 1; font-size: 5.4em; }
+.poster[data-theme="stone"] .ph-jp.len-3 { font-size: 4em; }
+.poster[data-theme="stone"] .ph-jp.len-4 { font-size: 3.1em; }
+.poster[data-theme="stone"] .ph-jp.len-5 { font-size: 2.5em; }
+.poster[data-theme="stone"] .g-label { font-size: 1.45em; border-bottom: .06em solid var(--rule); padding-bottom: .3em; }
+.poster[data-theme="stone"] .g-label small { font-family: "Figtree", sans-serif; color: var(--slate); }
+.poster[data-theme="stone"] .p-note { color: var(--slate); border-top: .06em solid var(--rule); padding-top: .8em; max-width: none; }
+.poster[data-theme="stone"] .pf { border-top: .12em solid var(--ink); }
+.poster[data-theme="stone"] .pf-name strong { font-family: "Zen Antique", serif; font-weight: 400; font-size: 1.45em; }
+.poster[data-theme="stone"] .pf-name span, .poster[data-theme="stone"] .pf-url { color: var(--slate); }
+.poster[data-theme="stone"] .count li { border-top: .08em solid var(--rule); }
+.poster[data-theme="stone"] .c-n { color: var(--seal); }
+.poster[data-theme="stone"] :is(.c-kana, .t-e, .b-r, .c-note) { color: var(--slate); opacity: 1; }
+.poster[data-theme="stone"] .count-extra > div { background: rgba(20,22,24,.05); }
+.poster[data-theme="stone"] :is(.brows li, .adults li, .terms li, .pairs li, .timeline li) { border-bottom: .06em solid var(--rule); }
+.poster[data-theme="stone"] .tech li, .poster[data-theme="stone"] .ukemi li { background: rgba(20,22,24,.045); border-top: .1em solid var(--ink); }
+.poster[data-theme="stone"] .tech .t-f { color: var(--seal); }
+.poster[data-theme="stone"] .princ li { border-top: .1em solid var(--ink); }
+.poster[data-theme="stone"] .tl-y { color: var(--ink); }
+.poster[data-theme="stone"] .timeline li:last-child .tl-y { color: var(--seal); }
+.poster[data-theme="stone"] .cd-k { background: var(--ink); color: var(--mist); border-radius: 46% 54% 50% 50% / 55% 48% 52% 45%; }
+.poster[data-theme="stone"] .rules li::before, .poster[data-theme="stone"] .is-seq .terms li::before { color: var(--seal); }
+.poster[data-theme="stone"] .belt { box-shadow: inset 0 0 0 .07em rgba(20,22,24,.35); }
+.poster[data-theme="stone"].t-promo .ph-title { font-size: 7.2em; }
+.poster[data-theme="stone"] .promo-progs li { border-bottom: .03em solid var(--rule); }
+.poster[data-theme="stone"] .qr-box { border: .15em solid var(--ink); }

@@ -7,7 +7,7 @@ ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 OUT="$ROOT/site/posters/thumbs"; TMP="$(mktemp -d)"
 mkdir -p "$OUT"
 CH="/c/Program Files/Google/Chrome/Application/chrome.exe"
-for theme in tenugui wellsgray stripe; do
+for theme in tenugui stone stripe; do
   for p in counting judo-belts bjj-belts two-names; do
     "$CH" --headless=new --disable-gpu --hide-scrollbars --force-device-scale-factor=1 --window-size=900,1200 \
       --virtual-time-budget=6000 --screenshot="$(cygpath -w "$TMP/$theme-$p.png")" \

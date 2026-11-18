@@ -125,3 +125,22 @@ h1, h2, h3 { text-wrap: balance; }
 .foot { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 2rem; padding: 2rem clamp(16px, 4vw, 48px); }
 .foot-mark { width: 56px; display: block; }
 .foot .small { margin-left: auto; }
+
+/* Photos from Ernst's club */
+.hero-photo, .coach-photo { margin: 0; }
+.hero-photo img, .coach-photo img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.coach-photo figcaption { font-size: .85rem; margin-top: .6rem; opacity: .85; }
+.gallery-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1.3fr 1fr 1fr; grid-auto-rows: clamp(170px, 20vw, 300px); gap: 12px; }
+.gallery-list li { overflow: hidden; }
+.gallery-list li:first-child { grid-row: span 2; }
+.gallery-list li:last-child { grid-column: span 2; }
+.gallery-list img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .6s cubic-bezier(.2,.8,.2,1); }
+.gallery-list li:hover img { transform: scale(1.03); }
+@media (max-width: 760px) { .gallery-list { grid-template-columns: 1fr 1fr; grid-auto-rows: 42vw; } .gallery-list li:first-child { grid-column: span 2; grid-row: span 1; } .gallery-list li:last-child { grid-column: span 2; } }
+
+/* The scrolls on our wall */
+.scroll-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: clamp(20px, 3vw, 40px); align-items: end; }
+.scroll-paper { height: 300px; display: grid; place-items: center; padding: 1.4rem; background: #F7F4EC; box-shadow: 0 1px 2px rgba(0,0,0,.12), 0 12px 28px rgba(0,0,0,.14); margin-bottom: 1.2rem; }
+.scroll-paper img { width: auto; height: auto; max-width: 100%; max-height: 252px; }
+.scroll-list h3 { font-size: 1.9rem; letter-spacing: .06em; }
+.sc-r { font-weight: 700; margin: .3rem 0 .4rem; }
