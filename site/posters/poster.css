@@ -315,3 +315,5 @@
 .poster[data-theme="stone"].t-promo .ph-title { font-size: 7.2em; }
 .poster[data-theme="stone"] .promo-progs li { border-bottom: .03em solid var(--rule); }
 .poster[data-theme="stone"] .qr-box { border: .15em solid var(--ink); }
+
+.promo-where .promo-when { margin-bottom: .5em; }

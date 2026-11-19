@@ -136,7 +136,7 @@
     promo: (p, theme) => `
       <div class="promo">
         <ul class="promo-progs">${p.programs.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>
-        <div class="promo-where"><strong>${esc(club.venue)}</strong><span>${esc(club.address)}</span></div>
+        <div class="promo-where">${p.when ? `<strong class="promo-when">${esc(p.when)}</strong>` : ""}<strong>${esc(club.venue)}</strong><span>${esc(club.address)}</span></div>
         <div class="promo-qr"><div class="qr-box">${qr(6)}</div><p>${esc(p.cta)}<br><b>${esc(club.url)}</b></p></div>
       </div>`
   };

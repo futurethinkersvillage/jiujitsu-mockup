@@ -25,10 +25,10 @@
     return `url("data:image/svg+xml,${encodeURIComponent(svg)}")`;
   }
 
-  /* --- Tenugui direction: vermilion hanko seal reading 清水道場 (Shimizu Dōjō, "Clearwater Dojo").
+  /* --- Tenugui direction: vermilion hanko seal reading 清水道場 (Shi Mizu Dojo, "Clearwater Dojo").
          Traditional order: right column top-to-bottom, then left column. --- */
   function seal({ fill = "#C8402A", ink = "#EEE9DD", size = "100%" } = {}) {
-    return `<svg class="mark seal" viewBox="0 0 100 100" width="${size}" role="img" aria-label="Seal reading 清水道場, Shimizu Dōjō">
+    return `<svg class="mark seal" viewBox="0 0 100 100" width="${size}" role="img" aria-label="Seal reading 清水道場, Shi Mizu Dojo">
       <rect x="3" y="3" width="94" height="94" rx="9" fill="${fill}"/>
       <rect x="9" y="9" width="82" height="82" rx="4" fill="none" stroke="${ink}" stroke-width="2.4"/>
       <line x1="50" y1="14" x2="50" y2="86" stroke="${ink}" stroke-width="1.2" opacity=".55"/>
@@ -42,7 +42,7 @@
   /* --- Stone & Water direction: a river stone carved with 清水道場 in brush script,
          with a small red seal like the one on Ernst's carved-rock banner. --- */
   function stone({ fill = "#1E2124", ink = "#ECEDEA", seal = "#B8322A", size = "100%" } = {}) {
-    return `<svg class="mark stone" viewBox="0 0 100 100" width="${size}" role="img" aria-label="River stone carved with 清水道場, Shimizu Dōjō">
+    return `<svg class="mark stone" viewBox="0 0 100 100" width="${size}" role="img" aria-label="River stone carved with 清水道場, Shi Mizu Dojo">
       <path d="M48 4 C72 3 93 19 96 45 C99 72 81 95 52 97 C25 99 4 82 4 54 C4 27 22 5 48 4 Z" fill="${fill}"/>
       <path d="M30 14 C42 8 60 8 72 14" stroke="${ink}" stroke-opacity=".14" stroke-width="3" fill="none" stroke-linecap="round"/>
       <g fill="${ink}" font-family="'Yuji Boku', 'Shippori Mincho B1', serif" font-size="31" text-anchor="middle">

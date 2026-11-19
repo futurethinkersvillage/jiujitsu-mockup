@@ -95,3 +95,14 @@ h1, h2, h3 { font-weight: 400; letter-spacing: -0.005em; }
 .foot { background: var(--ink); color: var(--pale); }
 .foot b { color: var(--mist); font-family: var(--f-head); font-weight: 400; }
 .foot a { color: var(--mist); }
+
+/* Nov 19: generated falls hero, shown in black and white */
+.hero { display: flex; --hero-shade: linear-gradient(90deg, rgba(20,22,24,.92) 0%, rgba(20,22,24,.7) 40%, rgba(20,22,24,.2) 75%, rgba(20,22,24,.35) 100%), linear-gradient(0deg, rgba(20,22,24,.6), transparent 45%); }
+.hero-media img, .hero-media video { filter: grayscale(1) contrast(1.08) brightness(.95); }
+.hero h1 { font-size: clamp(3rem, 8.5vw, 7rem); }
+.price-card { border: 1px solid rgba(236,237,234,.2); }
+.price-card .price { font-family: var(--f-head); font-weight: 400; }
+.price-card p:not(.price) { color: var(--pale); }
+.map { filter: grayscale(1) contrast(1.05); border: 1px solid rgba(20,22,24,.2); }
+.day p { border-top-color: rgba(20,22,24,.15); }
+@media (max-width: 760px) { .hero { --hero-shade: linear-gradient(0deg, rgba(20,22,24,.95) 10%, rgba(20,22,24,.65) 60%, rgba(20,22,24,.35)); } }

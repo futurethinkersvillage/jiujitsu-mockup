@@ -2,12 +2,12 @@
    Everything marked TBC needs confirming with the instructor. */
 window.DOJO = {
   club: {
-    name: "Shimizu Dojo · Clearwater Martial Arts", // from Ernst's banner drafts (TBC)
-    short: "Shimizu Dojo",
+    name: "Shi Mizu Dojo · Clearwater Martial Arts",
+    short: "Shi Mizu Dojo",
     sub: "Clearwater Martial Arts",
     jp: "清水道場",
-    jpReading: "Shimizu Dōjō",
-    jpMeaning: "清水 (shimizu) literally means “clear water”",
+    jpReading: "Shi Mizu Dojo",
+    jpMeaning: "清水 literally means “clear water”",
     venue: "52 Ridge · Clearwater Valley Resort",
     address: "373 Clearwater Valley Rd, Clearwater, BC",
     url: "jiujitsu.designspore.co",
@@ -239,7 +239,7 @@ window.DOJO = {
       items: [
         { k: "精力善用", r: "Seiryoku zen'yō", e: "Maximum efficiency", d: "Use your energy in the best possible way. Technique over strength." },
         { k: "自他共栄", r: "Jita kyōei",      e: "Mutual welfare and benefit", d: "You and your partner both improve, or neither of you does." },
-        { k: "柔能制剛", r: "Jū yoku gō o seisu", e: "Softness controls hardness", d: "Give way to force, then redirect it. The root idea of 柔 jū, and one of the scrolls on our wall." },
+        { k: "柔能制剛", r: "Jū yoku gō o seisu", e: "Softness controls hardness", d: "Give way to force, then redirect it. The root idea of 柔 jū." },
         { k: "初心",     r: "Shoshin",         e: "Beginner's mind", d: "Black belts keep training like white belts: open, curious, humble." },
         { k: "守破離",   r: "Shu-ha-ri",       e: "Learn, break, transcend", d: "Copy the form, test the form, then make it your own." },
         { k: "礼",       r: "Rei",             e: "Respect", d: "Every class starts and ends with a bow." }
@@ -286,6 +286,7 @@ window.DOJO = {
       jp: "稽古", romaji: "Keiko", title: "Come train with us",
       lede: "Jiu jitsu and judo for adults, teens and kids in Clearwater. No experience needed. Wear comfortable clothes and come try a class.",
       programs: ["Brazilian jiu jitsu", "Judo", "Kids classes"],
+      when: "Tuesdays & Thursdays · Kids 5 pm · Adults 6–7:30 pm · $100 a month",
       cta: "Schedule, location and sign-up"
     }
   ]

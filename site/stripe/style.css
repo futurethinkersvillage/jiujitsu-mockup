@@ -88,3 +88,13 @@ h1, h2, h3 { font-stretch: 125%; font-weight: 800; letter-spacing: -0.025em; }
 .coach-photo figcaption { padding: .5rem .7rem; margin: 0; background: var(--ink); color: var(--paper); opacity: 1; }
 .scroll-paper { box-shadow: none; border: 3px solid var(--ink); }
 .scroll-list h3 { font-family: "Zen Kaku Gothic New", sans-serif; font-weight: 900; font-stretch: normal; }
+
+/* Nov 19: text on paper, then the generated falls as a wide band above the belt */
+.hero { display: block; min-height: 0; padding-bottom: 0; isolation: auto; overflow: visible; }
+.hero-band { position: relative; inset: auto; z-index: auto; aspect-ratio: 21 / 9; margin: clamp(32px, 5vw, 56px) calc(-1 * clamp(16px, 4vw, 48px)) 0; border-top: 4px solid var(--ink); }
+.hero-text { padding-bottom: 0; }
+.price-card { border-top: 4px solid var(--ink); padding-left: 0; }
+.map { border: 4px solid var(--ink); }
+.day { border-top: 4px solid var(--ink); }
+@media (max-width: 760px) { .hero-band { aspect-ratio: 4 / 3; } }
+.hero h1 { max-width: 17ch; font-size: clamp(2.6rem, 7vw, 6.4rem); }

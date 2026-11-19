@@ -1,6 +1,5 @@
 """Builds the three homepage versions (tenugui, stone, stripe) from one shared structure.
-Run:  python build/build_site.py   (writes site/<theme>/index.html)
-Content marked TBC needs confirming with the instructor."""
+Run:  python build/build_site.py   (writes site/<theme>/index.html; needs node for the logo marks)"""
 import json
 import subprocess
 from pathlib import Path
@@ -10,8 +9,19 @@ MARKS = json.loads(subprocess.run(["node", str(Path(__file__).with_name("brand_d
                                   capture_output=True, text=True, encoding="utf-8", check=True).stdout)
 LEARN = [("counting", "Counting to ten"), ("judo-belts", "Judo belt ranks"),
          ("bjj-belts", "Jiu jitsu belt ranks"), ("two-names", "Same move, two names")]
+
+CLUB, CLUB_SUB = "Shi Mizu Dojo", "Clearwater Martial Arts"
 CTA = "Book your first class"
-CLUB, CLUB_SUB = "Shimizu Dojo", "Clearwater Martial Arts"   # from Ernst's banner drafts (TBC)
+EMAIL = "clearwaterjiujitsu@icloud.com"
+PHONE, PHONE_TEL = "+1 (780) 720-1705", "+17807201705"
+WHATSAPP = "https://chat.whatsapp.com/CLJdBec0hAzFXTIkviskQX"
+VENUE, ADDRESS = "52 Ridge · Clearwater Valley Resort", "373 Clearwater Valley Rd, Clearwater, BC"
+MAP_EMBED = "https://www.google.com/maps?q=Clearwater+Valley+Resort,+373+Clearwater+Valley+Rd,+Clearwater,+BC&z=14&output=embed"
+MAP_LINK = "https://www.google.com/maps/search/?api=1&query=Clearwater+Valley+Resort+373+Clearwater+Valley+Rd+Clearwater+BC"
+
+FONTS = ("https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900"
+         "&family=Figtree:wght@400;600;700;800&family=Shippori+Mincho+B1:wght@400;700;800"
+         "&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Yuji+Boku&family=Zen+Antique&display=swap")
 
 # Ernst's photos from his Alberta club (site/assets/photos). name: (width, height, alt)
 PHOTOS = {
@@ -22,125 +32,89 @@ PHOTOS = {
     "youth-throw": (640, 409, "A young judoka with a yellow belt is thrown mid-air during practice."),
     "grading-group": (480, 562, "Five judoka in gis, kneeling and standing in front of the dojo wall after a grading."),
 }
-GALLERY = ["o-uchi-gari", "juji-gatame-guard", "groundwork-pin", "koshi-guruma", "youth-throw"]
-SCROLLS = [
-    ("seiryoku-zenyo", 121, 190, "精力善用", "Seiryoku zen'yō", "Maximum efficiency. Use your energy in the best possible way: technique over strength."),
-    ("jita-kyoei", 122, 183, "自他共栄", "Jita kyōei", "Mutual welfare and benefit. You and your partner both get better, or neither of you does."),
-    ("ju-yoku-go-o-seisu", 216, 520, "柔能制剛", "Jū yoku gō o seisu", "Softness controls hardness. Give way to force, then redirect it."),
-]
+GALLERY = ["koshi-guruma", "o-uchi-gari", "juji-gatame-guard", "groundwork-pin", "youth-throw"]
+
+# The hero uses the generated falls image; the looping video plays over it when motion is allowed.
+HERO_VIDEO = True
 
 
-def img(name, cls="", lazy=True):
+def img(name, lazy=True):
     w, h, alt = PHOTOS[name]
     load = ' loading="lazy" decoding="async"' if lazy else ' fetchpriority="high"'
-    return f'<img class="{cls}" src="../assets/photos/{name}.webp" width="{w}" height="{h}" alt="{alt}"{load}>'
+    return f'<img src="../assets/photos/{name}.webp" width="{w}" height="{h}" alt="{alt}"{load}>'
 
-FONTS = ("https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900"
-         "&family=Figtree:wght@400;600;700;800&family=Shippori+Mincho+B1:wght@400;700;800"
-         "&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Yuji+Boku&family=Zen+Antique&display=swap")
 
 THEMES = {
     "tenugui": {
         "label": "Tenugui",
         "color": "#1B2A47",
-        "h1": "The gentle way,<br>in Clearwater.",
-        "kicker": "柔 · jū — gentleness that overcomes force",
-        "lede": "Judo and Brazilian jiu jitsu for kids, teens and adults. Both arts grew from the same Japanese idea: give way to force, then turn it. We teach it on one mat at 52 Ridge.",
-        "hero_art": '<div class="hero-art"><div class="vert" lang="ja">柔の道</div><figure class="hero-photo">{photo:koshi-guruma}</figure></div>',
-        "hero_photo": "koshi-guruma",
-        "two_title": "Two arts, one root",
+        "h1": "Judo and Brazilian jiu jitsu in Clearwater",
+        "lede": "Classes for kids and adults every Tuesday and Thursday at 52 Ridge, Clearwater Valley Resort. Taught by Ernst Bergmann. Beginners welcome.",
     },
     "stone": {
         "label": "Stone & Water",
         "color": "#141618",
-        "h1": "Soft as water.<br>Steady as stone.",
-        "kicker": "",
-        "lede": "Judo and Brazilian jiu jitsu for kids, teens and adults in the Clearwater Valley. Ernst Bergmann teaches both arts on one mat at 52 Ridge. No experience needed.",
-        "hero_art": '<div class="hero-bg" aria-hidden="true"><img src="../assets/photos/falls-stone.webp" alt="" width="640" height="349" fetchpriority="high"></div>',
-        "hero_photo": "",
-        "two_title": "Two arts, one source",
+        "h1": "Shi Mizu Dojo",
+        "lede": "Judo and Brazilian jiu jitsu in Clearwater, BC. Kids at 5 pm and adults from 6 to 7:30 pm, every Tuesday and Thursday at 52 Ridge.",
     },
     "stripe": {
         "label": "Stripe",
         "color": "#16161A",
-        "h1": "Every black belt<br>started as a white belt.",
-        "kicker": "Brazilian jiu jitsu + judo · Clearwater, BC",
-        "lede": "A new club for kids, teens and adults who want to learn to grapple, properly and safely. First class: wear what you'd wear to the gym.",
-        "hero_art": '<figure class="hero-photo">{photo:o-uchi-gari}</figure><div class="hero-belt" aria-hidden="true"><span class="hb-bar"><i></i><i></i><i></i><i></i></span></div>',
-        "hero_photo": "o-uchi-gari",
-        "two_title": "Judo or jiu jitsu? Both.",
+        "h1": "Judo and jiu jitsu<br>in Clearwater, BC",
+        "lede": "Tuesdays and Thursdays at 52 Ridge, Clearwater Valley Resort. Kids class at 5 pm, adults from 6 to 7:30 pm. $100 a month.",
     },
 }
 
-PROGRAMS = [
-    ("Little grapplers", "Ages 5–8 (TBC)", "Balance, breakfalls, animal movements and games that sneak in real technique. Short classes, lots of laughing."),
-    ("Kids & youth", "Ages 9–14 (TBC)", "Judo throws, jiu jitsu basics, belt grading and how to train hard with a partner without anyone getting hurt."),
-    ("Adult jiu jitsu", "Teens 15+ and adults", "Positions, escapes, sweeps and submissions, in the gi and without it. Live rolling at the end, always optional for beginners."),
-    ("Adult judo", "Teens 15+ and adults", "How to fall, how to throw and how to pin. Builds balance and timing that carries straight into the ground game."),
-    ("Women's self-defence", "Teens and adults (TBC)", "Practical escapes, grips and getting back to your feet, built on judo and jiu jitsu. Ernst ran this program at his Alberta club."),
-]
-
-SCHEDULE = [  # sample layout only
-    ("Mon", [("5:00 pm", "Kids"), ("6:15 pm", "Adult jiu jitsu")]),
-    ("Tue", []),
-    ("Wed", [("5:00 pm", "Kids"), ("6:15 pm", "Adult judo")]),
-    ("Thu", []),
-    ("Fri", [("6:00 pm", "Open mat")]),
-    ("Sat", [("10:00 am", "Family class")]),
-]
+SCHEDULE = [("Tuesday", [("5:00 pm", "Kids"), ("6:00 – 7:30 pm", "Adults")]),
+            ("Thursday", [("5:00 pm", "Kids"), ("6:00 – 7:30 pm", "Adults")])]
 
 FIRST = [
-    ("Send us a message", "Tell us who's coming and which class. We'll confirm the time and send the waiver."),
-    ("Arrive ten minutes early", "Sign the waiver, meet the coach, see where to change. Parents are welcome to stay and watch."),
+    ("Send us a message", "Tell us who's coming and which class. We'll confirm and send the waiver."),
+    ("Arrive ten minutes early", "Sign the waiver, meet Ernst and see where to change. Parents are welcome to stay and watch."),
     ("Wear gym clothes", "T-shirt, shorts or track pants with no zips or buttons. Bring water and sandals for off the mat. No gi needed yet."),
     ("Train", "Bow in, warm up, learn to fall, learn one technique, then try it with a partner at your own pace."),
 ]
 
 FAQ = [
-    ("Do I need to be fit or have any experience?", "No. Most people start out of shape and with no experience. You'll get fitter by training, and you'll always train at your own pace."),
+    ("Do I need to be fit or have any experience?", "No. Most people start with no experience. You'll get fitter by training, and you always train at your own pace."),
     ("What's the difference between judo and jiu jitsu?", "Judo is mostly standing: throws, then pins. Brazilian jiu jitsu is mostly on the ground: control and submissions. Jiu jitsu grew out of judo about a hundred years ago, so they fit together naturally."),
-    ("Is it safe?", "Everyone learns to fall before they learn to throw, and everyone learns to tap. Coaches supervise every round and pair people by size and experience."),
-    ("How young can kids start?", "Around five, depending on the child (TBC with the instructor). Kids classes are about coordination, confidence and respect first."),
+    ("Is it safe?", "Everyone learns to fall before they learn to throw, and everyone learns to tap. Rounds are supervised and partners are matched by size and experience."),
+    ("How much does it cost?", "$100 a month. Family discounts are available; ask us."),
     ("Do I need to buy a gi?", "Not to start. After a few classes we'll help you choose one. A judo gi works for both arts."),
     ("Can I drop in while visiting Wells Gray?", "Yes. Visitors, seasonal workers and crews in town for the summer are welcome. Message us before you come."),
 ]
 
-PRICES = [
-    ("Drop-in", "Single class, any program"),
-    ("Adult monthly", "Unlimited classes"),
-    ("Kids monthly", "Kids & youth classes"),
-    ("Family", "Two or more on one plan"),
-]
+
+def hero_band():
+    video = ('<video muted loop playsinline preload="none" poster="../assets/video/falls-shimizu-poster.webp">'
+             '<source src="../assets/video/falls-shimizu-loop.mp4" type="video/mp4"></video>') if HERO_VIDEO else ''
+    pause = '<button class="hero-pause" type="button" hidden>Pause video</button>' if HERO_VIDEO else ''
+    return ('<div class="hero-band"><div class="hero-media" aria-hidden="true">'
+            '<img src="../assets/generated/falls-shimizu.webp" srcset="../assets/generated/falls-shimizu-1000.webp 1000w, '
+            '../assets/generated/falls-shimizu.webp 2000w" sizes="100vw" width="2000" height="1116" alt="" fetchpriority="high">'
+            f'{video}</div>{pause}</div>')
+
 
 def page(theme):
     t = THEMES[theme]
     others = [k for k in THEMES if k != theme]
-    progs = "".join(f'<li class="prog"><h3>{n}</h3><p class="prog-age">{a}</p><p>{d}</p></li>' for n, a, d in PROGRAMS)
     sched = "".join(
-        f'<div class="day"><h3>{d}</h3>' + ("".join(f'<p><b>{tm}</b>{c}</p>' for tm, c in cls) or '<p class="rest">Rest day</p>') + "</div>"
+        f'<div class="day"><h3>{d}</h3>' + "".join(f'<p><span class="cls">{c}</span><b>{tm}</b></p>' for tm, c in cls) + "</div>"
         for d, cls in SCHEDULE)
     first = "".join(f'<li><h3>{h}</h3><p>{p}</p></li>' for h, p in FIRST)
     faq = "".join(f'<details><summary>{q}</summary><p>{a}</p></details>' for q, a in FAQ)
-    prices = "".join(f'<li><h3>{n}</h3><p class="price">$ TBC</p><p>{d}</p></li>' for n, d in PRICES)
     learn = "".join(
         f'<a class="learn-card" href="../posters/?theme={theme}&amp;p={pid}">'
         f'<img src="../posters/thumbs/{theme}-{pid}.webp" width="600" height="800" loading="lazy" decoding="async" alt="{title} poster"></a>'
         for pid, title in LEARN)
-    hero_art = t['hero_art']
-    if t['hero_photo']:
-        hero_art = hero_art.replace('{photo:' + t['hero_photo'] + '}', img(t['hero_photo'], lazy=False))
-    kicker = f'<p class="kicker">{t["kicker"]}</p>' if t['kicker'] else ''
-    gallery = "".join(f'<li>{img(n)}</li>' for n in [g for g in GALLERY if g != t['hero_photo']][:4])
-    scrolls = "".join(
-        f'<li><div class="scroll-paper"><img src="../assets/photos/scroll-{f}.png" width="{w}" height="{h}" alt="Brush calligraphy: {k}" loading="lazy"></div>'
-        f'<h3 lang="ja">{k}</h3><p class="sc-r">{r}</p><p>{d}</p></li>'
-        for f, w, h, k, r, d in SCROLLS)
+    gallery = "".join(f'<li>{img(n)}</li>' for n in GALLERY)
     asanoha_attr = MARKS['asanoha'].replace('"', '&quot;')
     root_style = f' style="--asanoha: {asanoha_attr}"' if theme == 'tenugui' else ''
     nav_mark, foot_mark = MARKS[theme]['nav'], MARKS[theme]['foot']
     switch = " ".join(f'<a href="../{k}/">{THEMES[k]["label"]}</a>' for k in others)
+    NAV = ('<a href="#schedule">Schedule</a><a href="#pricing">Pricing</a><a href="#first">First class</a>'
+           '<a href="#coach">Coach</a><a href="#learn">Learn</a><a href="#visit">Find us</a>')
 
-    NAV = '<a href="#programs">Programs</a><a href="#schedule">Schedule</a><a href="#pricing">Pricing</a><a href="#first">First class</a><a href="#learn">Learn</a><a href="#visit">Find us</a>'
     return f"""<!doctype html>
 <html lang="en"{root_style}>
 <head>
@@ -148,15 +122,16 @@ def page(theme):
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{CLUB} · {CLUB_SUB} · {t['label']} direction</title>
 <meta name="robots" content="noindex">
-<meta name="description" content="Brazilian jiu jitsu and judo for kids, teens and adults at 52 Ridge, Clearwater Valley Resort, Clearwater BC. No experience needed.">
+<meta name="description" content="Judo and Brazilian jiu jitsu for kids and adults at 52 Ridge, Clearwater Valley Resort, Clearwater BC. Tuesdays and Thursdays.">
 <meta name="theme-color" content="{t['color']}">
 <meta property="og:title" content="{CLUB} · {CLUB_SUB}">
-<meta property="og:description" content="Jiu jitsu and judo for kids, teens and adults in Clearwater, BC.">
+<meta property="og:description" content="Judo and Brazilian jiu jitsu in Clearwater, BC. Tuesdays and Thursdays at 52 Ridge.">
+<meta property="og:image" content="https://jiujitsu.designspore.co/assets/generated/falls-shimizu-1000.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="{FONTS}" rel="stylesheet">
 <link rel="stylesheet" href="../assets/site-base.css">
 <link rel="stylesheet" href="style.css">
-<script type="application/ld+json">{{"@context":"https://schema.org","@type":"SportsActivityLocation","name":"{CLUB}","sport":["Brazilian jiu jitsu","Judo"],"address":{{"@type":"PostalAddress","streetAddress":"373 Clearwater Valley Rd","addressLocality":"Clearwater","addressRegion":"BC","addressCountry":"CA"}}}}</script>
+<script type="application/ld+json">{{"@context":"https://schema.org","@type":"SportsActivityLocation","name":"{CLUB}","sport":["Brazilian jiu jitsu","Judo"],"email":"{EMAIL}","telephone":"{PHONE_TEL}","address":{{"@type":"PostalAddress","streetAddress":"373 Clearwater Valley Rd","addressLocality":"Clearwater","addressRegion":"BC","addressCountry":"CA"}}}}</script>
 </head>
 <body class="th-{theme}">
 <a class="skip" href="#main">Skip to content</a>
@@ -171,53 +146,41 @@ def page(theme):
 <main id="main">
 <section class="hero" id="top">
   <div class="hero-text">
-    {kicker}
     <h1>{t['h1']}</h1>
     <p class="lede">{t['lede']}</p>
-    <div class="ctas"><a class="btn" href="#contact">{CTA}</a><a class="btn btn-ghost" href="#programs">See kids classes</a></div>
-    <p class="where">52 Ridge · Clearwater Valley Resort · Clearwater, BC</p>
+    <div class="ctas"><a class="btn" href="#contact">{CTA}</a><a class="btn btn-ghost" href="#schedule">See the schedule</a></div>
   </div>
-  {hero_art}
+  {hero_band()}
+  {'<div class="hero-belt" aria-hidden="true"><span class="hb-bar"><i></i><i></i><i></i><i></i></span></div>' if theme == 'stripe' else ''}
 </section>
 
-<section class="sec programs" id="programs">
-  <div class="sec-head"><h2>Classes for every age</h2><p>Four programs, one mat. Ages and times are being finalized with the instructor.</p></div>
-  <ul class="prog-list">{progs}</ul>
+<section class="sec schedule" id="schedule">
+  <div class="sec-head"><h2>Schedule</h2><p>Every week at {VENUE}.</p></div>
+  <div class="week">{sched}</div>
 </section>
 
 <section class="sec gallery" id="mat">
-  <div class="sec-head"><h2>On the mat</h2><p>Training at Ernst's previous club in Rocky Mountain House, Alberta. Photos from Clearwater are coming.</p></div>
+  <div class="sec-head"><h2>On the mat</h2><p>Photos from Ernst's previous club in Rocky Mountain House, Alberta.</p></div>
   <ul class="gallery-list">{gallery}</ul>
 </section>
 
 <section class="sec two" id="arts">
-  <div class="sec-head"><h2>{t['two_title']}</h2></div>
+  <div class="sec-head"><h2>Judo and jiu jitsu</h2></div>
   <div class="two-grid">
     <div class="art"><p class="art-jp" lang="ja">柔道</p><h3>Judo</h3><p>“The gentle way.” Founded in Tokyo in 1882 by Jigorō Kanō. You learn to fall safely, to break someone's balance and to throw, then to pin. An Olympic sport since 1964.</p></div>
-    <div class="art"><p class="art-jp" lang="ja">柔術</p><h3>Brazilian jiu jitsu</h3><p>“The gentle art.” Judo master Mitsuyo Maeda taught it to the Gracie family in Brazil around 1917, and they built it into a complete ground game. Smaller people control bigger people with leverage.</p></div>
-    <p class="two-note">Same root, 柔 (jū): yield to force, then redirect it. Training both makes you better at each.</p>
+    <div class="art"><p class="art-jp" lang="ja">柔術</p><h3>Brazilian jiu jitsu</h3><p>“The gentle art.” Judo master Mitsuyo Maeda taught it to the Gracie family in Brazil around 1917, and they built it into a complete ground game, where leverage lets a smaller person control a bigger one.</p></div>
+    <p class="two-note">Both share the same root, 柔 (jū): give way to force, then redirect it.</p>
   </div>
 </section>
 
-<section class="sec scrolls" id="scrolls">
-  <div class="sec-head"><h2>The scrolls on our wall</h2><p>Three brushed maxims from Ernst's dojo in Alberta. Judo's founder, Jigorō Kanō, built the art on the first two.</p></div>
-  <ul class="scroll-list">{scrolls}</ul>
-</section>
-
-<section class="sec schedule" id="schedule">
-  <div class="sec-head"><h2>Weekly schedule</h2><p class="flag">Sample layout. Real times are coming soon.</p></div>
-  <div class="week">{sched}</div>
-  <p class="small"><a href="../posters/?theme={theme}">Printable posters</a> · schedule PDF coming with the final times</p>
-</section>
-
 <section class="sec pricing" id="pricing">
-  <div class="sec-head"><h2>Simple pricing</h2><p>No contracts, no hidden fees. Final prices are TBC.</p></div>
-  <ul class="price-list">{prices}</ul>
-  <p class="fund">Cost shouldn't stop a kid from training. BC families can apply to <a href="https://kidsportcanada.ca/british-columbia/" rel="noopener">KidSport BC</a> or <a href="https://jumpstart.canadiantire.ca/" rel="noopener">Canadian Tire Jumpstart</a> for help with fees.</p>
+  <div class="sec-head"><h2>Pricing</h2></div>
+  <div class="price-card"><p class="price">$100<span> / month</span></p><p>Family discounts are available. Ask us about them.</p></div>
+  <p class="fund">BC families can apply to <a href="https://kidsportcanada.ca/british-columbia/" rel="noopener">KidSport BC</a> or <a href="https://jumpstart.canadiantire.ca/" rel="noopener">Canadian Tire Jumpstart</a> for help with fees.</p>
 </section>
 
 <section class="sec first" id="first">
-  <div class="sec-head"><h2>Your first class</h2><p>Nervous is normal. Here's exactly what happens.</p></div>
+  <div class="sec-head"><h2>Your first class</h2></div>
   <ol class="steps">{first}</ol>
 </section>
 
@@ -232,7 +195,7 @@ def page(theme):
 </section>
 
 <section class="sec learn" id="learn">
-  <div class="sec-head"><h2>The dojo library</h2><p>The posters on our walls, free to read here: counting in Japanese, belt ranks, dojo words, throws, groundwork and where it all came from.</p></div>
+  <div class="sec-head"><h2>The dojo library</h2><p>The posters on our walls: counting in Japanese, belt ranks, dojo words, throws, groundwork and where it all came from.</p></div>
   <div class="learn-grid">{learn}</div>
   <a class="btn" href="../posters/?theme={theme}">See all twelve posters</a>
 </section>
@@ -240,15 +203,12 @@ def page(theme):
 <section class="sec visit" id="visit">
   <div class="visit-text">
     <h2>Find us</h2>
-    <p class="addr"><b>52 Ridge · Clearwater Valley Resort</b><br>373 Clearwater Valley Rd, Clearwater, BC</p>
+    <p class="addr"><b>{VENUE}</b><br>{ADDRESS}</p>
     <p>On Clearwater Valley Road, the road into Wells Gray Park.</p>
-    <p>Training with us from Birch Island, Vavenby, Blackpool or Little Fort? Ask about carpooling. In winter, check <a href="https://www.drivebc.ca/" rel="noopener">DriveBC</a> before you head out.</p>
-    <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=Clearwater+Valley+Resort+373+Clearwater+Valley+Rd+Clearwater+BC" rel="noopener">Open in Maps</a>
+    <p>Coming from Birch Island, Vavenby, Blackpool or Little Fort? Ask about carpooling. In winter, check <a href="https://www.drivebc.ca/" rel="noopener">DriveBC</a> before you head out.</p>
+    <a class="btn btn-ghost" href="{MAP_LINK}" rel="noopener">Open in Google Maps</a>
   </div>
-  <div class="visit-card">
-    <h3>Visiting Wells Gray?</h3>
-    <p>Staying at the resort, working a season or here with a fire crew? Drop in for a class. Bring a gi if you have one; if not, gym clothes are fine.</p>
-  </div>
+  <iframe class="map" title="Map of {VENUE}, {ADDRESS}" src="{MAP_EMBED}" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
 </section>
 
 <section class="sec faq" id="faq">
@@ -257,23 +217,35 @@ def page(theme):
 </section>
 
 <section class="sec contact" id="contact">
-  <h2>{CTA}</h2>
-  <p>Message the club to book a class or ask anything. Parents are welcome to come and watch first.</p>
-  <p class="contact-flag">Contact details are being confirmed with the instructor and will appear here.</p>
-  <dl class="contact-row"><div><dt>Email</dt><dd>[TBC]</dd></div><div><dt>Phone / text</dt><dd>[TBC]</dd></div><div><dt>Instagram</dt><dd>[TBC]</dd></div></dl>
+  <h2>Contact</h2>
+  <p>Message us to book a first class or ask a question. Parents are welcome to come and watch.</p>
+  <dl class="contact-row">
+    <div><dt>Email</dt><dd><a href="mailto:{EMAIL}">{EMAIL}</a></dd></div>
+    <div><dt>Phone or text</dt><dd><a href="tel:{PHONE_TEL}">{PHONE}</a></dd></div>
+    <div><dt>WhatsApp</dt><dd><a href="{WHATSAPP}" rel="noopener">Join the club group</a></dd></div>
+  </dl>
 </section>
 </main>
 
 <footer class="foot">
   <span class="foot-mark" aria-hidden="true">{foot_mark}</span>
-  <p><b>{CLUB} · {CLUB_SUB}</b><br>52 Ridge · Clearwater Valley Resort · Clearwater, BC</p>
-  <p class="small">Temporary site · {t['label']} design direction · <a href="../posters/?theme={theme}">Posters</a></p>
+  <p><b>{CLUB} · {CLUB_SUB}</b><br>{VENUE} · Clearwater, BC</p>
+  <p class="small"><a href="mailto:{EMAIL}">{EMAIL}</a> · <a href="tel:{PHONE_TEL}">{PHONE}</a> · <a href="../posters/?theme={theme}">Posters</a></p>
 </footer>
 
 <script>
   // Close the phone menu after a section link is chosen.
   const menu = document.querySelector(".menu");
   menu.addEventListener("click", (e) => {{ if (e.target.closest("a")) menu.open = false; }});
+  // Hero video: plays over the still only when motion is allowed, with a pause control.
+  const media = document.querySelector(".hero-media"), video = media && media.querySelector("video"), pause = document.querySelector(".hero-pause");
+  if (video && !matchMedia("(prefers-reduced-motion: reduce)").matches) {{
+    video.preload = "auto";
+    video.play().then(() => {{ media.classList.add("is-video"); pause.hidden = false; }}).catch(() => {{}});
+    pause.addEventListener("click", () => {{
+      if (video.paused) {{ video.play(); pause.textContent = "Pause video"; }} else {{ video.pause(); pause.textContent = "Play video"; }}
+    }});
+  }}
 </script>
 </body>
 </html>

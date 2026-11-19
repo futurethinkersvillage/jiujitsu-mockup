@@ -76,3 +76,18 @@ h1, h2 { font-weight: 800; letter-spacing: -0.005em; }
 .coach-photo { border: 1px solid rgba(238,233,221,.25); padding: 10px; }
 .coach-photo figcaption { color: var(--ai-mut); }
 .sc-r { color: var(--shu-ink); }
+
+/* Nov 19: generated falls hero */
+.hero { --hero-shade: linear-gradient(90deg, rgba(18,29,51,.96) 0%, rgba(27,42,71,.84) 38%, rgba(27,42,71,.25) 72%, rgba(27,42,71,.08) 100%); }
+.hero h1 { font-size: clamp(2.4rem, 5vw, 4.4rem); }
+.lede { color: #C9D2E0; }
+.price-card { border: 1px solid rgba(238,233,221,.25); background: rgba(18,29,51,.5); }
+.price-card p:not(.price) { color: var(--ai-mut); }
+.map { border: 1px solid rgba(238,233,221,.25); }
+.day p { border-top-color: rgba(27,42,71,.18); }
+@media (max-width: 760px) { .hero { --hero-shade: linear-gradient(0deg, rgba(18,29,51,.95) 10%, rgba(27,42,71,.7) 60%, rgba(27,42,71,.35)); } }
+/* Keep the cloth/indigo bands alternating now that two sections are gone */
+.two { background: var(--kinari); color: var(--ai); }
+.two .art p:not(.art-jp) { color: var(--ink-mut); }
+.two .two-note { color: var(--ai); }
+.two .art { border-top-color: var(--shu-ink); }
