@@ -98,3 +98,8 @@ h1, h2, h3 { font-stretch: 125%; font-weight: 800; letter-spacing: -0.025em; }
 .day { border-top: 4px solid var(--ink); }
 @media (max-width: 760px) { .hero-band { aspect-ratio: 4 / 3; } }
 .hero h1 { max-width: 17ch; font-size: clamp(2.6rem, 7vw, 6.4rem); }
+
+/* Nov 20: 清水 over the canyon band, no tint */
+.hero { --kanji: #F1EEE6; }
+.hero-text { max-width: none; }
+.hero-text .lede { max-width: 36em; }

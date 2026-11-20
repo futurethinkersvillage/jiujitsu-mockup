@@ -106,3 +106,7 @@ h1, h2, h3 { font-weight: 400; letter-spacing: -0.005em; }
 .map { filter: grayscale(1) contrast(1.05); border: 1px solid rgba(20,22,24,.2); }
 .day p { border-top-color: rgba(20,22,24,.15); }
 @media (max-width: 760px) { .hero { --hero-shade: linear-gradient(0deg, rgba(20,22,24,.95) 10%, rgba(20,22,24,.65) 60%, rgba(20,22,24,.35)); } }
+
+/* Nov 20: whole-video tint (replaces the left-to-right gradient) */
+.hero { --hero-shade: none; --hero-tint: #5E6367; --kanji: #ECEDEA; }
+@media (max-width: 760px) { .hero { --hero-shade: none; } .hero-kanji { display: none; } }

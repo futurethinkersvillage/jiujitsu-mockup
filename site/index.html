@@ -92,7 +92,7 @@
 
   <section class="gen" id="generated">
     <h2>Generated images</h2>
-    <p>Used in the hero of each homepage. More to come.</p>
+    <p>The canyon loop runs in the hero of each homepage. More to come.</p>
     <div class="gen-list" id="genList"></div>
   </section>
 
@@ -120,7 +120,7 @@
     </div>
     <div class="note">
       <h2>Photos</h2>
-      <p>The homepages use the generated falls image (and its looping video) in the hero, and Ernst's photos from his Alberta club further down. The prompts page covers anything still missing.</p>
+      <p>The homepages use the generated canyon loop in the hero, and Ernst's photos from his Alberta club further down. The prompts page covers anything still missing.</p>
       <p><a href="prompts/">See the image prompts</a></p>
       <p><a href="posters/">Browse all posters</a></p>
     </div>
@@ -156,10 +156,11 @@
   ];
   // Generated images: add new ones here (image, optional looping video).
   const GEN = [
-    { title: "Falls with 清水", img: "assets/generated/falls-shimizu.webp", video: "assets/video/falls-shimizu-loop.mp4", poster: "assets/video/falls-shimizu-poster.webp" }
+    { title: "Canyon loop (in the heroes)", img: "assets/video/canyon-poster.webp", w: 1280, h: 720, video: "assets/video/canyon-loop.mp4", poster: "assets/video/canyon-poster.webp", note: "Stabilized and looped seamlessly; 清水 is added on the page as text" },
+    { title: "Falls with 清水", img: "assets/generated/falls-shimizu.webp", w: 2000, h: 1116, video: "assets/video/falls-shimizu-loop.mp4", poster: "assets/video/falls-shimizu-poster.webp" }
   ];
   document.getElementById("genList").innerHTML = GEN.map((g) => `
-    <figure><img src="${g.img}" width="2000" height="1116" alt="Generated image: ${g.title}" loading="lazy"><figcaption><span>${g.title} · still</span><a href="${g.img}">Full size</a></figcaption></figure>
+    <figure><img src="${g.img}" width="${g.w}" height="${g.h}" alt="Generated image: ${g.title}" loading="lazy"><figcaption><span>${g.title} · still${g.note ? ` · ${g.note}` : ""}</span><a href="${g.img}">Full size</a></figcaption></figure>
     ${g.video ? `<figure><video src="${g.video}" poster="${g.poster}" controls muted loop playsinline preload="none"></video><figcaption><span>${g.title} · looping video</span><a href="${g.video}">MP4</a></figcaption></figure>` : ""}`).join("");
   document.getElementById("dirs").innerHTML = D.map((d) => `
     <article class="dir d-${d.k}">

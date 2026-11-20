@@ -177,3 +177,10 @@ h1, h2, h3 { text-wrap: balance; }
 @media (max-width: 760px) { .gallery-list { grid-template-columns: 1fr 1fr; grid-auto-rows: 44vw; } .gallery-list li:first-child { grid-column: span 2; grid-row: span 2; } .gallery-list li:last-child { grid-column: span 2; } }
 
 .contact-row a { color: inherit; text-underline-offset: 3px; }
+
+/* ===== Nov 20: canyon loop + 清水 text overlay; tint covers the whole video ===== */
+/* Video, still and the SVG text share one frame anchored right, so 清水 stays where it was drawn. */
+.hero-media img, .hero-media video { object-position: 100% 50%; }
+.hero-kanji { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; fill: var(--kanji, #EFECE5); }
+/* One solid colour, multiplied over the entire frame: no gradient, no fade to clear. */
+.hero-media::after { background: var(--hero-tint, transparent); mix-blend-mode: multiply; }

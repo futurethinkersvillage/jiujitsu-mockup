@@ -91,3 +91,7 @@ h1, h2 { font-weight: 800; letter-spacing: -0.005em; }
 .two .art p:not(.art-jp) { color: var(--ink-mut); }
 .two .two-note { color: var(--ai); }
 .two .art { border-top-color: var(--shu-ink); }
+
+/* Nov 20: whole-video tint (replaces the left-to-right gradient) */
+.hero { --hero-shade: none; --hero-tint: #3E5688; --kanji: #EEE9DD; }
+@media (max-width: 760px) { .hero { --hero-shade: none; } .hero-kanji { display: none; } }

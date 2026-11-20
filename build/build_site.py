@@ -34,7 +34,7 @@ PHOTOS = {
 }
 GALLERY = ["koshi-guruma", "o-uchi-gari", "juji-gatame-guard", "groundwork-pin", "youth-throw"]
 
-# The hero uses the generated falls image; the looping video plays over it when motion is allowed.
+# The hero uses the generated canyon loop; its first frame shows when motion is reduced or before it loads.
 HERO_VIDEO = True
 
 
@@ -86,13 +86,19 @@ FAQ = [
 
 
 def hero_band():
-    video = ('<video muted loop playsinline preload="none" poster="../assets/video/falls-shimizu-poster.webp">'
-             '<source src="../assets/video/falls-shimizu-loop.mp4" type="video/mp4"></video>') if HERO_VIDEO else ''
+    """Generated canyon loop (stabilized, seamless) over its first frame, with 清水 set as text
+    where the characters sat in the original image. The SVG uses the same 1280x720 frame and
+    'slice' scaling as the video's object-fit: cover, so the text stays locked to the picture."""
+    video = ('<video muted loop playsinline preload="none" poster="../assets/video/canyon-poster.webp">'
+             '<source src="../assets/video/canyon-loop.mp4" type="video/mp4"></video>') if HERO_VIDEO else ''
     pause = '<button class="hero-pause" type="button" hidden>Pause video</button>' if HERO_VIDEO else ''
+    kanji = ('<svg class="hero-kanji" viewBox="0 0 1280 720" preserveAspectRatio="xMidYMid slice" aria-hidden="true">'
+             '<defs><filter id="kshadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="7" flood-color="#000" flood-opacity=".35"/></filter></defs>'
+             '<g filter="url(#kshadow)" text-anchor="middle" dominant-baseline="central" font-family="Yuji Boku, Shippori Mincho B1, serif" font-size="262">'
+             '<text x="1123" y="225">清</text><text x="1123" y="480">水</text></g></svg>')
     return ('<div class="hero-band"><div class="hero-media" aria-hidden="true">'
-            '<img src="../assets/generated/falls-shimizu.webp" srcset="../assets/generated/falls-shimizu-1000.webp 1000w, '
-            '../assets/generated/falls-shimizu.webp 2000w" sizes="100vw" width="2000" height="1116" alt="" fetchpriority="high">'
-            f'{video}</div>{pause}</div>')
+            '<img src="../assets/video/canyon-poster.webp" width="1280" height="720" alt="" fetchpriority="high">'
+            f'{video}</div>{kanji}{pause}</div>')
 
 
 def page(theme):
