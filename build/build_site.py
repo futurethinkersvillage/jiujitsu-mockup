@@ -80,7 +80,10 @@ FAQ = [
     ("What's the difference between judo and jiu jitsu?", "Judo is mostly standing: throws, then pins. Brazilian jiu jitsu is mostly on the ground: control and submissions. Jiu jitsu grew out of judo about a hundred years ago, so they fit together naturally."),
     ("Is it safe?", "Everyone learns to fall before they learn to throw, and everyone learns to tap. Rounds are supervised and partners are matched by size and experience."),
     ("How much does it cost?", "$100 a month. Family discounts are available; ask us."),
-    ("Do I need to buy a gi?", "Not to start. After a few classes we'll help you choose one. A judo gi works for both arts."),
+    ("Do I need a gi, and where can I buy one?", "Not to start: gym clothes are fine for your first few classes. When you're ready, one plain white gi works for both arts while you're learning; a single-weave judo gi is fine for jiu jitsu. Expect about $90–160 for an adult gi and $40–90 for a child's. Canadian sellers avoid duty and cross-border shipping surprises: "
+     '<a href="https://www.fushida.ca" rel="noopener">Fushida</a> (Vancouver), <a href="https://bushido.ca" rel="noopener">Bushido</a> (Langley), <a href="https://matsuru.ca" rel="noopener">Matsuru</a>, '
+     '<a href="https://www.kingzkimonos.ca" rel="noopener">Kingz Canada</a> and <a href="https://stonebelt.ca" rel="noopener">Stonebelt</a>. '
+     "Cotton gis shrink 3–5%, so use the brand's size chart, size up if you're between sizes, wash cold and hang to dry. Ask Ernst before you buy and he'll help with sizing."),
     ("Can I drop in while visiting Wells Gray?", "Yes. Visitors, seasonal workers and crews in town for the summer are welcome. Message us before you come."),
 ]
 
@@ -90,7 +93,7 @@ def hero_band():
     where the characters sat in the original image. The SVG uses the same 1280x720 frame and
     'slice' scaling as the video's object-fit: cover, so the text stays locked to the picture."""
     video = ('<video muted loop playsinline preload="none" poster="../assets/video/canyon-poster.webp">'
-             '<source src="../assets/video/canyon-loop.mp4" type="video/mp4"></video>') if HERO_VIDEO else ''
+             '<source src="../assets/video/canyon-loop-v2.mp4" type="video/mp4"></video>') if HERO_VIDEO else ''
     pause = '<button class="hero-pause" type="button" hidden>Pause video</button>' if HERO_VIDEO else ''
     kanji = ('<svg class="hero-kanji" viewBox="0 0 1280 720" preserveAspectRatio="xMidYMid slice" aria-hidden="true">'
              '<defs><filter id="kshadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="7" flood-color="#000" flood-opacity=".35"/></filter></defs>'
