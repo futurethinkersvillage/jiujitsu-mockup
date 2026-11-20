@@ -2,7 +2,11 @@
 Run:  python build/build_site.py   (writes site/<theme>/index.html; needs node for the logo marks)"""
 import json
 import subprocess
+import sys
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import build_events  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent / "site"
 MARKS = json.loads(subprocess.run(["node", str(Path(__file__).with_name("brand_dump.js"))],
@@ -121,7 +125,9 @@ def page(theme):
     root_style = f' style="--asanoha: {asanoha_attr}"' if theme == 'tenugui' else ''
     nav_mark, foot_mark = MARKS[theme]['nav'], MARKS[theme]['foot']
     switch = " ".join(f'<a href="../{k}/">{THEMES[k]["label"]}</a>' for k in others)
-    NAV = ('<a href="#schedule">Schedule</a><a href="#pricing">Pricing</a><a href="#first">First class</a>'
+    ev = build_events.upcoming(6)
+    ev_list = ''.join(build_events.row_html(e) for e in ev) or '<li class="ev-empty">New events are added every month.</li>'
+    NAV = ('<a href="#schedule">Schedule</a><a href="#events">Events</a><a href="#pricing">Pricing</a><a href="#first">First class</a>'
            '<a href="#coach">Coach</a><a href="#learn">Learn</a><a href="#visit">Find us</a>')
 
     return f"""<!doctype html>
@@ -166,6 +172,13 @@ def page(theme):
 <section class="sec schedule" id="schedule">
   <div class="sec-head"><h2>Schedule</h2><p>Every week at {VENUE}.</p></div>
   <div class="week">{sched}</div>
+</section>
+
+<section class="sec events" id="events">
+  <div class="sec-head"><h2>Events</h2><p>Judo and jiu jitsu tournaments, seminars and courses in BC and Alberta, plus our own club events. Subscribe and they show up in your calendar.</p></div>
+  <ul class="ev">{ev_list}</ul>
+  {build_events.subscribe_html().replace('../events.ics', '../events.ics')}
+  <p class="small"><a href="../events/">All events</a></p>
 </section>
 
 <section class="sec gallery" id="mat">

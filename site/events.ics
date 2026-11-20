@@ -1,0 +1,848 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Shi Mizu Dojo//Events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Shi Mizu Dojo · BC & Alberta judo and jiu jitsu events
+X-WR-TIMEZONE:America/Vancouver
+X-WR-CALDESC:Shi Mizu Dojo classes and events\, plus judo and jiu jitsu tou
+ rnaments\, seminars and courses in BC and Alberta. Updated monthly.
+REFRESH-INTERVAL;VALUE=DURATION:P1D
+X-PUBLISHED-TTL:P1D
+BEGIN:VTIMEZONE
+TZID:America/Vancouver
+X-LIC-LOCATION:America/Vancouver
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0800
+TZOFFSETTO:-0700
+TZNAME:PDT
+DTSTART:19700308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0700
+TZOFFSETTO:-0800
+TZNAME:PST
+DTSTART:19701101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:2026-11-24-kids-class@jiujitsu.designspore.co
+DTSTAMP:20261120T203908Z
+DTSTART;TZID=America/Vancouver:20261124T170000
+DTEND;TZID=America/Vancouver:20261124T180000
+RRULE:FREQ=WEEKLY;BYDAY=TU,TH
+SUMMARY:Kids class
+LOCATION:52 Ridge\, Clearwater Valley Resort\, Clearwater\, BC
+DESCRIPTION:Weekly kids class. Beginners welcome. · https://jiujitsu.desig
+ nspore.co/
+URL:https://jiujitsu.designspore.co/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-24-adult-class@jiujitsu.designspore.co
+DTSTAMP:20261120T203908Z
+DTSTART;TZID=America/Vancouver:20261124T180000
+DTEND;TZID=America/Vancouver:20261124T193000
+RRULE:FREQ=WEEKLY;BYDAY=TU,TH
+SUMMARY:Adult class
+LOCATION:52 Ridge\, Clearwater Valley Resort\, Clearwater\, BC
+DESCRIPTION:Judo and Brazilian jiu jitsu\, adults and teens. Beginners welc
+ ome. · https://jiujitsu.designspore.co/
+URL:https://jiujitsu.designspore.co/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-20-judo-alberta-introductory-referee-seminar--lethbridge-@jiuji
+ tsu.designspore.co
+DTSTAMP:20261120T203908Z
+DTSTART;VALUE=DATE:20261120
+DTEND;VALUE=DATE:20261121
+SUMMARY:Judo Alberta Introductory Referee Seminar (Lethbridge) (JUDO course
+ )
+LOCATION:Lethbridge Kyodokan Judo Club\, Lethbridge\, AB
+DESCRIPTION:Judo Alberta · Judo Alberta post: Friday Nov 20\, 7:00 PM\; co
+ ntact Jennifer Parker to register. (Event calendar/schedule list it on Nov
+  21 alongside the Florence Senda Cup.) · https://judoalberta.com/
+URL:https://judoalberta.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-20-nccp-dojo-assistant---dojo-instructor-course--burnaby-@jiuji
+ tsu.designspore.co
+DTSTAMP:20261120T203908Z
+DTSTART;VALUE=DATE:20261120
+DTEND;VALUE=DATE:20261123
+SUMMARY:NCCP Dojo Assistant / Dojo Instructor Course (Burnaby) (JUDO course
+ )
+LOCATION:Odd Squad Productions Society / Police Judo\, 5487 Lane St\, Burna
+ by\, BC
+DESCRIPTION:Judo BC · Listed on Judo BC events calendar\; register via the
+  Coach.ca Locker. · https://thelocker.coach.ca/event/registration/15858
+URL:https://thelocker.coach.ca/event/registration/15858
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-20-nccp-dojo-assistant---dojo-instructor-course--mile-zero-@jiu
+ jitsu.designspore.co
+DTSTAMP:20261120T203908Z
+DTSTART;VALUE=DATE:20261120
+DTEND;VALUE=DATE:20261123
+SUMMARY:NCCP Dojo Assistant / Dojo Instructor Course (Mile Zero) (JUDO cour
+ se)
+LOCATION:Mile Zero Judo Club\, Dawson Creek\, BC
+DESCRIPTION:Judo BC · Listed on Judo BC events calendar\; register via the
+  Coach.ca Locker. City inferred from club name (Mile Zero = Dawson Creek).
+  · https://thelocker.coach.ca/event/registration/15868
+URL:https://thelocker.coach.ca/event/registration/15868
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-21-alberta-grappling-open@jiujitsu.designspore.co
+DTSTAMP:20261120T203908Z
+DTSTART;VALUE=DATE:20261121
+DTEND;VALUE=DATE:20261123
+SUMMARY:Alberta Grappling Open (BJJ tournament)
+LOCATION:Alavanca Shawnessy\, 14315 Macleod Trail S\, Calgary\, AB
+DESCRIPTION:Alavanca Shawnessy · Gi round-robin submission tournament\; ki
+ ds\, youth and adult divisions. · https://smoothcomp.com/en/event/32162
+URL:https://smoothcomp.com/en/event/32162
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-21-compnet-nationals-canada-2026@jiujitsu.designspore.co
+DTSTAMP:20261120T203908Z
+DTSTART;VALUE=DATE:20261121
+DTEND;VALUE=DATE:20261122
+SUMMARY:Compnet Nationals Canada 2026 (BJJ tournament) [tentative]
+LOCATION:Burnaby\, BC
+DESCRIPTION:Compnet · Date not yet confirmed by the organiser\; check befo
+ re you travel. · Gi\, no-gi and kids (per BJJ Calendar / BJJCompFinder). 
+ · https://compnet.smoothcomp.com/en/event/35189
+URL:https://compnet.smoothcomp.com/en/event/35189
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-21-florence-senda-cup--junior-tournament-@jiujitsu.designspore.
+ co
+DTSTAMP:20261120T203908Z
+DTSTART;VALUE=DATE:20261121
+DTEND;VALUE=DATE:20261122
+SUMMARY:Florence Senda Cup (junior tournament) (JUDO tournament)
+LOCATION:Lethbridge\, AB
+DESCRIPTION:Judo Alberta / Lethbridge · U10\, U12\, U14\, yellow belt and 
+ up. Registration deadline (Nov 13) has passed. · https://judoalberta.com/
+ index.php/event-calendar/
+URL:https://judoalberta.com/index.php/event-calendar/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-21-provincial-referee-b---c-grading--lethbridge-@jiujitsu.desig
+ nspore.co
+DTSTAMP:20261120T203908Z
+DTSTART;VALUE=DATE:20261121
+DTEND;VALUE=DATE:20261122
+SUMMARY:Provincial Referee B & C Grading (Lethbridge) (JUDO course)
+LOCATION:Lethbridge\, AB
+DESCRIPTION:Judo Alberta · Held at the Florence Senda Cup\; candidates mus
+ t register interest in advance. · https://judoalberta.com/index.php/event
+ -calendar/
+URL:https://judoalberta.com/index.php/event-calendar/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-22-thompson-okanagan-regional-practice--judo-bc-@jiujitsu.desig
+ nspore.co
+DTSTAMP:20261120T203908Z
+DTSTART;VALUE=DATE:20261122
+DTEND;VALUE=DATE:20261123
+SUMMARY:Thompson-Okanagan Regional Practice (Judo BC) (JUDO open mat)
+LOCATION:Kelowna Judo Club (dojo)\, Kelowna\, BC
+DESCRIPTION:Judo BC · Judo BC regional practice\, 10:00-12:00. Regional te
+ am training for Judo BC members - check with Judo BC/Kelowna Judo Club bef
+ ore bringing visitors. · https://www.judobc.ca/events-calendar/
+URL:https://www.judobc.ca/events-calendar/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-29-thompson-okanagan-regional-practice--judo-bc-@jiujitsu.desig
+ nspore.co
+DTSTAMP:20261120T203908Z
+DTSTART;VALUE=DATE:20261129
+DTEND;VALUE=DATE:20261130
+SUMMARY:Thompson-Okanagan Regional Practice (Judo BC) (JUDO open mat)
+LOCATION:Kelowna Judo Club (dojo)\, Kelowna\, BC
+DESCRIPTION:Judo BC · Judo BC regional practice\, 10:00-12:00. Regional te
+ am training for Judo BC members - check with Judo BC/Kelowna Judo Club bef
+ ore bringing visitors. · https://www.judobc.ca/events-calendar/
+URL:https://www.judobc.ca/events-calendar/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-05-2026-christmas-cup@jiujitsu.designspore.co
+DTSTAMP:20261120T203908Z
+DTSTART;VALUE=DATE:20261205
+DTEND;VALUE=DATE:20261206
+SUMMARY:2026 Christmas Cup (JUDO tournament)
+LOCATION:Lindsay Thurber Comprehensive High School\, 4204 58 St\, Red Deer\
+ , AB
+DESCRIPTION:Red Deer Judo Club · 9:00-18:00\; registration deadline Dec 2\
+ , 2026 (via Judo Canada DokuMe). · https://judocanada.dokume.app/#/events
+ _registration/register/4478
+URL:https://judocanada.dokume.app/#/events_registration/register/4478
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-05-2026-steveston-junior-shiai@jiujitsu.designspore.co
+DTSTAMP:20261120T203908Z
+DTSTART;VALUE=DATE:20261205
+DTEND;VALUE=DATE:20261206
+SUMMARY:2026 Steveston Junior Shiai (JUDO tournament)
+LOCATION:Steveston (venue not listed)\, Richmond\, BC
+DESCRIPTION:Steveston Judo Club / Judo BC · Judo BC provincial tournament 
+ (juniors). · https://www.judobc.ca/events-calendar/
+URL:https://www.judobc.ca/events-calendar/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-06-ava-ultra-2026@jiujitsu.designspore.co
+DTSTAMP:20261120T203908Z
+DTSTART;VALUE=DATE:20261206
+DTEND;VALUE=DATE:20261207
+SUMMARY:AVA Ultra 2026 (GRAPPLING tournament)
+LOCATION:Vancouver\, BC
+DESCRIPTION:AVA Submission Grappling Federation · Submission-only. BJJComp
+ Finder lists Nov 28 but AVA's Smoothcomp federation page shows Dec 6. · h
+ ttps://avagrappling.smoothcomp.com/en/event/29934
+URL:https://avagrappling.smoothcomp.com/en/event/29934
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-06-judo-alberta-yudansha--black-belt--grading@jiujitsu.designsp
+ ore.co
+DTSTAMP:20261120T203908Z
+DTSTART;VALUE=DATE:20261206
+DTEND;VALUE=DATE:20261207
+SUMMARY:Judo Alberta Yudansha (Black Belt) Grading (JUDO grading)
+LOCATION:Red Deer Judo Club\, 87 Petrolia Drive\, Red Deer\, AB
+DESCRIPTION:Judo Alberta · 10:00 am. Application deadline was Oct 29. Note
+ : the draft season schedule PDF lists the Dec 6 provincial grading in Calg
+ ary\; the newer Judo Alberta post says Red Deer. · https://judoalberta.co
+ m/
+URL:https://judoalberta.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-06-triple-crown-submission-series-2@jiujitsu.designspore.co
+DTSTAMP:20261120T203908Z
+DTSTART;VALUE=DATE:20261206
+DTEND;VALUE=DATE:20261207
+SUMMARY:Triple Crown Submission Series 2 (GRAPPLING tournament)
+LOCATION:Alliance BJJ Calgary\, Deer Ridge Dr SE\, Calgary\, AB
+DESCRIPTION:T7 Grappling · Gi and no-gi\; beginner and kids divisions. BJJ
+ CompFinder lists Nov 29 but the Smoothcomp event page says Dec 6. · https
+ ://smoothcomp.com/en/event/30126
+URL:https://smoothcomp.com/en/event/30126
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-11-judo-alberta-winter-camp@jiujitsu.designspore.co
+DTSTAMP:20261120T203908Z
+DTSTART;VALUE=DATE:20261211
+DTEND;VALUE=DATE:20261214
+SUMMARY:Judo Alberta Winter Camp (JUDO camp) [tentative]
+LOCATION:Lethbridge\, AB
+DESCRIPTION:Judo Alberta · Date not yet confirmed by the organiser\; check
+  before you travel. · Inter-provincial camp\; from draft season schedule.
+  · https://judoalberta.com/wp-content/uploads/2026/08/Final-2026-2027-DRA
+ FT-Judo-AB-Event-Schedule.Aug-28.pdf
+URL:https://judoalberta.com/wp-content/uploads/2026/08/Final-2026-2027-DRAF
+ T-Judo-AB-Event-Schedule.Aug-28.pdf
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-12-eyjs-monthly---intro-referee-seminar@jiujitsu.designspore.co
+DTSTAMP:20261120T203908Z
+DTSTART;VALUE=DATE:20261212
+DTEND;VALUE=DATE:20261213
+SUMMARY:EYJS Monthly + Intro Referee Seminar (JUDO tournament) [tentative]
+LOCATION:Edmonton\, AB
+DESCRIPTION:Judo Alberta / Edmonton youth judo series · Date not yet confi
+ rmed by the organiser\; check before you travel. · From Judo Alberta's 20
+ 26-27 DRAFT event schedule (subject to change). Regional youth competition
+  with an introductory referee seminar. · https://judoalberta.com/wp-conte
+ nt/uploads/2026/08/Final-2026-2027-DRAFT-Judo-AB-Event-Schedule.Aug-28.pdf
+URL:https://judoalberta.com/wp-content/uploads/2026/08/Final-2026-2027-DRAF
+ T-Judo-AB-Event-Schedule.Aug-28.pdf
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-13-thompson-okanagan-regional-practice--judo-bc-@jiujitsu.desig
+ nspore.co
+DTSTAMP:20261120T203908Z
+DTSTART;VALUE=DATE:20261213
+DTEND;VALUE=DATE:20261214
+SUMMARY:Thompson-Okanagan Regional Practice (Judo BC) (JUDO open mat)
+LOCATION:Kelowna Judo Club (dojo)\, Kelowna\, BC
+DESCRIPTION:Judo BC · Judo BC regional practice\, 10:00-12:00. Regional te
+ am training for Judo BC members - check with Judo BC/Kelowna Judo Club bef
+ ore bringing visitors. · https://www.judobc.ca/events-calendar/
+URL:https://www.judobc.ca/events-calendar/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-19-bc-absolute-christmas-classic@jiujitsu.designspore.co
+DTSTAMP:20261120T203908Z
+DTSTART;VALUE=DATE:20261219
+DTEND;VALUE=DATE:20261220
+SUMMARY:BC Absolute Christmas Classic (BJJ tournament)
+LOCATION:Pacific Top Team Kelowna\, Kelowna\, BC
+DESCRIPTION:BC Absolute / Pacific Top Team Tournaments · Gi and no-gi\; ki
+ ds 3-15 and white-belt absolute divisions. Closest BJJ event to Clearwater
+ . · https://smoothcomp.com/en/event/36069
+URL:https://smoothcomp.com/en/event/36069
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-19-true-north-championship@jiujitsu.designspore.co
+DTSTAMP:20261120T203908Z
+DTSTART;VALUE=DATE:20261219
+DTEND;VALUE=DATE:20261220
+SUMMARY:True North Championship (BJJ tournament)
+LOCATION:McKinnon Building\, University of Victoria\, 11 Gabriola Rd\, Vict
+ oria\, BC
+DESCRIPTION:True North Martial Arts Challenge · Multi-style event includin
+ g youth BJJ (U18\, IBJJF rules). · https://smoothcomp.com/en/event/34557
+URL:https://smoothcomp.com/en/event/34557
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-27-2026-okanagan-winter-camp@jiujitsu.designspore.co
+DTSTAMP:20261120T203908Z
+DTSTART;VALUE=DATE:20261227
+DTEND;VALUE=DATE:20261229
+SUMMARY:2026 Okanagan Winter Camp (JUDO camp)
+LOCATION:Kelowna\, BC
+DESCRIPTION:Judo BC · Part of Judo BC decentralized winter camps. · https
+ ://www.judobc.ca/events-calendar/
+URL:https://www.judobc.ca/events-calendar/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-28-2026-lower-mainland-winter-camp@jiujitsu.designspore.co
+DTSTAMP:20261120T203908Z
+DTSTART;VALUE=DATE:20261228
+DTEND;VALUE=DATE:20261230
+SUMMARY:2026 Lower Mainland Winter Camp (JUDO camp)
+LOCATION:Abbotsford Judo Club\, Abbotsford\, BC
+DESCRIPTION:Judo BC · Part of Judo BC decentralized winter camps. · https
+ ://www.judobc.ca/events-calendar/
+URL:https://www.judobc.ca/events-calendar/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-28-2026-northern-winter-camp@jiujitsu.designspore.co
+DTSTAMP:20261120T203908Z
+DTSTART;VALUE=DATE:20261228
+DTEND;VALUE=DATE:20261229
+SUMMARY:2026 Northern Winter Camp (JUDO camp)
+LOCATION:Hart (Hart Judo Club)\, Prince George\, BC
+DESCRIPTION:Judo BC · Calendar shows a 9:00 am start on Dec 28\; part of d
+ ecentralized winter camps. · https://www.judobc.ca/events-calendar/
+URL:https://www.judobc.ca/events-calendar/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-28-2026-vancouver-island-winter-camp@jiujitsu.designspore.co
+DTSTAMP:20261120T203908Z
+DTSTART;VALUE=DATE:20261228
+DTEND;VALUE=DATE:20261230
+SUMMARY:2026 Vancouver Island Winter Camp (JUDO camp)
+LOCATION:Nanaimo\, BC
+DESCRIPTION:Judo BC · Part of Judo BC decentralized winter camps. · https
+ ://www.judobc.ca/events-calendar/
+URL:https://www.judobc.ca/events-calendar/
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-09-eyjs-monthly---intro-referee-seminar@jiujitsu.designspore.co
+DTSTAMP:20261120T203908Z
+DTSTART;VALUE=DATE:20270109
+DTEND;VALUE=DATE:20270110
+SUMMARY:EYJS Monthly + Intro Referee Seminar (JUDO tournament) [tentative]
+LOCATION:Edmonton\, AB
+DESCRIPTION:Judo Alberta / Edmonton youth judo series · Date not yet confi
+ rmed by the organiser\; check before you travel. · From Judo Alberta's 20
+ 26-27 DRAFT event schedule (subject to change). Regional youth competition
+  with an introductory referee seminar. · https://judoalberta.com/wp-conte
+ nt/uploads/2026/08/Final-2026-2027-DRAFT-Judo-AB-Event-Schedule.Aug-28.pdf
+URL:https://judoalberta.com/wp-content/uploads/2026/08/Final-2026-2027-DRAF
+ T-Judo-AB-Event-Schedule.Aug-28.pdf
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-09-judo-bc-winter-2027-black-belt-grading@jiujitsu.designspore.
+ co
+DTSTAMP:20261120T203908Z
+DTSTART;VALUE=DATE:20270109
+DTEND;VALUE=DATE:20270110
+SUMMARY:Judo BC Winter 2027 Black Belt Grading (JUDO grading)
+LOCATION:Steveston Judo Club\, 4111 Moncton St\, Richmond\, BC
+DESCRIPTION:Judo BC · Calendar says details/registration to be available f
+ rom mid-October 2026. · https://www.judobc.ca/events-calendar/
+URL:https://www.judobc.ca/events-calendar/
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-16-ava-victoria-2027@jiujitsu.designspore.co
+DTSTAMP:20261120T203908Z
+DTSTART;VALUE=DATE:20270116
+DTEND;VALUE=DATE:20270117
+SUMMARY:AVA Victoria 2027 (GRAPPLING tournament)
+LOCATION:Victoria\, BC
+DESCRIPTION:AVA Submission Grappling Federation · Submission-only round ro
+ bin. · https://avagrappling.smoothcomp.com/en/event/32539
+URL:https://avagrappling.smoothcomp.com/en/event/32539
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-29-judo-alberta-provincial-training-camp--edmonton-@jiujitsu.de
+ signspore.co
+DTSTAMP:20261120T203908Z
+DTSTART;VALUE=DATE:20270129
+DTEND;VALUE=DATE:20270131
+SUMMARY:Judo Alberta Provincial Training Camp (Edmonton) (JUDO camp) [tenta
+ tive]
+LOCATION:Edmonton\, AB
+DESCRIPTION:Judo Alberta · Date not yet confirmed by the organiser\; check
+  before you travel. · Provincial team event\; from draft season schedule.
+  · https://judoalberta.com/wp-content/uploads/2026/08/Final-2026-2027-DRA
+ FT-Judo-AB-Event-Schedule.Aug-28.pdf
+URL:https://judoalberta.com/wp-content/uploads/2026/08/Final-2026-2027-DRAF
+ T-Judo-AB-Event-Schedule.Aug-28.pdf
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-30-grappling-industries-vancouver@jiujitsu.designspore.co
+DTSTAMP:20261120T203908Z
+DTSTART;VALUE=DATE:20270130
+DTEND;VALUE=DATE:20270131
+SUMMARY:Grappling Industries Vancouver (BJJ tournament)
+LOCATION:Burnaby\, BC
+DESCRIPTION:Grappling Industries · Gi and no-gi round robin. · https://gr
+ applingindustries.smoothcomp.com/en/event/29927
+URL:https://grapplingindustries.smoothcomp.com/en/event/29927
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-06-bc-absolute--okanagan-absolute@jiujitsu.designspore.co
+DTSTAMP:20261120T203908Z
+DTSTART;VALUE=DATE:20270206
+DTEND;VALUE=DATE:20270207
+SUMMARY:BC Absolute: Okanagan Absolute (BJJ tournament)
+LOCATION:Okanagan (venue TBA)\, BC
+DESCRIPTION:BC Absolute · Date from BC Absolute's 2027 series announcement
+  (Instagram\, Oct 27 2026)\; venue/registration not yet posted - series is
+  based around Kelowna. · https://www.instagram.com/p/DfAcZZVJQpf/
+URL:https://www.instagram.com/p/DfAcZZVJQpf/
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-06-eyjs-monthly---intro-referee-seminar@jiujitsu.designspore.co
+DTSTAMP:20261120T203908Z
+DTSTART;VALUE=DATE:20270206
+DTEND;VALUE=DATE:20270207
+SUMMARY:EYJS Monthly + Intro Referee Seminar (JUDO tournament) [tentative]
+LOCATION:Edmonton\, AB
+DESCRIPTION:Judo Alberta / Edmonton youth judo series · Date not yet confi
+ rmed by the organiser\; check before you travel. · From Judo Alberta's 20
+ 26-27 DRAFT event schedule (subject to change). Regional youth competition
+  with an introductory referee seminar. · https://judoalberta.com/wp-conte
+ nt/uploads/2026/08/Final-2026-2027-DRAFT-Judo-AB-Event-Schedule.Aug-28.pdf
+URL:https://judoalberta.com/wp-content/uploads/2026/08/Final-2026-2027-DRAF
+ T-Judo-AB-Event-Schedule.Aug-28.pdf
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-13-intro-referee-seminar---provincial-referee-b-c-grading--calg
+ ary-@jiujitsu.designspore.co
+DTSTAMP:20261120T203908Z
+DTSTART;VALUE=DATE:20270213
+DTEND;VALUE=DATE:20270214
+SUMMARY:Intro Referee Seminar + Provincial Referee B/C Grading (Calgary) (J
+ UDO course) [tentative]
+LOCATION:Calgary\, AB
+DESCRIPTION:Judo Alberta · Date not yet confirmed by the organiser\; check
+  before you travel. · Held with the Rocky Mountain tournament\; from draf
+ t season schedule. · https://judoalberta.com/wp-content/uploads/2026/08/F
+ inal-2026-2027-DRAFT-Judo-AB-Event-Schedule.Aug-28.pdf
+URL:https://judoalberta.com/wp-content/uploads/2026/08/Final-2026-2027-DRAF
+ T-Judo-AB-Event-Schedule.Aug-28.pdf
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-13-rocky-mountain-judo-tournament@jiujitsu.designspore.co
+DTSTAMP:20261120T203908Z
+DTSTART;VALUE=DATE:20270213
+DTEND;VALUE=DATE:20270214
+SUMMARY:Rocky Mountain Judo Tournament (JUDO tournament) [tentative]
+LOCATION:Calgary\, AB
+DESCRIPTION:Judo Alberta · Date not yet confirmed by the organiser\; check
+  before you travel. · Provincial-level\; from draft season schedule. · h
+ ttps://judoalberta.com/wp-content/uploads/2026/08/Final-2026-2027-DRAFT-Ju
+ do-AB-Event-Schedule.Aug-28.pdf
+URL:https://judoalberta.com/wp-content/uploads/2026/08/Final-2026-2027-DRAF
+ T-Judo-AB-Event-Schedule.Aug-28.pdf
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-19-judo-alberta-provincial-training-camp--calgary-@jiujitsu.des
+ ignspore.co
+DTSTAMP:20261120T203908Z
+DTSTART;VALUE=DATE:20270219
+DTEND;VALUE=DATE:20270221
+SUMMARY:Judo Alberta Provincial Training Camp (Calgary) (JUDO camp) [tentat
+ ive]
+LOCATION:Calgary\, AB
+DESCRIPTION:Judo Alberta · Date not yet confirmed by the organiser\; check
+  before you travel. · Provincial team event\; from draft season schedule.
+  · https://judoalberta.com/wp-content/uploads/2026/08/Final-2026-2027-DRA
+ FT-Judo-AB-Event-Schedule.Aug-28.pdf
+URL:https://judoalberta.com/wp-content/uploads/2026/08/Final-2026-2027-DRAF
+ T-Judo-AB-Event-Schedule.Aug-28.pdf
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-20-prime-bjj-series-17@jiujitsu.designspore.co
+DTSTAMP:20261120T203908Z
+DTSTART;VALUE=DATE:20270220
+DTEND;VALUE=DATE:20270221
+SUMMARY:PRIME BJJ Series 17 (BJJ tournament) [tentative]
+LOCATION:Burnaby\, BC
+DESCRIPTION:Prime BJJ · Date not yet confirmed by the organiser\; check be
+ fore you travel. · https://primebjj.smoothcomp.com/en/event/36049
+URL:https://primebjj.smoothcomp.com/en/event/36049
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-27-okanagan-fight-night-9---kids-open-weight-bjj-division@jiuji
+ tsu.designspore.co
+DTSTAMP:20261120T203908Z
+DTSTART;VALUE=DATE:20270227
+DTEND;VALUE=DATE:20270228
+SUMMARY:Okanagan Fight Night 9 - kids open-weight BJJ division (BJJ tournam
+ ent) [tentative]
+LOCATION:Kelowna Community Theatre\, Kelowna\, BC
+DESCRIPTION:Victory International Promotion · Date not yet confirmed by th
+ e organiser\; check before you travel. · Seen only in a search snippet of
+  the promoter's Facebook post\; a combat-sports fight night with a kids BJ
+ J division. Verify before publishing. · https://www.facebook.com/victoryi
+ nternationalpromotion/posts/-now-accepting-competitor-submissions-okanagan
+ -fight-night-9-saturday-february-2/1001620616329021/
+URL:https://www.facebook.com/victoryinternationalpromotion/posts/-now-accep
+ ting-competitor-submissions-okanagan-fight-night-9-saturday-february-2/100
+ 1620616329021/
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-28-2027-decentralized-spring-bc-training-camp@jiujitsu.designsp
+ ore.co
+DTSTAMP:20261120T203908Z
+DTSTART;VALUE=DATE:20270228
+DTEND;VALUE=DATE:20270302
+SUMMARY:2027 Decentralized Spring BC Training Camp (JUDO camp)
+LOCATION:Multiple locations\, BC
+DESCRIPTION:Judo BC · Locations not yet listed. · https://www.judobc.ca/e
+ vents-calendar/
+URL:https://www.judobc.ca/events-calendar/
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-06-true-north-grappling-spring-open@jiujitsu.designspore.co
+DTSTAMP:20261120T203908Z
+DTSTART;VALUE=DATE:20270306
+DTEND;VALUE=DATE:20270307
+SUMMARY:True North Grappling Spring Open (BJJ tournament)
+LOCATION:Servus Credit Union Place\, St. Albert\, AB
+DESCRIPTION:True North Grappling Ltd. · Gi and no-gi\; full kids/teen divi
+ sions. · https://smoothcomp.com/en/event/35446
+URL:https://smoothcomp.com/en/event/35446
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-12-2027-matsuru-pacific-international-judo-championships@jiujit
+ su.designspore.co
+DTSTAMP:20261120T203908Z
+DTSTART;VALUE=DATE:20270312
+DTEND;VALUE=DATE:20270315
+SUMMARY:2027 Matsuru Pacific International Judo Championships (JUDO tournam
+ ent)
+LOCATION:Richmond Olympic Oval\, 6111 River Rd\, Richmond\, BC
+DESCRIPTION:Judo BC / Judo Canada · Judo Canada national circuit event\; s
+ ame dates on Judo BC calendar. · https://judocanada.org/events/2027-pacif
+ ic-international/
+URL:https://judocanada.org/events/2027-pacific-international/
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-13-ava-legends-2027@jiujitsu.designspore.co
+DTSTAMP:20261120T203908Z
+DTSTART;VALUE=DATE:20270313
+DTEND;VALUE=DATE:20270314
+SUMMARY:AVA Legends 2027 (GRAPPLING tournament)
+LOCATION:Vancouver\, BC
+DESCRIPTION:AVA Submission Grappling Federation · https://avagrappling.smo
+ othcomp.com/en/event/34635
+URL:https://avagrappling.smoothcomp.com/en/event/34635
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-13-ava-origins-2027@jiujitsu.designspore.co
+DTSTAMP:20261120T203908Z
+DTSTART;VALUE=DATE:20270313
+DTEND;VALUE=DATE:20270314
+SUMMARY:AVA Origins 2027 (GRAPPLING tournament)
+LOCATION:Vancouver\, BC
+DESCRIPTION:AVA Submission Grappling Federation · https://avagrappling.smo
+ othcomp.com/en/event/34640
+URL:https://avagrappling.smoothcomp.com/en/event/34640
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-13-sio-bc-junior-championships-2027@jiujitsu.designspore.co
+DTSTAMP:20261120T203908Z
+DTSTART;VALUE=DATE:20270313
+DTEND;VALUE=DATE:20270314
+SUMMARY:SIO BC Junior Championships 2027 (BJJ tournament) [tentative]
+LOCATION:Chemainus\, BC
+DESCRIPTION:SIO · Date not yet confirmed by the organiser\; check before y
+ ou travel. · Junior (youth) event. · https://smoothcomp.com/en/event/341
+ 98
+URL:https://smoothcomp.com/en/event/34198
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-13-titanium-grappling-camrose--x-mvm-academy-@jiujitsu.designsp
+ ore.co
+DTSTAMP:20261120T203908Z
+DTSTART;VALUE=DATE:20270313
+DTEND;VALUE=DATE:20270314
+SUMMARY:Titanium Grappling Camrose (x MVM Academy) (BJJ tournament)
+LOCATION:Camrose Regional Exhibition\, 4250 Exhibition Dr\, Camrose\, AB
+DESCRIPTION:Titanium Grappling · Gi and no-gi\; kids 15 and under. · http
+ s://smoothcomp.com/en/event/35604
+URL:https://smoothcomp.com/en/event/35604
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-19-2027-edmonton-international@jiujitsu.designspore.co
+DTSTAMP:20261120T203908Z
+DTSTART;VALUE=DATE:20270319
+DTEND;VALUE=DATE:20270322
+SUMMARY:2027 Edmonton International (JUDO tournament)
+LOCATION:West Edmonton Mall\, 8882 170 St NW\, Edmonton\, AB
+DESCRIPTION:Judo Canada / Judo Alberta · National circuit event. (Judo BC 
+ calendar also has a stray Mar 20-28 entry - ignore.) · https://judocanada
+ .org/events/edmonton-international-2027/
+URL:https://judocanada.org/events/edmonton-international-2027/
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-19-national-referee-seminar--edmonton-international-@jiujitsu.d
+ esignspore.co
+DTSTAMP:20261120T203908Z
+DTSTART;VALUE=DATE:20270319
+DTEND;VALUE=DATE:20270322
+SUMMARY:National Referee Seminar (Edmonton International) (JUDO course) [te
+ ntative]
+LOCATION:Edmonton\, AB
+DESCRIPTION:Judo Alberta / Judo Canada · Date not yet confirmed by the org
+ aniser\; check before you travel. · From draft season schedule. · https:
+ //judoalberta.com/wp-content/uploads/2026/08/Final-2026-2027-DRAFT-Judo-AB
+ -Event-Schedule.Aug-28.pdf
+URL:https://judoalberta.com/wp-content/uploads/2026/08/Final-2026-2027-DRAF
+ T-Judo-AB-Event-Schedule.Aug-28.pdf
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-04-02-prince-george-open--judo-@jiujitsu.designspore.co
+DTSTAMP:20261120T203908Z
+DTSTART;VALUE=DATE:20270402
+DTEND;VALUE=DATE:20270404
+SUMMARY:Prince George Open (judo) (JUDO tournament) [tentative]
+LOCATION:Duchess Park Secondary School\, 747 Winnipeg St\, Prince George\, 
+ BC
+DESCRIPTION:Prince George Judo Club / Judo BC · Date not yet confirmed by 
+ the organiser\; check before you travel. · CONFLICT: Judo BC calendar lis
+ ts 'PG Open' Apr 2-3 AND 'Prince George Open - Provincial Tournament' Apr 
+ 16-17\, 2027. Details due early 2027 - confirm before publishing. · https
+ ://www.judobc.ca/events-calendar/
+URL:https://www.judobc.ca/events-calendar/
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-04-03-jiu-jitsu-bc-provincial-championships--first-edition-@jiujit
+ su.designspore.co
+DTSTAMP:20261120T203908Z
+DTSTART;VALUE=DATE:20270403
+DTEND;VALUE=DATE:20270404
+SUMMARY:Jiu Jitsu BC Provincial Championships (first edition) (BJJ tourname
+ nt) [tentative]
+LOCATION:Richmond\, BC
+DESCRIPTION:Jiu Jitsu BC Association · Date not yet confirmed by the organ
+ iser\; check before you travel. · JJBC says 'tentatively planned ... stil
+ l to be confirmed'. Open only to individual JJBC members from member acade
+ mies. · https://www.instagram.com/p/DehbO1FTh_h/
+URL:https://www.instagram.com/p/DehbO1FTh_h/
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-04-09-judo-bc-provincial-championships@jiujitsu.designspore.co
+DTSTAMP:20261120T203908Z
+DTSTART;VALUE=DATE:20270409
+DTEND;VALUE=DATE:20270412
+SUMMARY:Judo BC Provincial Championships (JUDO tournament)
+LOCATION:Ag Rec Centre\, Abbotsford\, BC
+DESCRIPTION:Judo BC · https://www.judobc.ca/events-calendar/
+URL:https://www.judobc.ca/events-calendar/
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-04-23-judo-alberta-inter-provincial-camp@jiujitsu.designspore.co
+DTSTAMP:20261120T203908Z
+DTSTART;VALUE=DATE:20270423
+DTEND;VALUE=DATE:20270426
+SUMMARY:Judo Alberta Inter-Provincial Camp (JUDO camp) [tentative]
+LOCATION:Fort Saskatchewan\, AB
+DESCRIPTION:Judo Alberta · Date not yet confirmed by the organiser\; check
+  before you travel. · CONFLICT: Judo AB draft schedule says Apr 23-25\; J
+ udo BC calendar lists the Fort Sask inter-provincial camp Apr 16-18\, 2027
+ . · https://judoalberta.com/wp-content/uploads/2026/08/Final-2026-2027-DR
+ AFT-Judo-AB-Event-Schedule.Aug-28.pdf
+URL:https://judoalberta.com/wp-content/uploads/2026/08/Final-2026-2027-DRAF
+ T-Judo-AB-Event-Schedule.Aug-28.pdf
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-04-24-bc-absolute--spring-open@jiujitsu.designspore.co
+DTSTAMP:20261120T203908Z
+DTSTART;VALUE=DATE:20270424
+DTEND;VALUE=DATE:20270425
+SUMMARY:BC Absolute: Spring Open (BJJ tournament)
+LOCATION:Okanagan (venue TBA)\, BC
+DESCRIPTION:BC Absolute · Date from BC Absolute's 2027 series announcement
+ \; venue/registration not yet posted. · https://www.instagram.com/p/DfAcZ
+ ZVJQpf/
+URL:https://www.instagram.com/p/DfAcZZVJQpf/
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-04-24-sio-spring-classic-2027@jiujitsu.designspore.co
+DTSTAMP:20261120T203908Z
+DTSTART;VALUE=DATE:20270424
+DTEND;VALUE=DATE:20270425
+SUMMARY:SIO Spring Classic 2027 (BJJ tournament) [tentative]
+LOCATION:Chemainus\, BC
+DESCRIPTION:SIO · Date not yet confirmed by the organiser\; check before y
+ ou travel. · https://smoothcomp.com/en/event/34199
+URL:https://smoothcomp.com/en/event/34199
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-05-01-ava-edmonton-2027@jiujitsu.designspore.co
+DTSTAMP:20261120T203908Z
+DTSTART;VALUE=DATE:20270501
+DTEND;VALUE=DATE:20270502
+SUMMARY:AVA Edmonton 2027 (GRAPPLING tournament)
+LOCATION:Edmonton\, AB
+DESCRIPTION:AVA Submission Grappling Federation · Submission-only round ro
+ bin. · https://avagrappling.smoothcomp.com/en/event/32541
+URL:https://avagrappling.smoothcomp.com/en/event/32541
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-05-01-grappling-industries-vancouver@jiujitsu.designspore.co
+DTSTAMP:20261120T203908Z
+DTSTART;VALUE=DATE:20270501
+DTEND;VALUE=DATE:20270502
+SUMMARY:Grappling Industries Vancouver (BJJ tournament)
+LOCATION:Burnaby\, BC
+DESCRIPTION:Grappling Industries · Gi and no-gi round robin. · https://gr
+ applingindustries.smoothcomp.com/en/event/32092
+URL:https://grapplingindustries.smoothcomp.com/en/event/32092
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-05-01-katsuta-cup@jiujitsu.designspore.co
+DTSTAMP:20261120T203908Z
+DTSTART;VALUE=DATE:20270501
+DTEND;VALUE=DATE:20270502
+SUMMARY:Katsuta Cup (JUDO tournament) [tentative]
+LOCATION:Raymond\, AB
+DESCRIPTION:Judo Alberta · Date not yet confirmed by the organiser\; check
+  before you travel. · Includes Provincial Referee C grading\; from draft 
+ season schedule. · https://judoalberta.com/wp-content/uploads/2026/08/Fin
+ al-2026-2027-DRAFT-Judo-AB-Event-Schedule.Aug-28.pdf
+URL:https://judoalberta.com/wp-content/uploads/2026/08/Final-2026-2027-DRAF
+ T-Judo-AB-Event-Schedule.Aug-28.pdf
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-05-07-judo-alberta-provincial-camp@jiujitsu.designspore.co
+DTSTAMP:20261120T203908Z
+DTSTART;VALUE=DATE:20270507
+DTEND;VALUE=DATE:20270510
+SUMMARY:Judo Alberta Provincial Camp (JUDO camp) [tentative]
+LOCATION:Lethbridge\, AB
+DESCRIPTION:Judo Alberta · Date not yet confirmed by the organiser\; check
+  before you travel. · From draft season schedule. · https://judoalberta.
+ com/wp-content/uploads/2026/08/Final-2026-2027-DRAFT-Judo-AB-Event-Schedul
+ e.Aug-28.pdf
+URL:https://judoalberta.com/wp-content/uploads/2026/08/Final-2026-2027-DRAF
+ T-Judo-AB-Event-Schedule.Aug-28.pdf
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-05-14-judo-alberta-regional-camp--edmonton-@jiujitsu.designspore.c
+ o
+DTSTAMP:20261120T203908Z
+DTSTART;VALUE=DATE:20270514
+DTEND;VALUE=DATE:20270515
+SUMMARY:Judo Alberta Regional Camp (Edmonton) (JUDO camp) [tentative]
+LOCATION:Edmonton\, AB
+DESCRIPTION:Judo Alberta · Date not yet confirmed by the organiser\; check
+  before you travel. · From draft season schedule. · https://judoalberta.
+ com/wp-content/uploads/2026/08/Final-2026-2027-DRAFT-Judo-AB-Event-Schedul
+ e.Aug-28.pdf
+URL:https://judoalberta.com/wp-content/uploads/2026/08/Final-2026-2027-DRAF
+ T-Judo-AB-Event-Schedule.Aug-28.pdf
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-05-15-ava-western-2027@jiujitsu.designspore.co
+DTSTAMP:20261120T203908Z
+DTSTART;VALUE=DATE:20270515
+DTEND;VALUE=DATE:20270516
+SUMMARY:AVA Western 2027 (GRAPPLING tournament)
+LOCATION:Cochrane\, AB
+DESCRIPTION:AVA Submission Grappling Federation · Submission-only round ro
+ bin. · https://avagrappling.smoothcomp.com/en/event/32542
+URL:https://avagrappling.smoothcomp.com/en/event/32542
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-05-15-judo-alberta-regional-camp--calgary-@jiujitsu.designspore.co
+DTSTAMP:20261120T203908Z
+DTSTART;VALUE=DATE:20270515
+DTEND;VALUE=DATE:20270516
+SUMMARY:Judo Alberta Regional Camp (Calgary) (JUDO camp) [tentative]
+LOCATION:Calgary\, AB
+DESCRIPTION:Judo Alberta · Date not yet confirmed by the organiser\; check
+  before you travel. · From draft season schedule. · https://judoalberta.
+ com/wp-content/uploads/2026/08/Final-2026-2027-DRAFT-Judo-AB-Event-Schedul
+ e.Aug-28.pdf
+URL:https://judoalberta.com/wp-content/uploads/2026/08/Final-2026-2027-DRAF
+ T-Judo-AB-Event-Schedule.Aug-28.pdf
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-05-20-2027-open-national-judo-championships@jiujitsu.designspore.c
+ o
+DTSTAMP:20261120T203908Z
+DTSTART;VALUE=DATE:20270520
+DTEND;VALUE=DATE:20270524
+SUMMARY:2027 Open National Judo Championships (JUDO tournament)
+LOCATION:Olympic Oval\, University of Calgary\, 2500 University Dr NW\, Cal
+ gary\, AB
+DESCRIPTION:Judo Canada · Judo Canada says 'more info to come'. Judo BC ca
+ lendar also shows a conflicting May 14-17 entry. · https://judocanada.org
+ /events/2026-open-national-championships-calgary-599/
+URL:https://judocanada.org/events/2026-open-national-championships-calgary-
+ 599/
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-05-23-judo-canada-national-training-camp--post-nationals-@jiujitsu
+ .designspore.co
+DTSTAMP:20261120T203908Z
+DTSTART;VALUE=DATE:20270523
+DTEND;VALUE=DATE:20270526
+SUMMARY:Judo Canada National Training Camp (post-Nationals) (JUDO camp) [te
+ ntative]
+LOCATION:Calgary\, AB
+DESCRIPTION:Judo Canada · Date not yet confirmed by the organiser\; check 
+ before you travel. · CONFLICT: Judo AB draft says May 23-25\; Judo BC cal
+ endar lists 'Open Nationals Training Camp' May 18-20. · https://judoalber
+ ta.com/wp-content/uploads/2026/08/Final-2026-2027-DRAFT-Judo-AB-Event-Sche
+ dule.Aug-28.pdf
+URL:https://judoalberta.com/wp-content/uploads/2026/08/Final-2026-2027-DRAF
+ T-Judo-AB-Event-Schedule.Aug-28.pdf
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-05-29-eyjs-monthly---intro-referee-seminar@jiujitsu.designspore.co
+DTSTAMP:20261120T203908Z
+DTSTART;VALUE=DATE:20270529
+DTEND;VALUE=DATE:20270530
+SUMMARY:EYJS Monthly + Intro Referee Seminar (JUDO tournament) [tentative]
+LOCATION:Edmonton\, AB
+DESCRIPTION:Judo Alberta / Edmonton youth judo series · Date not yet confi
+ rmed by the organiser\; check before you travel. · From Judo Alberta's 20
+ 26-27 DRAFT event schedule (subject to change). Regional youth competition
+  with an introductory referee seminar. · https://judoalberta.com/wp-conte
+ nt/uploads/2026/08/Final-2026-2027-DRAFT-Judo-AB-Event-Schedule.Aug-28.pdf
+URL:https://judoalberta.com/wp-content/uploads/2026/08/Final-2026-2027-DRAF
+ T-Judo-AB-Event-Schedule.Aug-28.pdf
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-06-19-peak-grappling-summerslam-2027@jiujitsu.designspore.co
+DTSTAMP:20261120T203908Z
+DTSTART;VALUE=DATE:20270619
+DTEND;VALUE=DATE:20270620
+SUMMARY:Peak Grappling SummerSlam 2027 (BJJ tournament) [tentative]
+LOCATION:Cochrane\, AB
+DESCRIPTION:Peak Grappling · Date not yet confirmed by the organiser\; che
+ ck before you travel. · https://smoothcomp.com/en/event/36040
+URL:https://smoothcomp.com/en/event/36040
+END:VEVENT
+END:VCALENDAR

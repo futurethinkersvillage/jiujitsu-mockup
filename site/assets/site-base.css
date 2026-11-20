@@ -184,3 +184,14 @@ h1, h2, h3 { text-wrap: balance; }
 .hero-kanji { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; fill: var(--kanji, #EFECE5); }
 /* One solid colour, multiplied over the entire frame: no gradient, no fade to clear. */
 .hero-media::after { background: var(--hero-tint, transparent); mix-blend-mode: multiply; }
+
+/* Events */
+.ev { list-style: none; margin: 0 0 1.4rem; padding: 0; max-width: 52rem; }
+.ev li { display: grid; grid-template-columns: 11rem 1fr; gap: 1rem; padding: .85rem 0; border-bottom: 1px solid rgba(127,127,127,.28); }
+.ev time { font-weight: 700; }
+.ev b { display: block; font-weight: 700; }
+.ev b a { color: inherit; }
+.ev span { font-size: .92rem; opacity: .85; }
+.ev .ev-empty { display: block; opacity: .8; }
+.events .sub { display: flex; flex-wrap: wrap; gap: .7rem; margin-bottom: .8rem; }
+@media (max-width: 560px) { .ev li { grid-template-columns: 1fr; gap: .2rem; } }
