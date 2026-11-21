@@ -1,7 +1,7 @@
 /* STRIPE — Swiss grid, the belt progression as the palette, the rank bar as the motif. */
 :root {
   --paper: #F5F5F2; --ink: #16161A; --mut: #55555B; --red: #D7262E;
-  --white-belt: #FFFFFF; --blue: #2557B8; --purple: #6A3FA0; --brown: #6B4226; --black: #16161A;
+  --white-belt: #FFFFFF; --blue: #0556A8; --purple: #6A3FA0; --brown: #6B4226; --black: #16161A;
   --bg: var(--paper); --btn-bg: var(--ink); --btn-ink: var(--paper); --radius: 0;
   --f-head: "Archivo", system-ui, sans-serif; --f-body: "Archivo", system-ui, sans-serif;
   --nav-bg: var(--paper); --menu-line: var(--ink); --flag-bg: rgba(245,245,242,.14);

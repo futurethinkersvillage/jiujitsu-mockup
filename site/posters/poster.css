@@ -155,10 +155,10 @@
 .promo-qr p { font-size: 1.25em; margin-top: .8em; line-height: 1.35; }
 
 /* =====================================================================
-   THEME 1 · TENUGUI — indigo-dyed cloth, kinari cotton ink, vermilion seal
+   THEME 1 · TENUGUI — judo-gi blue cloth (#0556A8), kinari cotton ink, vermilion seal
    ===================================================================== */
 .poster[data-theme="tenugui"] {
-  --bg: #1B2A47; --ink: #EEE9DD; --mut: #A9B6CC; --acc: #D2472F; --rule: rgba(238,233,221,.24);
+  --bg: #0556A8; --ink: #EEE9DD; --mut: #D3E0F2; --acc: #FFC9BC; --shu: #C8402A; --rule: rgba(238,233,221,.28);
   background: var(--asanoha, none) 0 0 / 3.4em auto, var(--bg);
   color: var(--ink); font-family: "Zen Kaku Gothic New", system-ui, sans-serif;
 }
@@ -173,7 +173,7 @@
 .poster[data-theme="tenugui"] .pb { padding-top: 1.6em; }
 .poster[data-theme="tenugui"] .g-label { color: var(--acc); font-family: "Shippori Mincho B1", serif; font-size: 1.4em; border-bottom: .06em solid var(--rule); padding-bottom: .35em; }
 .poster[data-theme="tenugui"] .g-label small { color: var(--mut); font-family: "Zen Kaku Gothic New", sans-serif; }
-.poster[data-theme="tenugui"] .p-note { color: var(--mut); border-left: .2em solid var(--acc); padding-left: 1em; }
+.poster[data-theme="tenugui"] .p-note { color: var(--mut); border-left: .2em solid var(--shu); padding-left: 1em; }
 .poster[data-theme="tenugui"] .pf { border-top: .06em solid var(--rule); }
 .poster[data-theme="tenugui"] .pf-name span, .poster[data-theme="tenugui"] .pf-url { color: var(--mut); }
 .poster[data-theme="tenugui"] .count li { border-top: .08em solid var(--rule); }
@@ -181,11 +181,11 @@
 .poster[data-theme="tenugui"] .c-kana, .poster[data-theme="tenugui"] .t-e, .poster[data-theme="tenugui"] .b-r { color: var(--mut); opacity: 1; }
 .poster[data-theme="tenugui"] .count-extra > div { border: .08em solid var(--rule); }
 .poster[data-theme="tenugui"] :is(.brows li, .adults li, .terms li, .pairs li, .timeline li) { border-bottom: .06em solid var(--rule); }
-.poster[data-theme="tenugui"] .tech li, .poster[data-theme="tenugui"] .ukemi li { border: .08em solid var(--rule); background: rgba(14,22,38,.35); }
+.poster[data-theme="tenugui"] .tech li, .poster[data-theme="tenugui"] .ukemi li { border: .08em solid var(--rule); background: rgba(3,62,120,.35); }
 .poster[data-theme="tenugui"] .tech .t-f { color: var(--acc); }
-.poster[data-theme="tenugui"] .princ li { border-top: .1em solid var(--acc); }
+.poster[data-theme="tenugui"] .princ li { border-top: .1em solid var(--shu); }
 .poster[data-theme="tenugui"] .tl-y { color: var(--acc); font-weight: 800; }
-.poster[data-theme="tenugui"] .cd-k { background: var(--acc); color: var(--ink); border-radius: .12em; font-weight: 800; }
+.poster[data-theme="tenugui"] .cd-k { background: var(--shu); color: var(--ink); border-radius: .12em; font-weight: 800; }
 .poster[data-theme="tenugui"] .rules li::before, .poster[data-theme="tenugui"] .is-seq .terms li::before { color: var(--acc); font-family: "Shippori Mincho B1", serif; }
 .poster[data-theme="tenugui"].t-promo .ph-title { font-size: 7em; }
 .poster[data-theme="tenugui"] .promo-progs li { font-weight: 700; border-bottom: .03em solid var(--rule); }
@@ -239,7 +239,7 @@
 .poster[data-theme="tenugui"] .ph-seal { display: none; }
 .poster[data-theme="tenugui"].t-promo .ph-seal { display: block; }
 
-.poster[data-theme="tenugui"] .belt { box-shadow: inset 0 0 0 .07em rgba(238,233,221,.35); }
+.poster[data-theme="tenugui"] .belt { box-shadow: inset 0 0 0 .09em rgba(238,233,221,.75); }
 
 /* Let sparse posters breathe: lists grow to fill the sheet */
 .t-counting .count { flex: 1; grid-auto-rows: 1fr; }

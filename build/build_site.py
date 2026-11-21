@@ -52,20 +52,20 @@ THEMES = {
     "tenugui": {
         "label": "Tenugui",
         "color": "#0556A8",
-        "h1": "Judo and Brazilian jiu jitsu in Clearwater",
-        "lede": "Classes for kids and adults every Tuesday and Thursday at 52 Ridge, Clearwater Valley Resort. Taught by Ernst Bergmann. Beginners welcome.",
+        "h1": "Clearwater Mixed Martial Arts",
+        "lede": "Judo and Brazilian jiu jitsu for kids and adults, every Tuesday and Thursday at 52 Ridge, Clearwater Valley Resort. Taught by Ernst Bergmann. Beginners welcome.",
     },
     "stone": {
         "label": "Stone & Water",
         "color": "#141618",
-        "h1": "Shi Mizu Dojo",
+        "h1": "Clearwater Mixed Martial Arts",
         "lede": "Judo and Brazilian jiu jitsu in Clearwater, BC. Kids at 5 pm and adults from 6 to 7:30 pm, every Tuesday and Thursday at 52 Ridge.",
     },
     "stripe": {
         "label": "Stripe",
         "color": "#16161A",
-        "h1": "Judo and jiu jitsu<br>in Clearwater, BC",
-        "lede": "Tuesdays and Thursdays at 52 Ridge, Clearwater Valley Resort. Kids class at 5 pm, adults from 6 to 7:30 pm. $100 a month.",
+        "h1": "Clearwater Mixed<br>Martial Arts",
+        "lede": "Judo and Brazilian jiu jitsu on Tuesdays and Thursdays at 52 Ridge, Clearwater Valley Resort. Kids class at 5 pm, adults from 6 to 7:30 pm. $100 a month.",
     },
 }
 

@@ -37,8 +37,8 @@
     </header>`;
 
   // Stripe theme: each poster opens with a belt running edge to edge, colour keyed to the poster.
-  const BAND = { counting: "#F4F2EC", "judo-belts": "#F2C230", "bjj-belts": "#2557B8", "dojo-words": "#E8772E",
-    "nage-waza": "#2E8B4E", "katame-waza": "#6A3FA0", "two-names": "#2557B8", ukemi: "#F2C230",
+  const BAND = { counting: "#F4F2EC", "judo-belts": "#F2C230", "bjj-belts": "#0556A8", "dojo-words": "#E8772E",
+    "nage-waza": "#2E8B4E", "katame-waza": "#6A3FA0", "two-names": "#0556A8", ukemi: "#F2C230",
     principles: "#6B4226", lineage: "#16161A", "dojo-code": "#E8772E", "come-train": "#16161A" };
   function stripeBand(p) {
     const c = BAND[p.id] || "#16161A";

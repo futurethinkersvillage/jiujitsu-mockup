@@ -51,7 +51,7 @@ window.DOJO = {
           { c: ["#F2C230"], name: "Yellow", rank: "5th kyū", k: "五級", r: "gokyū" },
           { c: ["#E8772E"], name: "Orange", rank: "4th kyū", k: "四級", r: "yonkyū" },
           { c: ["#2E8B4E"], name: "Green",  rank: "3rd kyū", k: "三級", r: "sankyū" },
-          { c: ["#2557B8"], name: "Blue",   rank: "2nd kyū", k: "二級", r: "nikyū" },
+          { c: ["#0556A8"], name: "Blue",   rank: "2nd kyū", k: "二級", r: "nikyū" },
           { c: ["#6B4226"], name: "Brown",  rank: "1st kyū", k: "一級", r: "ikkyū" }
         ]},
         { label: "Dan grades · black belt and beyond", items: [
@@ -71,7 +71,7 @@ window.DOJO = {
       lede: "Brazilian jiu jitsu has fewer belts and a longer road. Each belt can carry up to four stripes before the next promotion.",
       adults: [
         { c: "#F4F2EC", name: "White",  jp: "白 shiro",     age: "Any age", time: "Where everyone starts" },
-        { c: "#2557B8", name: "Blue",   jp: "青 ao",        age: "16+", time: "2 years minimum at blue" },
+        { c: "#0556A8", name: "Blue",   jp: "青 ao",        age: "16+", time: "2 years minimum at blue" },
         { c: "#6A3FA0", name: "Purple", jp: "紫 murasaki",  age: "16+", time: "1½ years minimum at purple" },
         { c: "#6B4226", name: "Brown",  jp: "茶 cha",       age: "18+", time: "1 year minimum at brown" },
         { c: "#1A1A1D", name: "Black",  jp: "黒 kuro",      age: "19+", time: "Degrees follow, years apart", bar: "#C8202E" }
