@@ -1,8 +1,8 @@
 [
   {"title": "Kids class", "start": "2026-11-24", "time_start": "17:00", "time_end": "18:00",
    "rrule": "FREQ=WEEKLY;BYDAY=TU,TH", "venue": "52 Ridge, Clearwater Valley Resort", "city": "Clearwater", "province": "BC",
-   "notes": "Weekly kids class. Beginners welcome.", "url": "https://jiujitsu.designspore.co/"},
+   "notes": "Weekly kids class. Beginners welcome.", "url": "https://clearwatermma.ca/"},
   {"title": "Adult class", "start": "2026-11-24", "time_start": "18:00", "time_end": "19:30",
    "rrule": "FREQ=WEEKLY;BYDAY=TU,TH", "venue": "52 Ridge, Clearwater Valley Resort", "city": "Clearwater", "province": "BC",
-   "notes": "Judo and Brazilian jiu jitsu, adults and teens. Beginners welcome.", "url": "https://jiujitsu.designspore.co/"}
+   "notes": "Judo and Brazilian jiu jitsu, adults and teens. Beginners welcome.", "url": "https://clearwatermma.ca/"}
 ]

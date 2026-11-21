@@ -2,16 +2,16 @@
    Everything marked TBC needs confirming with the instructor. */
 window.DOJO = {
   club: {
-    name: "Shi Mizu Dojo · Clearwater Martial Arts",
+    name: "Shi Mizu Dojo · Clearwater Mixed Martial Arts",
     short: "Shi Mizu Dojo",
-    sub: "Clearwater Martial Arts",
+    sub: "Clearwater Mixed Martial Arts",
     jp: "清水道場",
     jpReading: "Shi Mizu Dojo",
     jpMeaning: "清水 literally means “clear water”",
     venue: "52 Ridge · Clearwater Valley Resort",
     address: "373 Clearwater Valley Rd, Clearwater, BC",
-    url: "jiujitsu.designspore.co",
-    href: "https://jiujitsu.designspore.co"
+    url: "clearwatermma.ca",
+    href: "https://clearwatermma.ca"
   },
 
   posters: [

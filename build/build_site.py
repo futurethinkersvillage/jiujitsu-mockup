@@ -14,7 +14,7 @@ MARKS = json.loads(subprocess.run(["node", str(Path(__file__).with_name("brand_d
 LEARN = [("counting", "Counting to ten"), ("judo-belts", "Judo belt ranks"),
          ("bjj-belts", "Jiu jitsu belt ranks"), ("two-names", "Same move, two names")]
 
-CLUB, CLUB_SUB = "Shi Mizu Dojo", "Clearwater Martial Arts"
+CLUB, CLUB_SUB = "Shi Mizu Dojo", "Clearwater Mixed Martial Arts"
 CTA = "Book your first class"
 EMAIL = "clearwaterjiujitsu@icloud.com"
 PHONE, PHONE_TEL = "+1 (780) 720-1705", "+17807201705"
@@ -141,7 +141,7 @@ def page(theme):
 <meta name="theme-color" content="{t['color']}">
 <meta property="og:title" content="{CLUB} · {CLUB_SUB}">
 <meta property="og:description" content="Judo and Brazilian jiu jitsu in Clearwater, BC. Tuesdays and Thursdays at 52 Ridge.">
-<meta property="og:image" content="https://jiujitsu.designspore.co/assets/generated/falls-shimizu-1000.webp">
+<meta property="og:image" content="https://clearwatermma.ca/assets/generated/falls-shimizu-1000.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="{FONTS}" rel="stylesheet">
 <link rel="stylesheet" href="../assets/site-base.css">
@@ -279,3 +279,16 @@ for theme in THEMES:
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(page(theme), encoding="utf-8")
     print("wrote", out.relative_to(ROOT))
+
+
+# ---- Live site: the chosen Tenugui (blue) page, served at the root of clearwatermma.ca ----
+# Same page without the design-direction bar, indexable, with root-absolute paths. nginx picks it by host.
+import re as _re
+LIVE = "https://clearwatermma.ca"
+live = page("tenugui")
+live = _re.sub(r'<div class="proto">.*?</div>\n', "", live, count=1)
+live = live.replace(f"{CLUB} · {CLUB_SUB} · Tenugui direction", f"{CLUB} · {CLUB_SUB}")
+live = live.replace('<meta name="robots" content="noindex">', f'<link rel="canonical" href="{LIVE}/">')
+live = live.replace('href="style.css"', 'href="/tenugui/style.css"').replace('"../', '"/')
+(ROOT / "home.html").write_text(live, encoding="utf-8")
+print("wrote home.html (live site)")

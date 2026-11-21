@@ -17,12 +17,12 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent / "site"
-SITE = "https://jiujitsu.designspore.co"
+SITE = "https://clearwatermma.ca"
 FEED = f"{SITE}/events.ics"
 CAL_NAME = "Shi Mizu Dojo · BC & Alberta judo and jiu jitsu events"
 TZ = "America/Vancouver"
-GOOGLE_SUB = "https://calendar.google.com/calendar/r?cid=" + "webcal%3A%2F%2Fjiujitsu.designspore.co%2Fevents.ics"
-WEBCAL = "webcal://jiujitsu.designspore.co/events.ics"
+GOOGLE_SUB = "https://calendar.google.com/calendar/r?cid=" + "webcal%3A%2F%2Fclearwatermma.ca%2Fevents.ics"
+WEBCAL = "webcal://clearwatermma.ca/events.ics"
 
 VTIMEZONE = """BEGIN:VTIMEZONE
 TZID:America/Vancouver

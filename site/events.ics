@@ -29,32 +29,32 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:2026-11-24-kids-class@jiujitsu.designspore.co
-DTSTAMP:20261120T203908Z
+DTSTAMP:20261121T071948Z
 DTSTART;TZID=America/Vancouver:20261124T170000
 DTEND;TZID=America/Vancouver:20261124T180000
 RRULE:FREQ=WEEKLY;BYDAY=TU,TH
 SUMMARY:Kids class
 LOCATION:52 Ridge\, Clearwater Valley Resort\, Clearwater\, BC
-DESCRIPTION:Weekly kids class. Beginners welcome. · https://jiujitsu.desig
- nspore.co/
-URL:https://jiujitsu.designspore.co/
+DESCRIPTION:Weekly kids class. Beginners welcome. · https://clearwatermma.
+ ca/
+URL:https://clearwatermma.ca/
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-11-24-adult-class@jiujitsu.designspore.co
-DTSTAMP:20261120T203908Z
+DTSTAMP:20261121T071948Z
 DTSTART;TZID=America/Vancouver:20261124T180000
 DTEND;TZID=America/Vancouver:20261124T193000
 RRULE:FREQ=WEEKLY;BYDAY=TU,TH
 SUMMARY:Adult class
 LOCATION:52 Ridge\, Clearwater Valley Resort\, Clearwater\, BC
 DESCRIPTION:Judo and Brazilian jiu jitsu\, adults and teens. Beginners welc
- ome. · https://jiujitsu.designspore.co/
-URL:https://jiujitsu.designspore.co/
+ ome. · https://clearwatermma.ca/
+URL:https://clearwatermma.ca/
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-11-20-judo-alberta-introductory-referee-seminar--lethbridge-@jiuji
  tsu.designspore.co
-DTSTAMP:20261120T203908Z
+DTSTAMP:20261121T071948Z
 DTSTART;VALUE=DATE:20261120
 DTEND;VALUE=DATE:20261121
 SUMMARY:Judo Alberta Introductory Referee Seminar (Lethbridge) (JUDO course
@@ -68,7 +68,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:2026-11-20-nccp-dojo-assistant---dojo-instructor-course--burnaby-@jiuji
  tsu.designspore.co
-DTSTAMP:20261120T203908Z
+DTSTAMP:20261121T071948Z
 DTSTART;VALUE=DATE:20261120
 DTEND;VALUE=DATE:20261123
 SUMMARY:NCCP Dojo Assistant / Dojo Instructor Course (Burnaby) (JUDO course
@@ -82,7 +82,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:2026-11-20-nccp-dojo-assistant---dojo-instructor-course--mile-zero-@jiu
  jitsu.designspore.co
-DTSTAMP:20261120T203908Z
+DTSTAMP:20261121T071948Z
 DTSTART;VALUE=DATE:20261120
 DTEND;VALUE=DATE:20261123
 SUMMARY:NCCP Dojo Assistant / Dojo Instructor Course (Mile Zero) (JUDO cour
@@ -95,7 +95,7 @@ URL:https://thelocker.coach.ca/event/registration/15868
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-11-21-alberta-grappling-open@jiujitsu.designspore.co
-DTSTAMP:20261120T203908Z
+DTSTAMP:20261121T071948Z
 DTSTART;VALUE=DATE:20261121
 DTEND;VALUE=DATE:20261123
 SUMMARY:Alberta Grappling Open (BJJ tournament)
@@ -106,7 +106,7 @@ URL:https://smoothcomp.com/en/event/32162
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-11-21-compnet-nationals-canada-2026@jiujitsu.designspore.co
-DTSTAMP:20261120T203908Z
+DTSTAMP:20261121T071948Z
 DTSTART;VALUE=DATE:20261121
 DTEND;VALUE=DATE:20261122
 SUMMARY:Compnet Nationals Canada 2026 (BJJ tournament) [tentative]
@@ -119,7 +119,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:2026-11-21-florence-senda-cup--junior-tournament-@jiujitsu.designspore.
  co
-DTSTAMP:20261120T203908Z
+DTSTAMP:20261121T071948Z
 DTSTART;VALUE=DATE:20261121
 DTEND;VALUE=DATE:20261122
 SUMMARY:Florence Senda Cup (junior tournament) (JUDO tournament)
@@ -132,7 +132,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:2026-11-21-provincial-referee-b---c-grading--lethbridge-@jiujitsu.desig
  nspore.co
-DTSTAMP:20261120T203908Z
+DTSTAMP:20261121T071948Z
 DTSTART;VALUE=DATE:20261121
 DTEND;VALUE=DATE:20261122
 SUMMARY:Provincial Referee B & C Grading (Lethbridge) (JUDO course)
@@ -145,7 +145,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:2026-11-22-thompson-okanagan-regional-practice--judo-bc-@jiujitsu.desig
  nspore.co
-DTSTAMP:20261120T203908Z
+DTSTAMP:20261121T071948Z
 DTSTART;VALUE=DATE:20261122
 DTEND;VALUE=DATE:20261123
 SUMMARY:Thompson-Okanagan Regional Practice (Judo BC) (JUDO open mat)
@@ -158,7 +158,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:2026-11-29-thompson-okanagan-regional-practice--judo-bc-@jiujitsu.desig
  nspore.co
-DTSTAMP:20261120T203908Z
+DTSTAMP:20261121T071948Z
 DTSTART;VALUE=DATE:20261129
 DTEND;VALUE=DATE:20261130
 SUMMARY:Thompson-Okanagan Regional Practice (Judo BC) (JUDO open mat)
@@ -170,7 +170,7 @@ URL:https://www.judobc.ca/events-calendar/
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-12-05-2026-christmas-cup@jiujitsu.designspore.co
-DTSTAMP:20261120T203908Z
+DTSTAMP:20261121T071948Z
 DTSTART;VALUE=DATE:20261205
 DTEND;VALUE=DATE:20261206
 SUMMARY:2026 Christmas Cup (JUDO tournament)
@@ -183,7 +183,7 @@ URL:https://judocanada.dokume.app/#/events_registration/register/4478
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-12-05-2026-steveston-junior-shiai@jiujitsu.designspore.co
-DTSTAMP:20261120T203908Z
+DTSTAMP:20261121T071948Z
 DTSTART;VALUE=DATE:20261205
 DTEND;VALUE=DATE:20261206
 SUMMARY:2026 Steveston Junior Shiai (JUDO tournament)
@@ -194,7 +194,7 @@ URL:https://www.judobc.ca/events-calendar/
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-12-06-ava-ultra-2026@jiujitsu.designspore.co
-DTSTAMP:20261120T203908Z
+DTSTAMP:20261121T071948Z
 DTSTART;VALUE=DATE:20261206
 DTEND;VALUE=DATE:20261207
 SUMMARY:AVA Ultra 2026 (GRAPPLING tournament)
@@ -207,7 +207,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:2026-12-06-judo-alberta-yudansha--black-belt--grading@jiujitsu.designsp
  ore.co
-DTSTAMP:20261120T203908Z
+DTSTAMP:20261121T071948Z
 DTSTART;VALUE=DATE:20261206
 DTEND;VALUE=DATE:20261207
 SUMMARY:Judo Alberta Yudansha (Black Belt) Grading (JUDO grading)
@@ -220,7 +220,7 @@ URL:https://judoalberta.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-12-06-triple-crown-submission-series-2@jiujitsu.designspore.co
-DTSTAMP:20261120T203908Z
+DTSTAMP:20261121T071948Z
 DTSTART;VALUE=DATE:20261206
 DTEND;VALUE=DATE:20261207
 SUMMARY:Triple Crown Submission Series 2 (GRAPPLING tournament)
@@ -232,7 +232,7 @@ URL:https://smoothcomp.com/en/event/30126
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-12-11-judo-alberta-winter-camp@jiujitsu.designspore.co
-DTSTAMP:20261120T203908Z
+DTSTAMP:20261121T071948Z
 DTSTART;VALUE=DATE:20261211
 DTEND;VALUE=DATE:20261214
 SUMMARY:Judo Alberta Winter Camp (JUDO camp) [tentative]
@@ -246,7 +246,7 @@ URL:https://judoalberta.com/wp-content/uploads/2026/08/Final-2026-2027-DRAF
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-12-12-eyjs-monthly---intro-referee-seminar@jiujitsu.designspore.co
-DTSTAMP:20261120T203908Z
+DTSTAMP:20261121T071948Z
 DTSTART;VALUE=DATE:20261212
 DTEND;VALUE=DATE:20261213
 SUMMARY:EYJS Monthly + Intro Referee Seminar (JUDO tournament) [tentative]
@@ -262,7 +262,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:2026-12-13-thompson-okanagan-regional-practice--judo-bc-@jiujitsu.desig
  nspore.co
-DTSTAMP:20261120T203908Z
+DTSTAMP:20261121T071948Z
 DTSTART;VALUE=DATE:20261213
 DTEND;VALUE=DATE:20261214
 SUMMARY:Thompson-Okanagan Regional Practice (Judo BC) (JUDO open mat)
@@ -274,7 +274,7 @@ URL:https://www.judobc.ca/events-calendar/
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-12-19-bc-absolute-christmas-classic@jiujitsu.designspore.co
-DTSTAMP:20261120T203908Z
+DTSTAMP:20261121T071948Z
 DTSTART;VALUE=DATE:20261219
 DTEND;VALUE=DATE:20261220
 SUMMARY:BC Absolute Christmas Classic (BJJ tournament)
@@ -286,7 +286,7 @@ URL:https://smoothcomp.com/en/event/36069
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-12-19-true-north-championship@jiujitsu.designspore.co
-DTSTAMP:20261120T203908Z
+DTSTAMP:20261121T071948Z
 DTSTART;VALUE=DATE:20261219
 DTEND;VALUE=DATE:20261220
 SUMMARY:True North Championship (BJJ tournament)
@@ -298,7 +298,7 @@ URL:https://smoothcomp.com/en/event/34557
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-12-27-2026-okanagan-winter-camp@jiujitsu.designspore.co
-DTSTAMP:20261120T203908Z
+DTSTAMP:20261121T071948Z
 DTSTART;VALUE=DATE:20261227
 DTEND;VALUE=DATE:20261229
 SUMMARY:2026 Okanagan Winter Camp (JUDO camp)
@@ -309,7 +309,7 @@ URL:https://www.judobc.ca/events-calendar/
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-12-28-2026-lower-mainland-winter-camp@jiujitsu.designspore.co
-DTSTAMP:20261120T203908Z
+DTSTAMP:20261121T071948Z
 DTSTART;VALUE=DATE:20261228
 DTEND;VALUE=DATE:20261230
 SUMMARY:2026 Lower Mainland Winter Camp (JUDO camp)
@@ -320,7 +320,7 @@ URL:https://www.judobc.ca/events-calendar/
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-12-28-2026-northern-winter-camp@jiujitsu.designspore.co
-DTSTAMP:20261120T203908Z
+DTSTAMP:20261121T071948Z
 DTSTART;VALUE=DATE:20261228
 DTEND;VALUE=DATE:20261229
 SUMMARY:2026 Northern Winter Camp (JUDO camp)
@@ -331,7 +331,7 @@ URL:https://www.judobc.ca/events-calendar/
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-12-28-2026-vancouver-island-winter-camp@jiujitsu.designspore.co
-DTSTAMP:20261120T203908Z
+DTSTAMP:20261121T071948Z
 DTSTART;VALUE=DATE:20261228
 DTEND;VALUE=DATE:20261230
 SUMMARY:2026 Vancouver Island Winter Camp (JUDO camp)
@@ -342,7 +342,7 @@ URL:https://www.judobc.ca/events-calendar/
 END:VEVENT
 BEGIN:VEVENT
 UID:2027-01-09-eyjs-monthly---intro-referee-seminar@jiujitsu.designspore.co
-DTSTAMP:20261120T203908Z
+DTSTAMP:20261121T071948Z
 DTSTART;VALUE=DATE:20270109
 DTEND;VALUE=DATE:20270110
 SUMMARY:EYJS Monthly + Intro Referee Seminar (JUDO tournament) [tentative]
@@ -358,7 +358,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:2027-01-09-judo-bc-winter-2027-black-belt-grading@jiujitsu.designspore.
  co
-DTSTAMP:20261120T203908Z
+DTSTAMP:20261121T071948Z
 DTSTART;VALUE=DATE:20270109
 DTEND;VALUE=DATE:20270110
 SUMMARY:Judo BC Winter 2027 Black Belt Grading (JUDO grading)
@@ -369,7 +369,7 @@ URL:https://www.judobc.ca/events-calendar/
 END:VEVENT
 BEGIN:VEVENT
 UID:2027-01-16-ava-victoria-2027@jiujitsu.designspore.co
-DTSTAMP:20261120T203908Z
+DTSTAMP:20261121T071948Z
 DTSTART;VALUE=DATE:20270116
 DTEND;VALUE=DATE:20270117
 SUMMARY:AVA Victoria 2027 (GRAPPLING tournament)
@@ -381,7 +381,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:2027-01-29-judo-alberta-provincial-training-camp--edmonton-@jiujitsu.de
  signspore.co
-DTSTAMP:20261120T203908Z
+DTSTAMP:20261121T071948Z
 DTSTART;VALUE=DATE:20270129
 DTEND;VALUE=DATE:20270131
 SUMMARY:Judo Alberta Provincial Training Camp (Edmonton) (JUDO camp) [tenta
@@ -396,7 +396,7 @@ URL:https://judoalberta.com/wp-content/uploads/2026/08/Final-2026-2027-DRAF
 END:VEVENT
 BEGIN:VEVENT
 UID:2027-01-30-grappling-industries-vancouver@jiujitsu.designspore.co
-DTSTAMP:20261120T203908Z
+DTSTAMP:20261121T071948Z
 DTSTART;VALUE=DATE:20270130
 DTEND;VALUE=DATE:20270131
 SUMMARY:Grappling Industries Vancouver (BJJ tournament)
@@ -407,7 +407,7 @@ URL:https://grapplingindustries.smoothcomp.com/en/event/29927
 END:VEVENT
 BEGIN:VEVENT
 UID:2027-02-06-bc-absolute--okanagan-absolute@jiujitsu.designspore.co
-DTSTAMP:20261120T203908Z
+DTSTAMP:20261121T071948Z
 DTSTART;VALUE=DATE:20270206
 DTEND;VALUE=DATE:20270207
 SUMMARY:BC Absolute: Okanagan Absolute (BJJ tournament)
@@ -419,7 +419,7 @@ URL:https://www.instagram.com/p/DfAcZZVJQpf/
 END:VEVENT
 BEGIN:VEVENT
 UID:2027-02-06-eyjs-monthly---intro-referee-seminar@jiujitsu.designspore.co
-DTSTAMP:20261120T203908Z
+DTSTAMP:20261121T071948Z
 DTSTART;VALUE=DATE:20270206
 DTEND;VALUE=DATE:20270207
 SUMMARY:EYJS Monthly + Intro Referee Seminar (JUDO tournament) [tentative]
@@ -435,7 +435,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:2027-02-13-intro-referee-seminar---provincial-referee-b-c-grading--calg
  ary-@jiujitsu.designspore.co
-DTSTAMP:20261120T203908Z
+DTSTAMP:20261121T071948Z
 DTSTART;VALUE=DATE:20270213
 DTEND;VALUE=DATE:20270214
 SUMMARY:Intro Referee Seminar + Provincial Referee B/C Grading (Calgary) (J
@@ -450,7 +450,7 @@ URL:https://judoalberta.com/wp-content/uploads/2026/08/Final-2026-2027-DRAF
 END:VEVENT
 BEGIN:VEVENT
 UID:2027-02-13-rocky-mountain-judo-tournament@jiujitsu.designspore.co
-DTSTAMP:20261120T203908Z
+DTSTAMP:20261121T071948Z
 DTSTART;VALUE=DATE:20270213
 DTEND;VALUE=DATE:20270214
 SUMMARY:Rocky Mountain Judo Tournament (JUDO tournament) [tentative]
@@ -465,7 +465,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:2027-02-19-judo-alberta-provincial-training-camp--calgary-@jiujitsu.des
  ignspore.co
-DTSTAMP:20261120T203908Z
+DTSTAMP:20261121T071948Z
 DTSTART;VALUE=DATE:20270219
 DTEND;VALUE=DATE:20270221
 SUMMARY:Judo Alberta Provincial Training Camp (Calgary) (JUDO camp) [tentat
@@ -480,7 +480,7 @@ URL:https://judoalberta.com/wp-content/uploads/2026/08/Final-2026-2027-DRAF
 END:VEVENT
 BEGIN:VEVENT
 UID:2027-02-20-prime-bjj-series-17@jiujitsu.designspore.co
-DTSTAMP:20261120T203908Z
+DTSTAMP:20261121T071948Z
 DTSTART;VALUE=DATE:20270220
 DTEND;VALUE=DATE:20270221
 SUMMARY:PRIME BJJ Series 17 (BJJ tournament) [tentative]
@@ -492,7 +492,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:2027-02-27-okanagan-fight-night-9---kids-open-weight-bjj-division@jiuji
  tsu.designspore.co
-DTSTAMP:20261120T203908Z
+DTSTAMP:20261121T071948Z
 DTSTART;VALUE=DATE:20270227
 DTEND;VALUE=DATE:20270228
 SUMMARY:Okanagan Fight Night 9 - kids open-weight BJJ division (BJJ tournam
@@ -511,7 +511,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:2027-02-28-2027-decentralized-spring-bc-training-camp@jiujitsu.designsp
  ore.co
-DTSTAMP:20261120T203908Z
+DTSTAMP:20261121T071948Z
 DTSTART;VALUE=DATE:20270228
 DTEND;VALUE=DATE:20270302
 SUMMARY:2027 Decentralized Spring BC Training Camp (JUDO camp)
@@ -522,7 +522,7 @@ URL:https://www.judobc.ca/events-calendar/
 END:VEVENT
 BEGIN:VEVENT
 UID:2027-03-06-true-north-grappling-spring-open@jiujitsu.designspore.co
-DTSTAMP:20261120T203908Z
+DTSTAMP:20261121T071948Z
 DTSTART;VALUE=DATE:20270306
 DTEND;VALUE=DATE:20270307
 SUMMARY:True North Grappling Spring Open (BJJ tournament)
@@ -534,7 +534,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:2027-03-12-2027-matsuru-pacific-international-judo-championships@jiujit
  su.designspore.co
-DTSTAMP:20261120T203908Z
+DTSTAMP:20261121T071948Z
 DTSTART;VALUE=DATE:20270312
 DTEND;VALUE=DATE:20270315
 SUMMARY:2027 Matsuru Pacific International Judo Championships (JUDO tournam
@@ -547,7 +547,7 @@ URL:https://judocanada.org/events/2027-pacific-international/
 END:VEVENT
 BEGIN:VEVENT
 UID:2027-03-13-ava-legends-2027@jiujitsu.designspore.co
-DTSTAMP:20261120T203908Z
+DTSTAMP:20261121T071948Z
 DTSTART;VALUE=DATE:20270313
 DTEND;VALUE=DATE:20270314
 SUMMARY:AVA Legends 2027 (GRAPPLING tournament)
@@ -558,7 +558,7 @@ URL:https://avagrappling.smoothcomp.com/en/event/34635
 END:VEVENT
 BEGIN:VEVENT
 UID:2027-03-13-ava-origins-2027@jiujitsu.designspore.co
-DTSTAMP:20261120T203908Z
+DTSTAMP:20261121T071948Z
 DTSTART;VALUE=DATE:20270313
 DTEND;VALUE=DATE:20270314
 SUMMARY:AVA Origins 2027 (GRAPPLING tournament)
@@ -569,7 +569,7 @@ URL:https://avagrappling.smoothcomp.com/en/event/34640
 END:VEVENT
 BEGIN:VEVENT
 UID:2027-03-13-sio-bc-junior-championships-2027@jiujitsu.designspore.co
-DTSTAMP:20261120T203908Z
+DTSTAMP:20261121T071948Z
 DTSTART;VALUE=DATE:20270313
 DTEND;VALUE=DATE:20270314
 SUMMARY:SIO BC Junior Championships 2027 (BJJ tournament) [tentative]
@@ -582,7 +582,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:2027-03-13-titanium-grappling-camrose--x-mvm-academy-@jiujitsu.designsp
  ore.co
-DTSTAMP:20261120T203908Z
+DTSTAMP:20261121T071948Z
 DTSTART;VALUE=DATE:20270313
 DTEND;VALUE=DATE:20270314
 SUMMARY:Titanium Grappling Camrose (x MVM Academy) (BJJ tournament)
@@ -593,7 +593,7 @@ URL:https://smoothcomp.com/en/event/35604
 END:VEVENT
 BEGIN:VEVENT
 UID:2027-03-19-2027-edmonton-international@jiujitsu.designspore.co
-DTSTAMP:20261120T203908Z
+DTSTAMP:20261121T071948Z
 DTSTART;VALUE=DATE:20270319
 DTEND;VALUE=DATE:20270322
 SUMMARY:2027 Edmonton International (JUDO tournament)
@@ -606,7 +606,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:2027-03-19-national-referee-seminar--edmonton-international-@jiujitsu.d
  esignspore.co
-DTSTAMP:20261120T203908Z
+DTSTAMP:20261121T071948Z
 DTSTART;VALUE=DATE:20270319
 DTEND;VALUE=DATE:20270322
 SUMMARY:National Referee Seminar (Edmonton International) (JUDO course) [te
@@ -621,7 +621,7 @@ URL:https://judoalberta.com/wp-content/uploads/2026/08/Final-2026-2027-DRAF
 END:VEVENT
 BEGIN:VEVENT
 UID:2027-04-02-prince-george-open--judo-@jiujitsu.designspore.co
-DTSTAMP:20261120T203908Z
+DTSTAMP:20261121T071948Z
 DTSTART;VALUE=DATE:20270402
 DTEND;VALUE=DATE:20270404
 SUMMARY:Prince George Open (judo) (JUDO tournament) [tentative]
@@ -637,7 +637,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:2027-04-03-jiu-jitsu-bc-provincial-championships--first-edition-@jiujit
  su.designspore.co
-DTSTAMP:20261120T203908Z
+DTSTAMP:20261121T071948Z
 DTSTART;VALUE=DATE:20270403
 DTEND;VALUE=DATE:20270404
 SUMMARY:Jiu Jitsu BC Provincial Championships (first edition) (BJJ tourname
@@ -651,7 +651,7 @@ URL:https://www.instagram.com/p/DehbO1FTh_h/
 END:VEVENT
 BEGIN:VEVENT
 UID:2027-04-09-judo-bc-provincial-championships@jiujitsu.designspore.co
-DTSTAMP:20261120T203908Z
+DTSTAMP:20261121T071948Z
 DTSTART;VALUE=DATE:20270409
 DTEND;VALUE=DATE:20270412
 SUMMARY:Judo BC Provincial Championships (JUDO tournament)
@@ -661,7 +661,7 @@ URL:https://www.judobc.ca/events-calendar/
 END:VEVENT
 BEGIN:VEVENT
 UID:2027-04-23-judo-alberta-inter-provincial-camp@jiujitsu.designspore.co
-DTSTAMP:20261120T203908Z
+DTSTAMP:20261121T071948Z
 DTSTART;VALUE=DATE:20270423
 DTEND;VALUE=DATE:20270426
 SUMMARY:Judo Alberta Inter-Provincial Camp (JUDO camp) [tentative]
@@ -676,7 +676,7 @@ URL:https://judoalberta.com/wp-content/uploads/2026/08/Final-2026-2027-DRAF
 END:VEVENT
 BEGIN:VEVENT
 UID:2027-04-24-bc-absolute--spring-open@jiujitsu.designspore.co
-DTSTAMP:20261120T203908Z
+DTSTAMP:20261121T071948Z
 DTSTART;VALUE=DATE:20270424
 DTEND;VALUE=DATE:20270425
 SUMMARY:BC Absolute: Spring Open (BJJ tournament)
@@ -688,7 +688,7 @@ URL:https://www.instagram.com/p/DfAcZZVJQpf/
 END:VEVENT
 BEGIN:VEVENT
 UID:2027-04-24-sio-spring-classic-2027@jiujitsu.designspore.co
-DTSTAMP:20261120T203908Z
+DTSTAMP:20261121T071948Z
 DTSTART;VALUE=DATE:20270424
 DTEND;VALUE=DATE:20270425
 SUMMARY:SIO Spring Classic 2027 (BJJ tournament) [tentative]
@@ -699,7 +699,7 @@ URL:https://smoothcomp.com/en/event/34199
 END:VEVENT
 BEGIN:VEVENT
 UID:2027-05-01-ava-edmonton-2027@jiujitsu.designspore.co
-DTSTAMP:20261120T203908Z
+DTSTAMP:20261121T071948Z
 DTSTART;VALUE=DATE:20270501
 DTEND;VALUE=DATE:20270502
 SUMMARY:AVA Edmonton 2027 (GRAPPLING tournament)
@@ -710,7 +710,7 @@ URL:https://avagrappling.smoothcomp.com/en/event/32541
 END:VEVENT
 BEGIN:VEVENT
 UID:2027-05-01-grappling-industries-vancouver@jiujitsu.designspore.co
-DTSTAMP:20261120T203908Z
+DTSTAMP:20261121T071948Z
 DTSTART;VALUE=DATE:20270501
 DTEND;VALUE=DATE:20270502
 SUMMARY:Grappling Industries Vancouver (BJJ tournament)
@@ -721,7 +721,7 @@ URL:https://grapplingindustries.smoothcomp.com/en/event/32092
 END:VEVENT
 BEGIN:VEVENT
 UID:2027-05-01-katsuta-cup@jiujitsu.designspore.co
-DTSTAMP:20261120T203908Z
+DTSTAMP:20261121T071948Z
 DTSTART;VALUE=DATE:20270501
 DTEND;VALUE=DATE:20270502
 SUMMARY:Katsuta Cup (JUDO tournament) [tentative]
@@ -735,7 +735,7 @@ URL:https://judoalberta.com/wp-content/uploads/2026/08/Final-2026-2027-DRAF
 END:VEVENT
 BEGIN:VEVENT
 UID:2027-05-07-judo-alberta-provincial-camp@jiujitsu.designspore.co
-DTSTAMP:20261120T203908Z
+DTSTAMP:20261121T071948Z
 DTSTART;VALUE=DATE:20270507
 DTEND;VALUE=DATE:20270510
 SUMMARY:Judo Alberta Provincial Camp (JUDO camp) [tentative]
@@ -750,7 +750,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:2027-05-14-judo-alberta-regional-camp--edmonton-@jiujitsu.designspore.c
  o
-DTSTAMP:20261120T203908Z
+DTSTAMP:20261121T071948Z
 DTSTART;VALUE=DATE:20270514
 DTEND;VALUE=DATE:20270515
 SUMMARY:Judo Alberta Regional Camp (Edmonton) (JUDO camp) [tentative]
@@ -764,7 +764,7 @@ URL:https://judoalberta.com/wp-content/uploads/2026/08/Final-2026-2027-DRAF
 END:VEVENT
 BEGIN:VEVENT
 UID:2027-05-15-ava-western-2027@jiujitsu.designspore.co
-DTSTAMP:20261120T203908Z
+DTSTAMP:20261121T071948Z
 DTSTART;VALUE=DATE:20270515
 DTEND;VALUE=DATE:20270516
 SUMMARY:AVA Western 2027 (GRAPPLING tournament)
@@ -775,7 +775,7 @@ URL:https://avagrappling.smoothcomp.com/en/event/32542
 END:VEVENT
 BEGIN:VEVENT
 UID:2027-05-15-judo-alberta-regional-camp--calgary-@jiujitsu.designspore.co
-DTSTAMP:20261120T203908Z
+DTSTAMP:20261121T071948Z
 DTSTART;VALUE=DATE:20270515
 DTEND;VALUE=DATE:20270516
 SUMMARY:Judo Alberta Regional Camp (Calgary) (JUDO camp) [tentative]
@@ -790,7 +790,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:2027-05-20-2027-open-national-judo-championships@jiujitsu.designspore.c
  o
-DTSTAMP:20261120T203908Z
+DTSTAMP:20261121T071948Z
 DTSTART;VALUE=DATE:20270520
 DTEND;VALUE=DATE:20270524
 SUMMARY:2027 Open National Judo Championships (JUDO tournament)
@@ -805,7 +805,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:2027-05-23-judo-canada-national-training-camp--post-nationals-@jiujitsu
  .designspore.co
-DTSTAMP:20261120T203908Z
+DTSTAMP:20261121T071948Z
 DTSTART;VALUE=DATE:20270523
 DTEND;VALUE=DATE:20270526
 SUMMARY:Judo Canada National Training Camp (post-Nationals) (JUDO camp) [te
@@ -821,7 +821,7 @@ URL:https://judoalberta.com/wp-content/uploads/2026/08/Final-2026-2027-DRAF
 END:VEVENT
 BEGIN:VEVENT
 UID:2027-05-29-eyjs-monthly---intro-referee-seminar@jiujitsu.designspore.co
-DTSTAMP:20261120T203908Z
+DTSTAMP:20261121T071948Z
 DTSTART;VALUE=DATE:20270529
 DTEND;VALUE=DATE:20270530
 SUMMARY:EYJS Monthly + Intro Referee Seminar (JUDO tournament) [tentative]
@@ -836,7 +836,7 @@ URL:https://judoalberta.com/wp-content/uploads/2026/08/Final-2026-2027-DRAF
 END:VEVENT
 BEGIN:VEVENT
 UID:2027-06-19-peak-grappling-summerslam-2027@jiujitsu.designspore.co
-DTSTAMP:20261120T203908Z
+DTSTAMP:20261121T071948Z
 DTSTART;VALUE=DATE:20270619
 DTEND;VALUE=DATE:20270620
 SUMMARY:Peak Grappling SummerSlam 2027 (BJJ tournament) [tentative]
