@@ -51,7 +51,7 @@ def img(name, lazy=True):
 THEMES = {
     "tenugui": {
         "label": "Tenugui",
-        "color": "#1B2A47",
+        "color": "#0556A8",
         "h1": "Judo and Brazilian jiu jitsu in Clearwater",
         "lede": "Classes for kids and adults every Tuesday and Thursday at 52 Ridge, Clearwater Valley Resort. Taught by Ernst Bergmann. Beginners welcome.",
     },

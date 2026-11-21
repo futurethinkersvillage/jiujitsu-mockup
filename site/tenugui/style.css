@@ -1,11 +1,11 @@
 /* TENUGUI — indigo-dyed cotton, kinari ink, one vermilion seal. */
 :root {
-  --ai: #1B2A47; --kon: #121D33; --kinari: #EEE9DD; --shu: #C8402A; --ai-mut: #A9B6CC; --ink-mut: #4A5470;
-  --shu-ink: #A8321F; /* red for small text on kinari (5.5:1) */ --shu-light: #F07A5E; /* red for small text on indigo (5.2:1) */
-  --mut: var(--ink-mut); --menu-bg: var(--kon); --menu-ink: var(--kinari); --menu-line: rgba(238,233,221,.2); --menu-hover: rgba(238,233,221,.08); --flag-bg: rgba(18,29,51,.35);
+  --ai: #0556A8; /* judo-gi blue */ --kon: #033E78; --kinari: #EEE9DD; --shu: #C8402A; --ai-mut: #D3E0F2; /* 5.4:1 on --ai */ --ink-mut: #3E4E68;
+  --shu-ink: #A8321F; /* red for small text on kinari (5.5:1) */ --shu-light: #FFC9BC; /* red tint for small text on blue (4.8:1) */
+  --mut: var(--ink-mut); --menu-bg: var(--kon); --menu-ink: var(--kinari); --menu-line: rgba(238,233,221,.2); --menu-hover: rgba(238,233,221,.08); --flag-bg: rgba(3,62,120,.35);
   --bg: var(--ai); --ink: var(--kinari); --btn-bg: var(--shu); --btn-ink: #FFF8EE; --radius: 2px;
   --f-head: "Shippori Mincho B1", "Noto Serif JP", serif; --f-body: "Zen Kaku Gothic New", system-ui, sans-serif;
-  --nav-bg: rgba(18, 29, 51, .94); --focus: #F08A6E;
+  --nav-bg: rgba(3, 62, 120, .94); --focus: #FFD9A0;
 }
 body { background: var(--asanoha) 0 0 / 56px auto, var(--ai); }
 .nav { border-bottom: 1px solid rgba(238,233,221,.14); backdrop-filter: blur(6px); }
@@ -24,14 +24,14 @@ h1, h2 { font-weight: 800; letter-spacing: -0.005em; }
 .img-slot { background:
     radial-gradient(circle at 30% 25%, rgba(238,233,221,.14) 0 18%, transparent 19%),
     radial-gradient(circle at 70% 60%, rgba(238,233,221,.10) 0 24%, transparent 25%),
-    repeating-radial-gradient(circle at 50% 120%, #22355A 0 14px, #1A2A48 14px 28px);
+    repeating-radial-gradient(circle at 50% 120%, #0A60B5 0 14px, #0556A8 14px 28px);
   border: 1px solid rgba(238,233,221,.25); }
 .img-slot span { background: var(--kinari); color: var(--ai); }
 .hero .btn-ghost { color: var(--kinari); }
 
 .prog-list { gap: 0; border-top: 2px solid var(--ai); }
-.prog { padding: 1.6rem 1.4rem 1.8rem 0; border-bottom: 1px solid rgba(27,42,71,.2); }
-.prog + .prog { padding-left: 1.4rem; border-left: 1px solid rgba(27,42,71,.2); }
+.prog { padding: 1.6rem 1.4rem 1.8rem 0; border-bottom: 1px solid rgba(5,86,168,.2); }
+.prog + .prog { padding-left: 1.4rem; border-left: 1px solid rgba(5,86,168,.2); }
 .prog-age { color: var(--shu-ink); }
 @media (max-width: 1100px) { .prog + .prog { border-left: 0; padding-left: 0; } }
 
@@ -40,11 +40,11 @@ h1, h2 { font-weight: 800; letter-spacing: -0.005em; }
 .art p:not(.art-jp) { color: var(--ai-mut); }
 .two-note { font-family: var(--f-head); font-size: 1.4rem; color: var(--kinari); border-left: 3px solid var(--shu); padding-left: 1rem; }
 
-.day { border-top: 2px solid var(--ai); background: rgba(27,42,71,.05); }
+.day { border-top: 2px solid var(--ai); background: rgba(5,86,168,.05); }
 .day h3 { font-weight: 800; }
 .flag { color: var(--shu-ink); }
 
-.pricing .price-list li { border: 1px solid rgba(238,233,221,.25); background: rgba(18,29,51,.5); }
+.pricing .price-list li { border: 1px solid rgba(238,233,221,.25); background: rgba(3,62,120,.5); }
 .pricing .sec-head p, .price-list p:not(.price), .fund { color: var(--ai-mut); }
 .fund a { color: var(--kinari); }
 
@@ -61,7 +61,7 @@ h1, h2 { font-weight: 800; letter-spacing: -0.005em; }
 .visit-text a:not(.btn) { color: var(--kinari); }
 .visit-card { background: var(--shu); color: #FFF8EE; }
 
-.faq details { border-bottom: 1px solid rgba(27,42,71,.2); }
+.faq details { border-bottom: 1px solid rgba(5,86,168,.2); }
 .faq summary::after { color: var(--shu); }
 .faq details p { color: var(--ink-mut); }
 
@@ -78,14 +78,14 @@ h1, h2 { font-weight: 800; letter-spacing: -0.005em; }
 .sc-r { color: var(--shu-ink); }
 
 /* Nov 19: generated falls hero */
-.hero { --hero-shade: linear-gradient(90deg, rgba(18,29,51,.96) 0%, rgba(27,42,71,.84) 38%, rgba(27,42,71,.25) 72%, rgba(27,42,71,.08) 100%); }
+.hero { --hero-shade: linear-gradient(90deg, rgba(3,62,120,.96) 0%, rgba(5,86,168,.84) 38%, rgba(5,86,168,.25) 72%, rgba(5,86,168,.08) 100%); }
 .hero h1 { font-size: clamp(2.4rem, 5vw, 4.4rem); }
 .lede { color: #C9D2E0; }
-.price-card { border: 1px solid rgba(238,233,221,.25); background: rgba(18,29,51,.5); }
+.price-card { border: 1px solid rgba(238,233,221,.25); background: rgba(3,62,120,.5); }
 .price-card p:not(.price) { color: var(--ai-mut); }
 .map { border: 1px solid rgba(238,233,221,.25); }
-.day p { border-top-color: rgba(27,42,71,.18); }
-@media (max-width: 760px) { .hero { --hero-shade: linear-gradient(0deg, rgba(18,29,51,.95) 10%, rgba(27,42,71,.7) 60%, rgba(27,42,71,.35)); } }
+.day p { border-top-color: rgba(5,86,168,.18); }
+@media (max-width: 760px) { .hero { --hero-shade: linear-gradient(0deg, rgba(3,62,120,.95) 10%, rgba(5,86,168,.7) 60%, rgba(5,86,168,.35)); } }
 /* Keep the cloth/indigo bands alternating now that two sections are gone */
 .two { background: var(--kinari); color: var(--ai); }
 .two .art p:not(.art-jp) { color: var(--ink-mut); }
@@ -93,7 +93,7 @@ h1, h2 { font-weight: 800; letter-spacing: -0.005em; }
 .two .art { border-top-color: var(--shu-ink); }
 
 /* Nov 20: whole-video tint (replaces the left-to-right gradient) */
-.hero { --hero-shade: none; --hero-tint: #3E5688; --kanji: #EEE9DD; }
+.hero { --hero-shade: none; --hero-tint: #0556A8; --kanji: #EEE9DD; }
 @media (max-width: 760px) { .hero { --hero-shade: none; } .hero-kanji { display: none; } }
 .gallery { background: var(--kon); }
 .events .ev li { border-bottom-color: rgba(238,233,221,.18); }
