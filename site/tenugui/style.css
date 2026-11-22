@@ -93,7 +93,8 @@ h1, h2 { font-weight: 800; letter-spacing: -0.005em; }
 .two .art { border-top-color: var(--shu-ink); }
 
 /* Nov 20: whole-video tint (replaces the left-to-right gradient) */
-.hero { --hero-shade: none; --hero-tint: #0556A8; --kanji: #EEE9DD; }
+/* Nov 21: neutral dark filter instead of the blue tint (grey multiplied = darker, no colour shift) */
+.hero { --hero-shade: none; --hero-tint: #4F4F4F; --kanji: #EEE9DD; }
 @media (max-width: 760px) { .hero { --hero-shade: none; } .hero-kanji { display: none; } }
 .gallery { background: var(--kon); }
 .events .ev li { border-bottom-color: rgba(238,233,221,.18); }
